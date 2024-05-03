@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=DM+Sans:wght@500&family=Lexend+Exa:wght@100..900&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>AjudaAki</title>
+</head>
+<body>
+    <div class="content">
+        <div class="background-perfil">
+            <div class="box-voltar">
+                <button class="voltar" type="button" routerLink="">Voltar</button>
+            </div>
+            <div class="box-foto-perfil">
+                <div > 
+                    <img class="foto-perfil" src="https://imgb.ifunny.co/images/86f6370b4166f9b7b95acaf2843fdceaa4577d08a508a722c948e454c328959c_1.jpg">
+                </div>
+            </div>
+        </div>  
+            <div class="box-nomeFav">
+                <div class="nome">
+                    <h1>Felipe Cavalcante</h1>
+                </div>
+                <div class="botao-fav">
+                    <button class="favoritar" type="button" (click)="trocarImagem()">
+                        <img class="img-favoritar" [src]="img_estrela" alt="imagem estrela">
+                    </button>
+                </div>
+            </div>
+            <div class="informacoes-perfil">
+                <div class="descricao">
+                    <p>Descrição</p>
+                    <p><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni neque suscipit nemo
+                    quam aut, minus aliquid molestiae recusandae temporibus maiores, officia odio explicabo
+                    excepturi, tempora saepe quibusdam exercitationem a? Iste?</p>
+                </div>
+                <div class="comentarios">
+                    <p>Comentarios</p>
+                </div>
+                <div class="info">
+                    <div class="especialidade">
+                        <p>Especialidade:</p>
+                        <div class="tag-especialidade">
+                           <p>Backend</p>
+                        </div>
+                    </div>
+                    <div class="horarios">
+                        <div class="horarios-prof">
+                            <p>Horarios:</p>
+                        </div>
+                    </div>
+                    <div class="preco">
+
+                    </div>
+                </div>
+            </div>
+        </div>     
+</body>
+</html>

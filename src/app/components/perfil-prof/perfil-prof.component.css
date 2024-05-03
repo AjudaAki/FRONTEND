@@ -1,0 +1,166 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.background-perfil{
+    width: 100%;
+    height: 240px;
+    background-color: #E80049;
+}
+
+
+.box-voltar{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 80px;
+    height: 60px;
+}
+
+
+.voltar{
+    height: 40px;
+    width: 80px;
+    color: white;
+    border: none;
+    text-align: center; 
+    cursor: pointer; 
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    background-color: #100F33;
+    transition: transform 0.3s ease;
+}
+
+
+.voltar:hover{
+    background-color:  #302426;
+    transform: scale(1.07);
+}
+
+
+.box-foto-perfil{
+    position: absolute;
+    margin-right: 145px;
+    margin-top: 27px;
+    width: 130px;
+    height: 130px;
+    right: 0px;
+}   
+
+
+.foto-perfil{
+    width: 200px;
+    height: 200px;
+    border-radius: 300px;
+    background-color: black;
+}
+
+
+.box-nomeFav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+}
+
+
+
+
+
+.nome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+
+.favoritar{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+
+
+
+
+.img-favoritar{
+    width: 40px;
+    height: 40px;
+}
+
+
+.informacoes-perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.descricao{
+    width: 333px;
+    height: 400px;
+    border: 2px solid #E80049;
+    border-radius: 13px;
+}
+
+
+.comentarios{
+    width: 690px;
+    height: 400px;
+    border: 2px solid #E80049;
+    border-radius: 13px;
+}
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 269px;
+    height: 400px;
+    border: 2px solid #E80049;
+    border-radius: 13px;
+}
+
+
+.especialidade{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+
+.tag-especialidade{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 40px; 
+    margin-top: 5px;
+    color: aliceblue;
+    background-color: #E80049;
+    border-radius: 8px;
+    font-size: 25px;
+}

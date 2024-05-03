@@ -1,0 +1,25 @@
+<div class="box-modal" [style.display]="showModal ? 'block' : 'none'">
+    <div class="conteudo">
+        <div class="box-botao">
+            <div class="botao-sair">
+                <button type="button" class="botao-cancel" (click)="fecharModal()">
+                    <img src="../../../assets/images/Cancel.png">
+                </button>
+            </div>
+        </div>
+        <div class="titulo-conteudo">
+            <h2>Que tal ser professor? </h2>
+        </div>
+        <div class="descricao">
+            <p>é facil e rapido, você só precisa preencher mais algumas informações!</p>
+        </div>
+        <div class="botoes">
+            <button type="button" class="botao-aluno">
+                Ser aluno
+            </button>
+            <button type="button" class="botao-prof" (click)="continuarCadastro()">
+                Ser professor
+            </button>
+        </div>
+    </div>
+</div>
