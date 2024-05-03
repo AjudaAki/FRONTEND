@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class CadastroUserComponent {
 
-  showProf: boolean = false;
+  showProf1: boolean = false;
   showDados: boolean = true;
   showEndereco: boolean = false;
   showPerfil: boolean = false;
@@ -43,7 +43,7 @@ export class CadastroUserComponent {
     }
 
     else if(this.step === 4){
-      this.showProf = false;
+      this.showProf1 = false;
       this.showPerfil = true;
       this.showConfirmar = true;
       this.showProximo = false;
@@ -75,7 +75,7 @@ export class CadastroUserComponent {
     }
 
     else if(this.step === 4){
-      this.showProf = true
+      this.showProf1 = true
     }
 
     console.log(this.step);

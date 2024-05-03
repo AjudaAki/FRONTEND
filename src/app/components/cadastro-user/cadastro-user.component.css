@@ -331,3 +331,45 @@
     width: 100px;
     height: 30px;
 }
+
+
+.campos-prof-contatoHorario{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
+    gap: 20px;
+    
+}
+
+
+.title-contatoHorario{
+    font-size: 18px;
+}
+
+
+.box-contatos{  
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: 130px;
+    border: 2px solid;
+    border-color: #E80049;
+    border-radius: 14px;
+}
+
+
+.box-titleInput{
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+
+.input-contato{
+    width: 200px;
+    height: 40px;
+    border-radius: 18px;
+}
+
+
+

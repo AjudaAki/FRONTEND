@@ -23,9 +23,9 @@ export class ModalProfComponent {
     if(this.CadastroUserComponent.step === 3){
       this.CadastroUserComponent.showModal = false;
       this.CadastroUserComponent.showPerfil = false;
-      this.CadastroUserComponent.showProf = true;
-      this.CadastroUserComponent.showConfirmar = false;
-      this.CadastroUserComponent.showProximo = true;
+      this.CadastroUserComponent.showProf1 = true;
+      this.CadastroUserComponent.showConfirmar = true;
+      this.CadastroUserComponent.showProximo = false;
       this.CadastroUserComponent.step++;
 
       console.log(this.CadastroUserComponent.step)
