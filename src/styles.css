@@ -3,3 +3,119 @@
 *{
     margin: 0px;
 }
+::-webkit-scrollbar {
+    width: 16px; /* Largura da barra de rolagem */
+    background-color: #f1f1f1;
+    
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #E80049; /* Cor do polegar da barra de rolagem */
+    border-radius: -5px; /* Raio de borda do polegar da barra de rolagem */
+    
+    
+}
+
+
+/* /////////Cores/////////// */
+.cor_p{
+    background-color: #E80049
+}
+.cor_bg{
+    background-color: #f1f1f1;
+
+    
+}
+
+/* /////////Fontes/////////// */
+.text_principal{
+    font-size: 58px;
+    font-family: "PT Mono", monospace;;
+}
+.text_Sub{
+    font-size: 48px;
+    font-family: "PT Mono", monospace;;
+}
+.text_modal{
+    font-size: 40px;
+    font-family: "PT Sans", sans-serif;
+}
+.text_medio{
+    font-size: 24px;
+    font-family: "PT Sans", sans-serif;
+}
+.text_aviso{
+    font-size: 20px;
+    font-family: "PT Sans", sans-serif;
+}
+.text_peq{
+    font-size: 16px;
+    font-family: "PT Sans", sans-serif;
+}
+/* /////////Buttons/////////// */
+.btn_rosa{
+    width: 247px;
+    height: 49px;
+    background-color: #E80049;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    transition: transform 0.6s ease;
+    
+
+}
+.btn_rosa:hover{
+    background-color: #af0339;
+    transform: scale(1.04);
+}
+
+.btn_branco{
+    width: 247px;
+    height: 49px;
+    background-color: white;
+    border-radius: 10px;
+    color: #E80049;
+    text-align: center;
+    border: none;
+    transition: transform 0.6s ease;
+
+}
+.btn_branco:hover{
+    background-color: #afafaf;
+    transform: scale(1.04);
+
+}
+
+.btn_azul{
+    width: 247px;
+    height: 49px;
+    background-color: #618CFA;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    transition: transform 0.6s ease;
+
+}
+.btn_azul:hover{
+    background-color: #365dc0;
+    transform: scale(1.04);
+}
+
+.btn_cinza{
+    width: 247px;
+    height: 49px;
+    background-color: #636466;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    transition: transform 0.3s ease;
+
+}
+.btn_cinza:hover{
+    background-color: #3b3b3b;
+    transform: scale(1.04);
+
+}
