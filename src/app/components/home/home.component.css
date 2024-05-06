@@ -1,13 +1,11 @@
 body{
     display: flex;
     flex-direction: column;
-    margin: 0;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
     
 }
-
 
 .title{
     display: flex;
@@ -16,22 +14,15 @@ body{
     justify-content: center;
 }
 
-
-.content{
-    padding-left:40px;
-
-}
-
-
 .box-logo{  
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
 }
 
 
 .logo-imagem{
-    width: 70px;
-    height: 70px;
+    width: 100%;
+    height: 100%;
     border-radius: 7px;
     bottom: 8px;
     right: 0; 
@@ -43,7 +34,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 100px;
     width: 100%;
     background-color: #E80049;
     
@@ -110,16 +101,14 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
-
-p{
-    font-size: 24px;
+.box-imagem-sobre{
+    width: 100%;
 }
-
-
 .imagem-sobre{
-    width: 1224px;
+    width: 100%;
     height: auto;
     margin-top: 64px;
     border-radius: 18px;
@@ -128,81 +117,55 @@ p{
 
 .texto-sobre{
     text-align: justify;
-    width: 1224px;
+    width: 90%;
 }
 
 
-
+.professor{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
 .prof-sobre{
     display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-
-.prof-image{
-    width: 246px;
-    height: 369px;
-    margin-top: 50px;
-    margin-left: 220px;
-    border-radius: 18px;
-}
-
-
-.h2{
-    font-size: 48px;
+    max-width: 958px;
+    align-items: center;
     
 }
 
-
-.h2-prof{
-    font-size: 48px;
-    margin-bottom: 20px;
+.aluno{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    
 }
-
-
-.prof-texto{
-    margin-top: 55px;
-    margin-left: 20px;
-}
-
-
 .aluno-box{
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-top: 20px;
+    max-width: 958px;
+    align-items: center;
+    justify-content: center;
+    
 }
-
-
-.h2-aluno{
-    font-size: 48px;
-    margin-left: 690px;
-    margin-bottom: 30px;
-}
-
-
-.aluno-texto{
+.info-texto{
     display: flex;
     flex-direction:  column;
     margin-top: 30px;
-    margin-left: 100px;
+    margin-left: 10px;
+    width: 690px;
+
 } 
 
 
 .aluno-image{
     display: flex;
     flex-direction: row;
-    width: 300px;
-    height: 400px;
-    margin-right: 100px;
-    border-radius: 18px;
 }
 
 
 .box-signup{
     display: flex;
     width: 100%;
-    height: 30px;
+    height: 70px;
     justify-content: center;
+    margin: 40px 0 80px 0;
 }

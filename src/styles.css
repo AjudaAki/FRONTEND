@@ -1,8 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-
 *{
     margin: 0px;
+   
 }
+/* /////////Scroll bar///////// */
+
 ::-webkit-scrollbar {
     width: 16px; /* Largura da barra de rolagem */
     background-color: #f1f1f1;
@@ -15,24 +16,31 @@
     
     
 }
-
+/* /////////Conteúdo///////// */
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 120px 0 120px;
+}
 
 /* /////////Cores/////////// */
-.cor_p{
-    background-color: #E80049
+:root{
+    --main-color: #E80049;
+    --blue-color: #365dc0;
+    --bg-color: #f1f1f1;
 }
 .cor_bg{
-    background-color: #f1f1f1;
-
-    
+    background-color: var(--bg-color);
 }
 
 /* /////////Fontes/////////// */
 .text_principal{
     font-size: 58px;
-    font-family: "PT Mono", monospace;;
+    font-family: "PT Mono", monospace;
 }
-.text_Sub{
+.text_sub{
     font-size: 48px;
     font-family: "PT Mono", monospace;;
 }
@@ -56,7 +64,7 @@
 .btn_rosa{
     width: 247px;
     height: 49px;
-    background-color: #E80049;
+    background-color: var(--main-color);
     border-radius: 10px;
     color: white;
     text-align: center;
@@ -75,7 +83,7 @@
     height: 49px;
     background-color: white;
     border-radius: 10px;
-    color: #E80049;
+    color: var(--main-color);
     text-align: center;
     border: none;
     transition: transform 0.6s ease;
@@ -90,11 +98,11 @@
 .btn_azul{
     width: 247px;
     height: 49px;
-    background-color: #618CFA;
     border-radius: 10px;
     color: white;
     text-align: center;
     border: none;
+    background-color: var(--blue-color);
     transition: transform 0.6s ease;
 
 }
@@ -118,4 +126,22 @@
     background-color: #3b3b3b;
     transform: scale(1.04);
 
+}
+
+/* /////////imagens/////////// */
+.img_media{
+    width: 246px;
+    height: 369px;
+    margin-top: 50px;
+    border-radius: 18px;
+}
+.img_prof{
+    width: 158px ;
+    height: 158px ;
+    border-radius: 80px;
+}
+.img_prof_big{
+    width: 240px ;
+    height: 240px ;
+    border-radius: 120px;
 }
