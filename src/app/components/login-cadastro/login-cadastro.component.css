@@ -47,12 +47,7 @@
     width: 423px;
     height: 601px;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-    transition:transform 0.6s ease ;
-}
-.conteudo:hover{
-    box-shadow: 8px 12px 7px rgba(0, 0, 0, 0.1);
-    transform: scale(1.02);
-
+    
 }
 
 
@@ -165,14 +160,8 @@
     height: 601px;
     gap:120px;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-    transition:transform 0.6s ease ;
+    
 }
-.conteudo-ld:hover{
-    box-shadow: 8px 12px 7px rgba(0, 0, 0, 0.1);
-    transform: scale(1.02);
-
-}
-
 
 .cad{
     display: flex;
