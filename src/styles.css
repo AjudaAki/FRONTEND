@@ -38,6 +38,9 @@
     justify-content: center;
     align-items: center;
     padding: 0 120px 0 120px;
+    background-color: var(--bg-color);
+    height: 100vh;
+    width: 100%;
 }
 
 /* /////////Cores/////////// */
@@ -56,17 +59,18 @@
 /* /////////Fontes/////////// */
 .text_principal{
     font-size: 58px;
-    font-family: "PT Mono", monospace;
-    font-weight: 200;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
 }
 .text_sub{
     font-size: 48px;
-    font-family: "PT Mono", monospace;
-    font-weight: 100;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 80;
 }
 .text_modal{
     font-size: 40px;
     font-family: "PT Sans", sans-serif;
+    font-weight: lighter;
 }
 .text_medio{
     font-size: 24px;
@@ -79,6 +83,7 @@
 .text_peq{
     font-size: 16px;
     font-family: "PT Sans", sans-serif;
+    
 }
 
 .text_principal-w{
@@ -116,24 +121,24 @@
     width: 247px;
     height: 49px;
     background-color: var(--main-color);
-    border-radius: 10px;
+    border-radius: 8px;
     color: white;
     text-align: center;
     border: none;
-    transition: transform 0.6s ease;
+    transition: transform 0.2s ease;
     
 
 }
 .btn_rosa:hover{
-    background-color: #af0339;
-    transform: scale(1.04);
+    background-color: #c0033f;
+    transform: scale(0.95);
 }
 
 .btn_branco{
     width: 247px;
     height: 49px;
     background-color: var(--bg-color);
-    border-radius: 10px;
+    border-radius: 8px;
     color: var(--main-color);
     text-align: center;
     border: none;
@@ -144,14 +149,31 @@
 .btn_branco:hover{
     background-color: var(--main-color);
     color: var(--bg-color);
-    transform: scale(1.04);
+    transform: scale(0.95);
+
+}
+.btn_branco-w{
+    width: 247px;
+    height: 49px;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    color: var(--main-color);
+    text-align: center;
+    border: none;
+    transition: transform 0.2s ease;
+    border: 1px solid var(--main-color);
+
+}
+.btn_branco-w:hover{
+    background-color: #d3d3d3;
+    transform: scale(0.95);
 
 }
 
 .btn_azul{
     width: 247px;
     height: 49px;
-    border-radius: 10px;
+    border-radius: 8px;
     color: white;
     text-align: center;
     border: none;
@@ -168,7 +190,7 @@
     width: 247px;
     height: 49px;
     background-color: #636466;
-    border-radius: 10px;
+    border-radius: 8px;
     color: white;
     text-align: center;
     border: none;
@@ -202,4 +224,70 @@
     width: 80px;
     height: 80px;
     border-radius: 8px;
+}
+
+/* /////////inputs/////////// */
+
+.input-p{
+    height: 48px;
+    width: 170px;
+    background-color: none;
+    border-radius: 8px;
+    border: 0.5px solid rgb(66, 66, 66);
+}
+.input-p:hover{
+    border: 0.5px solid var(--main-color);
+    transform: scale(1.02);
+}
+
+.input-m{
+    height: 48px;
+    width: 248px;
+    background-color: none;
+    border-radius: 8px;
+    border: 0.5px solid rgb(66, 66, 66);
+    transition: transform 0.3s ease; 
+}
+.input-m:hover{
+    border: 0.5px solid var(--main-color);
+    transform: scale(1.02);
+}
+
+.input-g{
+    height: 48px;
+    width: 400px;
+    background-color: none;
+    border-radius: 8px;
+    border: 0.5px solid rgb(66, 66, 66);
+    transition: transform 0.3s ease;
+}
+.input-g:hover{
+    border: 0.5px solid var(--main-color);
+    transform: scale(1.02);
+}
+
+.input-gg{
+    height: 48px;
+    width: 600px;
+    background-color: none;
+    border-radius: 8px;
+    border: 0.5px solid rgb(66, 66, 66);
+    transition: transform 0.3s ease;
+}
+.input-gg:hover{
+    border: 0.5px solid var(--main-color);
+    transform: scale(1.02);
+}
+
+.input-d{
+    height: 80px;
+    width: 600px;
+    background-color: none;
+    border-radius: 8px;
+    border: 0.5px solid rgb(66, 66, 66);
+    transition: transform 0.3s ease;
+}
+.input-d:hover{
+    border: 0.5px solid var(--main-color);
+    transform: scale(1.02);
 }
