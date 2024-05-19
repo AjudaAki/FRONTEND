@@ -1,0 +1,127 @@
+.tela{
+    display: flex;
+    flex-direction: row;
+    background-color: #f1f1f1;
+}
+
+
+.box-titulo-perfil{
+    display: flex;
+    align-items: center;
+    width: 25vh;
+    height: 10vh;
+    margin-left: 5vh;
+    margin-top: 2vh;
+    gap: 2vh;
+}
+
+
+.texto-perfil{
+    font-size: 6vh;
+}
+
+
+.img-teste{
+    display: flex;
+    width: 6vh;
+    height: 6vh;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+
+.box-info-perfil{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.box-infos-principais{
+    display: flex;
+    flex-direction: row;
+    width: 110vh;
+    height: 32vh;
+    background-color: #ffff;
+    border-radius: 12px;
+    margin-left: 28vh;
+    margin-top: 5vh;
+    box-shadow: 12px 20px rgba(0,0,0,0.03);
+}
+
+
+.box-foto-perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35vh;
+    height: 32vh;
+    /* background-color: purple; */
+}
+
+
+.foto-perfil{
+    width: 25vh;
+    height: 25vh;
+    /* background-color: red; */
+    border-radius: 20vh;
+}
+
+
+.box-nome-email-tel{
+    display: flex;
+    flex-direction: column;
+    width: 45vh;
+    height: 32vh;
+}
+
+
+.nome-nascimento{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 6vh;
+    gap: 5vh;
+}
+
+
+.nome{
+    font-size: 4vh;
+}
+
+
+.nascimento{
+    font-size: 2vh;
+    margin-top: 3vh;
+}
+
+
+
+.linha-divisoria{
+    height: 1px;
+    width: 43vh;
+    margin-top: 2vh;
+    background-color: var(--main-color);
+}
+
+
+
+.email-tel-cpf{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+    gap: 2vh;
+}
+
+
+.box-cargo{
+    display: flex;
+    width: 30vh;
+    height: 32vh;
+}
+
+
+.texto-cargo{
+    font-size: 5vh;
+    margin-top: 12vh;
+    margin-left: 3vh;
+}

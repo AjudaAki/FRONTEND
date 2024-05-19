@@ -13,6 +13,8 @@ import { LoginCadastroComponent } from './components/login-cadastro/login-cadast
 import { ModalProfComponent } from './components/modal-prof/modal-prof.component';
 import { HeaderComponent } from './components/header/header.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { TelaPerfilComponent } from './components/tela-perfil/tela-perfil.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { InicioComponent } from './components/inicio/inicio.component';
     LoginCadastroComponent,
     ModalProfComponent,
     HeaderComponent,
-    InicioComponent
+    InicioComponent,
+    NavbarComponent,
+    TelaPerfilComponent
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserModule, FormsModule, HttpClientModule],
   providers: [],

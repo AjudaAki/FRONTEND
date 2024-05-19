@@ -1,0 +1,164 @@
+
+.box-navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-color);
+    width: 30vh;
+    height: 100vh;
+}
+
+
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 12vh;
+    gap: 2vh
+}
+
+
+/* imagem de teste */
+.img-teste{
+    display: flex;
+    width: 6vh;
+    height: 6vh;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+/* botao prof */
+.box-botao-prof{
+    width: 30vh;
+    height: 8vh;
+}
+
+
+.botao-prof{
+    display: flex;
+    flex-direction: row;
+    width: 30vh;
+    height: 6vh;
+    background-color: var(--main-color);
+    border: none;
+    gap: 2vh;
+    cursor: pointer;
+}
+
+
+.box-nome-botao-prof{
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    width: 20vh;
+}
+
+.nome-botao-prof{
+    display: flex;
+    font-size: 2.5vh;
+    color: white;
+}
+
+
+/* botao favoritos */
+.box-botao-fav{
+    width: 30vh;
+    height: 8vh;
+}
+
+
+.botao-fav{
+    display: flex;
+    flex-direction: row;
+    width: 30vh;
+    height: 6vh;
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+    gap: 2vh;
+}
+
+
+.box-nome-botao-fav{
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    width: 20vh;
+}
+
+
+.nome-botao-fav{
+    display: flex;
+    font-size: 2.5vh;
+    color: white;
+}
+
+
+/* botao perfil */
+.box-botao-perfil{
+    width: 30vh;
+    height: 8vh;
+    
+}
+
+
+.botao-perfil{
+    display: flex;
+    flex-direction: row;
+    width: 30vh;
+    height: 6vh;
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+    gap: 2vh;
+}
+
+
+.box-nome-botao-perfil{
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    width: 20vh;
+}
+
+
+.nome-botao-perfil{
+    display: flex;
+    font-size: 2.5vh;
+    color: white;
+}
+
+
+/* botao sair */
+.box-botao-sair{
+    width: 30vh;
+    height: 8vh;
+    margin-top: 50vh;
+}
+
+
+.botao-sair{
+    display: flex;
+    flex-direction: row;
+    width: 30vh;
+    height: 6vh;
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+    gap: 2vh;
+}
+
+
+.box-nome-botao-sair{
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    width: 20vh;
+}
+
+
+.nome-botao-sair{
+    display: flex;
+    font-size: 2.5vh;
+    color: white;
+}
