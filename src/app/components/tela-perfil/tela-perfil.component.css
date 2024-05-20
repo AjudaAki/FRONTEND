@@ -33,6 +33,8 @@
 .box-info-perfil{
     display: flex;
     flex-direction: column;
+    margin-left: 28vh;
+    gap: 2vh;
 }
 
 
@@ -43,9 +45,9 @@
     height: 32vh;
     background-color: #ffff;
     border-radius: 12px;
-    margin-left: 28vh;
+    /* margin-left: 28vh; */
     margin-top: 5vh;
-    box-shadow: 12px 20px rgba(0,0,0,0.03);
+    box-shadow: 1vh 1vh rgba(0,0,0,0.03);
 }
 
 
@@ -125,4 +127,145 @@
     font-size: 5vh;
     margin-top: 12vh;
     margin-left: 3vh;
+}
+
+
+.box-infos-secundarias{
+    
+    width: 110vh;
+    height: 14vh;
+    /* margin-left: 28vh; */
+    background-color: #ffff;
+    border-radius: 12px;
+    box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+}
+
+
+.infos-secundarias{
+    display: flex;
+    justify-content: center;
+    gap: 8vh;
+}
+
+
+.box-endereco-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6vh;
+    width: 14vh;
+    height: 14vh;
+    /* background-color: purple; */
+}
+
+
+.box-info-fav-prof{
+    display: flex;
+    width: 110vh;
+    height: 22vh;
+    /* background-color: purple; */
+    
+    gap: 2vh;
+}
+
+
+.box-fav{
+    display: flex;
+    align-items: center;
+    width: 44vh;
+    height: 22vh;
+    /* background-color: blue; */
+    background-color: #ffff;
+    border-radius: 12px;
+    box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+    gap: 2vh
+}
+
+
+.box-img-fav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22vh;
+    height: 22vh;
+    /* background-color: aqua; */
+}
+
+
+.img-fav{
+
+    width: 20vh;
+    height: 20vh;
+}
+
+
+.box-prof-fav{
+    display: flex;
+    width: 20vh;
+    height: 22vh;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: green; */
+    gap: 2.1vh;
+}
+
+
+.texto-fav{
+    font-size: 2.5vh;
+}
+
+
+.numero-fav{
+    font-size: 8vh;
+}
+
+
+.box-prof-serProf{
+    width: 64vh;
+    height: 22vh;
+    border-radius: 12px;
+    box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+}
+
+
+.box-ser-prof{
+    display: flex;
+    width: 64vh;
+    height: 22vh;
+    background-color: var(--main-color);
+    border-radius: 12px;
+    box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+}
+
+
+.box-texto-serProf{
+    width: 40vh;
+    height: 15vh;
+    margin-top: 4vh;
+    margin-left: 2vh;
+    /* background-color: green; */
+}
+
+
+
+.titulo-serProf{
+    font-size: 4vh;
+    color: #ffff;
+}
+
+
+.texto-serProf{
+    margin-top: 2vh;
+    font-size: 2.3vh;
+    color: #ffff;
+}
+
+
+.box-img-serProf{
+    display: flex;
+    align-items: center;
+    width: 6vh;
+    height: 22vh;
+    margin-left: 16vh;
+    /* background-color: blue; */
 }
