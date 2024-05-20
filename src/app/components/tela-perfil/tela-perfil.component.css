@@ -108,6 +108,7 @@
 .email-tel-cpf{
     display: flex;
     flex-direction: column;
+    font-size: 2vh;
     margin-top: 2vh;
     gap: 2vh;
 }
