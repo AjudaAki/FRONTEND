@@ -1,8 +1,8 @@
 <div class="conteudo">
     <div class="opcoes">
         <div class="box-voltar">  
-            <button type="button" class="voltar" (click)="routerLogin()">
-                <img class="img-arrow-back" src="../../../assets/images/arrow back.png">Voltar
+            <button type="button" class="btn_back" (click)="routerLogin()">
+                <img class="volta" src="../../../assets/images/arrow back.png">Voltar
             </button>
         </div>
     </div>
@@ -10,7 +10,7 @@
         <h1 class="text_principal">Seu perfil</h1>
     </div>
     <div class="box-infos">
-        <div class="dados-pessoais" *ngIf="currentStep === 1">
+        <div class="dados" *ngIf="currentStep === 1">
             <div class="inputs">
                 <div class="campos-pessoais">
                     <div class="camp-nome">   
@@ -43,16 +43,23 @@
                     </div>
                 </div> 
             
-                <div>
+                <div class="ld">
                     <h2 class="text_sub">Fale um pouco sobre você!</h2>
+                    <img src="../../../assets/images/ph_person.png">
                 </div>
             </div>
-            <div>
-                <button (click)="nextStep()">próximo</button>
+            <div class="inferior">
+                <button (click)="previousStep()"  class="back-step-1 text_medio">vc achou o segredo</button>
+                <div class="steps">
+                    <p class="step-c text_peq-w">1</p>
+                    <p class="step-n text_peq-w">2</p>
+                    <p class="step-n text_peq-w">3</p>
+                </div>
+                <button (click)="nextStep()" class="next-step text_medio">próximo</button>
             </div>
            
         </div>
-        <div class="dados-endereco" *ngIf="currentStep === 2">
+        <div class="dados" *ngIf="currentStep === 2">
             <div class="campos-endereco">
                 <div class="camp-estado">
                     <p>Estado</p>
@@ -78,9 +85,14 @@
             <div>
                 <h2 class="text_sub">Vamos mostrar os <br/> professores mais <br/>próximos de você</h2>
             </div>
-            <div>
-                <button (click)="previousStep()">voltar</button>
-                <button (click)="nextStep()">próximo</button>
+            <div class="inferior">
+                <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
+                <div class="steps">
+                    <p class="step-c text_peq-w">1</p>
+                    <p class="step-c text_peq-w">2</p>
+                    <p class="step-n text_peq-w">3</p>
+                </div>
+                <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
             </div>
         </div>
         <div class="dados-foto" *ngIf="currentStep === 3">

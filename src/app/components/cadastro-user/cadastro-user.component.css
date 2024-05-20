@@ -1,68 +1,21 @@
 .conteudo{
     display: flex;
     flex-direction: column;
-    margin: 0 ;
-    width: 100%;
+    margin: 0;
+    padding:0 120px;
+
     height: 100vh;
     background-color: var(--bg-color);
 }
 
-
 .opcoes{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
     height: 9vh;   
 }
 
-
-.box-voltar{
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
-    height: 50px;
-    width: 100px;
-    transition: background-color 0.3s ease;
-    transition: transform 0.3s ease;
+.volta{
+    height: 24px;
+    width: 24px;
 }
-
-
-.box-voltar:hover{
-    transform: scale(1.07);
-}
-
-
-.img-arrow-back{
-    height: 35px;
-    width: 90px;
-}
-
-
-.voltar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: none;
-    background-color: white;
-    font-size: 23px;
-    width: 90px;
-    height: 30px;
-}
-
-
-.box-h1{
-    width: 100%;
-    height: 20px;
-}
-
-
-.h1{
-    display: flex;
-    flex-direction: row;
-    margin-left: 100px;
-    margin-top: 20px;
-}
-
 
 .box-infos{
     display: flex;
@@ -71,13 +24,14 @@
 }
 
 
-.dados-pessoais{
+.dados{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     opacity: 1; 
+    gap: 4vh;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -104,6 +58,59 @@
     width: 70%;
 }
 
+
+.ld{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+}
+
+.steps-1{
+    display: flex;
+    gap: 55px;
+    padding-left: 10%;
+}
+.steps{
+    display: flex;
+    gap: 55px;
+}
+
+.step-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    border-radius: 40px;
+    width: 34px;
+    height: 34px;
+}
+.step-n{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-color);
+    border-radius: 40px;
+    width: 34px;
+    height: 34px;
+}
+
+.inferior{
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.back-step-1{
+    width: 247px;
+    height: 49px;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+}
 .dados-endereco{
     width: 300px;
     height: 500px;

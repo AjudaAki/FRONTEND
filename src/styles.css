@@ -48,6 +48,7 @@
     --main-color: #E80049;
     --blue-color: #3f74fa;
     --bg-color: #f1f1f1;
+    --gray-color: #75676C;
 }
 .cor-bg{
     background-color: var(--bg-color);
@@ -58,65 +59,82 @@
 
 /* /////////Fontes/////////// */
 .text_principal{
-    font-size: 58px;
+    font-size: 5.37vh;
     font-family: "Montserrat", sans-serif;
     font-weight: 100;
 }
 .text_sub{
-    font-size: 48px;
+    font-size: 4.44vh;
     font-family: "Montserrat", sans-serif;
     font-weight: 80;
 }
 .text_modal{
-    font-size: 40px;
+    font-size: 3.70vh;
     font-family: "PT Sans", sans-serif;
     font-weight: lighter;
 }
 .text_medio{
-    font-size: 24px;
+    font-size: 2.22vh;
     font-family: "PT Sans", sans-serif;
 }
 .text_aviso{
-    font-size: 20px;
+    font-size: 1.85vh;
     font-family: "PT Sans", sans-serif;
 }
 .text_peq{
-    font-size: 16px;
+    font-size: 1.48vh;
     font-family: "PT Sans", sans-serif;
-    
 }
 
 .text_principal-w{
-    font-size: 58px;
+    font-size: 5.37vh;
     font-family: "PT Mono", monospace;
     color: white;
 }
 .text_sub-w{
-    font-size: 48px;
+    font-size: 4.44vh;
     font-family: "PT Mono", monospace;
     color: white;
 }
 .text_modal-w{
-    font-size: 40px;
+    font-size: 3.70vh;
     font-family: "PT Sans", sans-serif;
     color: white;
 }
 .text_medio-w{
-    font-size: 24px;
+    font-size: 2.22vh;
     font-family: "PT Sans", sans-serif;
     color: white;
 }
 .text_aviso-w{
-    font-size: 20px;
+    font-size: 1.85vh;
     font-family: "PT Sans", sans-serif;
     color: white;
 }
 .text_peq-w{
-    font-size: 16px;
+    font-size: 1.48vh;
     font-family: "PT Sans", sans-serif;
     color: white;
 }
+
 /* /////////Buttons/////////// */
+.btn_back{
+    padding-top: 4px;
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    font-size: 20px;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    width: 100px;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+.btn_back:hover{
+    transform: scale(1.07);
+}
+
 .btn_rosa{
     width: 247px;
     height: 49px;
@@ -201,6 +219,36 @@
     background-color: #3b3b3b;
     transform: scale(1.04);
 
+}
+
+.next-step{
+    width: 247px;
+    height: 49px;
+    border: none;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 4px 4px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+.next-step:hover{
+    box-shadow: none;
+    background-color: #c7c7c7;
+    transform: scale(0.9);
+}
+
+.back-step{
+    width: 247px;
+    height: 49px;
+    border: none;
+    background-color: rgb(211, 211, 211);
+    border-radius: 8px;
+    box-shadow: 4px 4px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+.back-step:hover{
+    box-shadow: none;
+    background-color: #c7c7c7;
+    transform: scale(0.9);
 }
 
 /* /////////imagens/////////// */
