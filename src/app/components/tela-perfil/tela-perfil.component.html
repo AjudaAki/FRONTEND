@@ -4,7 +4,7 @@
     </div>
     <div class="box-perfil">
         <div class="box-titulo-perfil">
-            <h1 class="texto-perfil">Perfil</h1>
+            <h1 class="texto-perfil text_principal">Perfil</h1>
             <img class="img-teste" src="../../../assets//images/imagem teste icone.jpeg">
         </div>
         <div class="box-info-perfil">
@@ -14,35 +14,35 @@
                 </div>
                 <div class="box-nome-email-tel">
                     <div class="nome-nascimento">
-                        <p class="nome">Felipe Cavalcante</p>
-                        <p class="nascimento">11/01/2005</p>
+                        <p class="nome text_principal">Felipe Cavalcante</p>
+                        <p class="nascimento text_peq">11/01/2005</p>
                     </div>
                     <div class="linha-divisoria"></div>
                     <div class="email-tel-cpf">
                         <div class="email text_peq">emailTeste123@gmail.com</div>
-                        <div class="telefone">(XX)XXXXX-XXXX</div>
-                        <div class="cpf">XXX-XXX-XXX-XX</div>
+                        <div class="telefone text_peq">(XX)XXXXX-XXXX</div>
+                        <div class="cpf text_peq">XXX-XXX-XXX-XX</div>
                     </div>
                 </div>
                 <div class="box-cargo">
-                    <h2 class="texto-cargo">Aluno</h2>
+                    <h2 class="texto-cargo text_sub">Aluno</h2>
                 </div>
             </div>
             <div class="box-infos-secundarias">
                 <div class="infos-secundarias">
-                    <div class="box-endereco-info">
+                    <div class="box-endereco-info text_medio">
                         <p>Estado:</p>
                         <p>SP</p>
                     </div>
-                    <div class="box-endereco-info">
+                    <div class="box-endereco-info text_medio">
                         <p>Cidade:</p>
                         <p>Marilia</p>
                     </div>
-                    <div class="box-endereco-info">
+                    <div class="box-endereco-info text_medio">
                         <p>Bairro:</p>
                         <p>Santa Antonieta</p>
                     </div>
-                    <div class="box-endereco-info">
+                    <div class="box-endereco-info text_medio">
                         <p>Número:</p>
                         <p>1125</p>
                     </div>
@@ -54,18 +54,18 @@
                         <img class="img-fav" src="../../../assets//images/imagem teste icone.jpeg">
                     </div>
                     <div class="box-prof-fav">
-                        <p class="texto-fav">Você favoritou</p>
-                        <p class="numero-fav">12</p>
-                        <p class="texto-fav">Professores</p>
+                        <p class="texto-fav text_medio">Você favoritou</p>
+                        <p class="numero-fav text_sub">12</p>
+                        <p class="texto-fav text_medio">Professores</p>
                     </div>
                 </div>
                 <div class="box-prof-serProf">
                     <div class="box-ser-prof" *ngIf="role === 0">
                         <div class="box-texto-serProf">
-                            <div class="titulo-serProf">
+                            <div class="titulo-serProf text_sub">
                                 <p>Que tal ser professor?</p>
                             </div>
-                            <div class="texto-serProf">
+                            <div class="texto-serProf text_peq">
                                 <p>É prático e rápido, você monta seu <br> perfil e ensina outras pessoas!</p>
                             </div>
                         </div>
@@ -76,9 +76,9 @@
                     <div class="box-prof-precos" *ngIf="role === 1">
                         <div class="box-precos">
                             <div class="preco">
-                                <p class="numero-preco">R$ 50,00</p>
-                                <p class="numero-preco">R$ 150,00</p>
-                                <p class="texto-faixa-preco">Faixa de preços por hora aula</p>
+                                <p class="numero-preco text_medio">R$ 50,00</p>
+                                <p class="numero-preco text_medio">R$ 150,00</p>
+                                <p class="texto-faixa-preco text_peq">Faixa de preços por hora aula</p>
                             </div>
                         </div>
                         <div class="box-logo">
@@ -91,50 +91,59 @@
                 <div class="box-contatos-descricoes">
                     <div class="box-contatos">
                         <div class="box-whats">
-                            <p>whatsapp</p>
+                            <div class="box-icone">
+                                <img class="img-contato" src="../../../assets//images/svg-images/whats-icon.svg">
+                            </div>
+                            <p class="nome-contato text_medio">Whatsapp</p>
                         </div>
                         <div class="box-discord">
-                            <p>discord</p>
+                            <div class="box-icone">
+                                <img class="img-contato" src="../../../assets//images/svg-images/discord-icon.svg">
+                            </div>
+                            <p class="nome-contato text_medio">Discord</p>
                         </div>
                         <div class="box-teams">
-                            <p>teams</p>
+                            <div class="box-icone">
+                                <img class="img-contato" src="../../../assets//images/svg-images/teams-icon.svg">
+                            </div>
+                            <p class="nome-contato text_medio">Teams</p>
                         </div>
                     </div>
                     <div class="box-descricoes">
-                        <div class="box-descri-rapida">
-                            <p>descrição legal do perfil</p>
+                        <div class="box-descri-rapida text_peq">
+                            <p class="texto-descricao">descrição legal do perfil</p>
                         </div>
-                        <div class="box-descri-longa">
-                            <P>descrição legal muito longa do perfil, bão dimais</P>
+                        <div class="box-descri-longa text_peq">
+                            <p class="texto-descricao">descrição legal muito longa do perfil, bão dimais</p>
                         </div>
                     </div>
                 </div>
                 <div class="box-semana">
-                    <div class="box-dia-semana">
+                    <div class="box-dia-semana text_medio">
                         <p>Segunda</p>
                         <p>10:00-20:00</p>
                     </div>
-                    <div class="box-dia-semana">
+                    <div class="box-dia-semana text_medio">
                         <p>Terça</p>
                         <p>10:00-20:00</p>
                     </div>
-                    <div class="box-dia-semana">
+                    <div class="box-dia-semana text_medio">
                         <p>Quarta</p>
                         <p>10:00-20:00</p>
                     </div>
-                    <div class="box-dia-semana">
+                    <div class="box-dia-semana text_medio">
                         <p>Quinta</p>
                         <p>10:00-20:00</p>
                     </div>
-                    <div class="box-dia-semana">
+                    <div class="box-dia-semana text_medio">
                         <p>Sexta</p>
                         <p>10:00-20:00</p>
                     </div>
-                    <div class="box-dia-semana">
+                    <div class="box-dia-semana text_medio">
                         <p>Sabado</p>
                         <p>10:00-20:00</p>
                     </div>
-                    <div class="box-dia-semana">
+                    <div class="box-dia-semana text_medio">
                         <p>Domingo</p>
                         <p>10:00-20:00</p>
                     </div>
