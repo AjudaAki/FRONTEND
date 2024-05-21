@@ -29,7 +29,8 @@
 .nada:hover{
     box-shadow: none;
     background-color: #c7c7c7;
-    transform: scale(0.9);
+    
+    transform: scale(0.96);
 }
 /* /////////Conteúdo///////// */
 .content{
@@ -63,6 +64,7 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 100;
 }
+
 .text_sub{
     font-size: 4.44vh;
     font-family: "Montserrat", sans-serif;
@@ -132,6 +134,7 @@
     transition: transform 0.3s ease;
 }
 .btn_back:hover{
+    color: var(--main-color);
     transform: scale(1.07);
 }
 
@@ -149,7 +152,7 @@
 }
 .btn_rosa:hover{
     background-color: #c0033f;
-    transform: scale(0.95);
+    transform: scale(0.96);
 }
 
 .btn_branco{
@@ -160,14 +163,14 @@
     color: var(--main-color);
     text-align: center;
     border: none;
-    transition: transform 0.6s ease;
+    transition: transform 0.2s ease;
     border: 1px solid var(--main-color);
 
 }
 .btn_branco:hover{
     background-color: var(--main-color);
     color: var(--bg-color);
-    transform: scale(0.95);
+    transform: scale(0.96);
 
 }
 .btn_branco-w{
@@ -184,7 +187,7 @@
 }
 .btn_branco-w:hover{
     background-color: #d3d3d3;
-    transform: scale(0.95);
+    transform: scale(0.96);
 
 }
 
@@ -192,16 +195,19 @@
     width: 247px;
     height: 49px;
     border-radius: 8px;
-    color: white;
+    color: var(--blue-color);
+    background-color: none;
     text-align: center;
     border: none;
-    background-color: var(--blue-color);
-    transition: transform 0.6s ease;
+    border: 1px solid var(--blue-color);
+    transition: transform 0.2s ease;
 
 }
 .btn_azul:hover{
-    background-color: #365dc0;
-    transform: scale(1.04);
+    background-color: var(--blue-color);
+    color: white;
+    border: none;
+    transform: scale(.96);
 }
 
 .btn_cinza{
