@@ -336,7 +336,7 @@
 
 .box-infos-prof{
     width: 110vh;
-    height: 100vh;
+    height: 70vh;
     /* background-color: purple; */
 }
 
@@ -357,6 +357,13 @@
 }
 
 
+.nome-contato{
+    margin-left: 1vh;
+    margin-top: 1vh;
+    color: white;
+}
+
+
 .box-whats{
     width: 100%;
     height: 10vh;
@@ -369,16 +376,36 @@
 .box-discord{
     width: 100%;
     height: 10vh;
-    background-color: rgb(53, 25, 177);
+    background-color: rgb(56, 83, 201);
     border-radius: 12px;
     box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+    
+}
+
+
+.box-icone{
+    display: flex;
+    width: 5vh;
+    height: 5vh;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vh;
+    margin-left: 1.2vh;
+    border-radius: 10vh;
+}
+
+
+.img-discord{
+    width: 4vh;
+    height: 3vh;
 }
 
 
 .box-teams{
     width: 100%;
     height: 10vh;
-    background-color: rgb(77, 104, 223);
+    background-color: rgb(64, 34, 197);
     border-radius: 12px;
     box-shadow: 1vh 1vh rgba(0,0,0,0.03);
 }
@@ -420,7 +447,7 @@
     display: flex;
     width: 100%;
     height: 18vh;
-    margin-top: 3vh;
+    margin-top: 5vh;
     /* background-color: red; */
     justify-content: space-between;
     
@@ -439,3 +466,5 @@
     border-radius: 2vh;
     background-color: var(--main-color);
 }
+
+
