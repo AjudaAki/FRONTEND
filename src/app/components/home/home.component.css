@@ -1,4 +1,4 @@
-.tela{
+.tela {
     display: flex;
     flex-direction: column;
     background-color: var(--main-color);
@@ -6,60 +6,90 @@
     align-items: center;
     height: 100vh;
 }
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px 0 40px;
-    width: 1326px;
+    padding: 1vh 4.39vh 0 4.39vh;
+    width: 145.55vh;
     border-radius: 16px 16px 0 0 ;
     box-shadow: 12px 20px rgba(0,0,0,0.4);
 }
-.title{
+
+.title {
     display: flex;
     align-items: center;
 }
-.login{
+
+.login {
     display: flex;
     align-items: center;
     gap: 40px;
 }
-.textos{
+
+.textos {
     display: flex;
     width: 343px;
     justify-content: space-between;
 }
-.card-inicio{
-    display: flex;
-    gap: 80px;
-    justify-content:space-between;
-    width: 1326px;
-    padding: 84px 40px 160px 40px;
-    border-radius: 0 0 16px 16px;
-    box-shadow: 12px 20px rgba(0,0,0,0.4);
+
+.card-inicio {
+
 }
-.le{
+
+.le {
     display: flex;
     align-items: center;
 }
-.ld{
+
+.ld {
     display: flex;
     flex-direction: column;
-    max-width: 520px;
-    height: 466px;
+    max-width: 57.08vh;
+    height: 48.95vh;
     justify-content: center;
     align-items: center;
     gap: 50%;
+   
 }
-.btn-step{
+
+.btn-step {
     display: flex;
     height: 100%;
     align-items: center;
-    
+    cursor: pointer;
 }
-.img-st{
+
+.img-st {
     height: 40px;
     width: 40px;
 }
 
+.carousel {
+    position: relative;
+    width: 145.55vh;
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    padding: 0 4.39vh 0 4.39vh;
+    box-shadow: 12px 20px rgba(0,0,0,0.4);
+
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    display: flex;
+    gap: 80px;
+    min-width: 100%;
+    justify-content:space-between;
+    width:  145.55vh;
+    padding: 84px 60px 80px 60px;
+    box-sizing: border-box;
+
+}
 
