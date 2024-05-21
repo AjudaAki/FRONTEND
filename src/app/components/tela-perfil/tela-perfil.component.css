@@ -2,6 +2,18 @@
     display: flex;
     flex-direction: row;
     background-color: #f1f1f1;
+    height: 100%;
+    
+}
+
+
+.navbar{
+    position: fixed;
+}
+
+
+.box-perfil{
+    margin-left: 30vh;
 }
 
 
@@ -99,7 +111,7 @@
 
 
 .linha-divisoria{
-    height: 1px;
+    height: 0.2vh;
     width: 43vh;
     margin-top: 2vh;
     background-color: var(--main-color);
@@ -247,7 +259,6 @@
 }
 
 
-
 .titulo-serProf{
     font-size: 4vh;
     color: #ffff;
@@ -268,4 +279,163 @@
     height: 22vh;
     margin-left: 16vh;
     /* background-color: blue; */
+}
+
+
+.box-prof-precos{
+    display: flex;
+    width: 64vh;
+    height: 22vh;
+    background-color: #ffff;
+    border-radius: 12px;
+    box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+    
+}
+
+
+.box-precos{
+    display: flex;
+    flex-direction: column;
+    width: 30vh;
+    height: 22vh;
+    /* background-color: green; */
+    gap: 1vh;
+}
+
+
+.preco{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vh;
+    margin-top: 3vh;
+    gap: 2vh;
+}
+
+
+.numero-preco{
+    font-size: 4vh;
+}
+
+
+.texto-faixa-preco{
+    font-size: 2vh;
+}   
+
+
+.box-logo{
+    display: flex;
+    width: 12vh;
+    height: 22vh;
+    margin-left: 22vh;
+    align-items: center;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: var(--main-color);
+}
+
+
+.box-infos-prof{
+    width: 110vh;
+    height: 100vh;
+    /* background-color: purple; */
+}
+
+
+.box-contatos-descricoes{
+    display: flex;
+    gap: 2vh;
+}
+
+
+.box-contatos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44vh;
+    height: 46vh;
+    /* background-color: blue; */
+}
+
+
+.box-whats{
+    width: 100%;
+    height: 10vh;
+    /* background-color: green; */
+    background-color: #1bc900;
+    border-radius: 12px;
+}
+
+
+.box-discord{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(53, 25, 177);
+    border-radius: 12px;
+    box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+}
+
+
+.box-teams{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(77, 104, 223);
+    border-radius: 12px;
+    box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+}
+
+
+
+
+.box-descricoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 64vh;
+    height: 46vh;
+    /* background-color: red; */
+}
+
+
+.box-descri-rapida{
+    width: 100%;
+    height: 14vh;
+    background-color: black;
+    background-color: #ffff;
+    border-radius: 12px;
+    box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+}
+
+
+.box-descri-longa{
+    width: 100%;
+    height: 30vh;
+    background-color: grey;
+    background-color: #ffff;
+    border-radius: 12px;
+    box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+}
+
+
+.box-semana{
+    display: flex;
+    width: 100%;
+    height: 18vh;
+    margin-top: 3vh;
+    /* background-color: red; */
+    justify-content: space-between;
+    
+}
+
+
+.box-dia-semana{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    width: 15vh;
+    height: 10vh;
+    color: white;
+    border-radius: 2vh;
+    background-color: var(--main-color);
 }

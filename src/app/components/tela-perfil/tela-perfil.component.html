@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="box-prof-serProf">
-                    <div class="box-ser-prof">
+                    <div class="box-ser-prof" *ngIf="role === 0">
                         <div class="box-texto-serProf">
                             <div class="titulo-serProf">
                                 <p>Que tal ser professor?</p>
@@ -73,6 +73,71 @@
                             <img class="img-teste" src="../../../assets//images/imagem teste icone.jpeg">
                         </div>
                     </div> 
+                    <div class="box-prof-precos" *ngIf="role === 1">
+                        <div class="box-precos">
+                            <div class="preco">
+                                <p class="numero-preco">R$ 50,00</p>
+                                <p class="numero-preco">R$ 150,00</p>
+                                <p class="texto-faixa-preco">Faixa de preços por hora aula</p>
+                            </div>
+                        </div>
+                        <div class="box-logo">
+                            <img class="img-teste" src="../../../assets//images/imagem teste icone.jpeg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-infos-prof" *ngIf="role === 1">
+                <div class="box-contatos-descricoes">
+                    <div class="box-contatos">
+                        <div class="box-whats">
+                            <p>whatsapp</p>
+                        </div>
+                        <div class="box-discord">
+                            <p>discord</p>
+                        </div>
+                        <div class="box-teams">
+                            <p>teams</p>
+                        </div>
+                    </div>
+                    <div class="box-descricoes">
+                        <div class="box-descri-rapida">
+                            <p>descrição legal do perfil</p>
+                        </div>
+                        <div class="box-descri-longa">
+                            <P>descrição legal muito longa do perfil, bão dimais</P>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-semana">
+                    <div class="box-dia-semana">
+                        <p>Segunda</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                    <div class="box-dia-semana">
+                        <p>Terça</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                    <div class="box-dia-semana">
+                        <p>Quarta</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                    <div class="box-dia-semana">
+                        <p>Quinta</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                    <div class="box-dia-semana">
+                        <p>Sexta</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                    <div class="box-dia-semana">
+                        <p>Sabado</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                    <div class="box-dia-semana">
+                        <p>Domingo</p>
+                        <p>10:00-20:00</p>
+                    </div>
                 </div>
             </div>
         </div>
