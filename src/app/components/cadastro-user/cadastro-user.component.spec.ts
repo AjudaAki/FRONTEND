@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CadastroUserComponent } from './cadastro-user.component';
 
+
+
 describe('CadastroUserComponent', () => {
   let component: CadastroUserComponent;
   let fixture: ComponentFixture<CadastroUserComponent>;
@@ -19,4 +21,6 @@ describe('CadastroUserComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
 

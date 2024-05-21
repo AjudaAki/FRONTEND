@@ -10,7 +10,7 @@
         <h1 class="text_principal">Seu perfil</h1>
     </div>
     <div class="box-infos">
-        <div class="dados" *ngIf="currentStep === 3">
+        <div class="dados" *ngIf="currentStep === 1">
             <div class="inputs">
                 <div class="campos-pessoais">
                     <div class="camp-nome">   
@@ -31,7 +31,7 @@
                     </div>
                     <div class="camp-tel">
                         <p class="text_peq">Telefone</p>
-                        <input type="text" class="c" placeholder="Telefone (apenas números)"/>
+                        <input type="text" class="input-g" placeholder="Telefone (apenas números)"/>
                     </div>
                     <div class="camp-cpf">
                         <p class="text_peq">CPF</p>
@@ -99,11 +99,32 @@
                 <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
             </div>
         </div>
-        <div class="dados-foto" *ngIf="currentStep === 1">
-            <img class="img-mais" src="../../../assets/images/add_.png">
-            <div>
-                <button (click)="previousStep()">voltar</button>
-                <button (click)="nextStep()">próximo</button>
+        <!-- Terceiro step -->
+        <div class="dados" *ngIf="currentStep === 3">
+            <div class="inputs">
+                <div class="campos-pessoais">
+                    <div class="input-img">
+                        <label for="imageInput" class="botao-img">
+                            <i><img src="../../../assets/images/Plus symbol button.png"></i> 
+                        </label>
+                        <input type="file" accept="image/*" id="imageInput" style="display: none">
+                        <img id="imagePreview" src="" alt="Visualização da Imagem">
+                    </div>
+                </div>
+                <div class="ld">
+                    <h2 class="text_sub">Mostre um pouquinho <br/>de você</h2>
+                    <img src="../../../assets\images\material-symbols-light_ar-on-you-outline.png">
+                </div>
+            </div>
+            
+            <div class="inferior">
+                <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
+                <div class="steps">
+                    <p class="step-c text_peq-w">1</p>
+                    <p class="step-c text_peq-w">2</p>
+                    <p class="step-c text_peq-w">3</p>
+                </div>
+                <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
             </div>
         </div>
 

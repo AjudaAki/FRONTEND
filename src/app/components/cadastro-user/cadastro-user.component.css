@@ -120,8 +120,17 @@
     border-radius: 13px;
 }
 
-
-
+.input-img{
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 43.46vh;
+    height: 43.46vh;
+    border: 0.3vh black dashed;
+    border-radius: 8px;
+}
 
 .campos-endereco{
     display: flex;

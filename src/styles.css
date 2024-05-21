@@ -233,22 +233,22 @@
 .next-step:hover{
     box-shadow: none;
     background-color: #c7c7c7;
-    transform: scale(0.9);
+    transform: scale(0.96);
 }
 
 .back-step{
     width: 247px;
     height: 49px;
     border: none;
-    background-color: rgb(211, 211, 211);
+    background-color: var(--bg-color);
     border-radius: 8px;
     box-shadow: 4px 4px rgba(0,0,0,0.2);
     transition: transform 0.2s ease;
 }
 .back-step:hover{
     box-shadow: none;
-    background-color: #c7c7c7;
-    transform: scale(0.9);
+    background-color: #d6d6d6;
+    transform: scale(0.96);
 }
 
 /* /////////imagens/////////// */
