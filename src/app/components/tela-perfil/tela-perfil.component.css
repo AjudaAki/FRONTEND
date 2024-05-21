@@ -56,7 +56,7 @@
     width: 110vh;
     height: 32vh;
     background-color: #ffff;
-    border-radius: 12px;
+    border-radius: 1.6vh;
     /* margin-left: 28vh; */
     margin-top: 5vh;
     box-shadow: 1vh 1vh rgba(0,0,0,0.03);
@@ -148,7 +148,7 @@
     height: 14vh;
     /* margin-left: 28vh; */
     background-color: #ffff;
-    border-radius: 12px;
+    border-radius: 1.6vh;
     box-shadow: 1vh 1vh rgba(0,0,0,0.03);
 }
 
@@ -165,8 +165,9 @@
     flex-direction: column;
     justify-content: center;
     gap: 6vh;
-    width: 14vh;
+    width: 18vh;
     height: 14vh;
+    
     /* background-color: purple; */
 }
 
@@ -188,7 +189,7 @@
     height: 22vh;
     /* background-color: blue; */
     background-color: #ffff;
-    border-radius: 12px;
+    border-radius: 1.6vh;
     box-shadow: 1vh 1vh rgba(0,0,0,0.03);
     gap: 2vh
 }
@@ -245,7 +246,7 @@
     width: 64vh;
     height: 22vh;
     background-color: var(--main-color);
-    border-radius: 12px;
+    border-radius: 1.6vh;
     box-shadow: 1vh 1vh rgba(0,0,0,0.03);
 }
 
@@ -287,7 +288,7 @@
     width: 64vh;
     height: 22vh;
     background-color: #ffff;
-    border-radius: 12px;
+    border-radius: 1.6vh;
     box-shadow: 1vh 1vh rgba(0,0,0,0.03);
     
 }
@@ -328,8 +329,8 @@
     height: 22vh;
     margin-left: 22vh;
     align-items: center;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-top-right-radius: 1.6vh;
+    border-bottom-right-radius: 1.6vh;
     background-color: var(--main-color);
 }
 
@@ -369,7 +370,7 @@
     height: 10vh;
     /* background-color: green; */
     background-color: #1bc900;
-    border-radius: 12px;
+    border-radius: 1.6vh;
 }
 
 
@@ -377,7 +378,7 @@
     width: 100%;
     height: 10vh;
     background-color: rgb(56, 83, 201);
-    border-radius: 12px;
+    border-radius: 1.6vh;
     box-shadow: 1vh 1vh rgba(0,0,0,0.03);
     
 }
@@ -396,7 +397,7 @@
 }
 
 
-.img-discord{
+.img-contato{
     width: 4vh;
     height: 3vh;
 }
@@ -406,7 +407,7 @@
     width: 100%;
     height: 10vh;
     background-color: rgb(64, 34, 197);
-    border-radius: 12px;
+    border-radius: 1.6vh;
     box-shadow: 1vh 1vh rgba(0,0,0,0.03);
 }
 
@@ -426,9 +427,8 @@
 .box-descri-rapida{
     width: 100%;
     height: 14vh;
-    background-color: black;
     background-color: #ffff;
-    border-radius: 12px;
+    border-radius: 1.6vh;
     box-shadow: 1vh 1vh rgba(0,0,0,0.03);
 }
 
@@ -436,10 +436,15 @@
 .box-descri-longa{
     width: 100%;
     height: 30vh;
-    background-color: grey;
     background-color: #ffff;
-    border-radius: 12px;
+    border-radius: 1.6vh;
     box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+}
+
+
+.texto-descricao{
+    margin-top: 1.5vh;
+    margin-left: 1.5vh;
 }
 
 
