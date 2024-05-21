@@ -5,7 +5,7 @@
 /* /////////Scroll bar///////// */
 
 ::-webkit-scrollbar {
-    width: 16px; /* Largura da barra de rolagem */
+    width: 2.1vh; /* Largura da barra de rolagem */
     background-color: #f1f1f1;
     
     
