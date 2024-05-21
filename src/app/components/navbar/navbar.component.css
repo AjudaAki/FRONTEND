@@ -15,6 +15,7 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 12vh;
+    margin-left: 1vh;
     gap: 2vh
 }
 
@@ -25,7 +26,7 @@
     width: 6vh;
     height: 6vh;
     justify-content: center;
-    margin-right: 10px;
+    margin-right: 1.3vh;
 }
 
 /* botao prof */
@@ -38,7 +39,7 @@
 .botao-prof{
     display: flex;
     flex-direction: row;
-    width: 30vh;
+    width: 28vh;
     height: 6vh;
     background-color: var(--main-color);
     border: none;
@@ -71,7 +72,7 @@
 .botao-fav{
     display: flex;
     flex-direction: row;
-    width: 30vh;
+    width: 28vh;
     height: 6vh;
     background-color: var(--main-color);
     border: none;
@@ -106,7 +107,7 @@
 .botao-perfil{
     display: flex;
     flex-direction: row;
-    width: 30vh;
+    width: 28vh;
     height: 6vh;
     background-color: var(--main-color);
     border: none;
@@ -155,6 +156,7 @@
     align-items: center;
     height: 6vh;
     width: 20vh;
+    margin-left: 10vh;
 }
 
 
