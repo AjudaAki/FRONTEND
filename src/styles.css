@@ -50,6 +50,7 @@
     --blue-color: #3f74fa;
     --bg-color: #f1f1f1;
     --gray-color: #75676C;
+   
 }
 .cor-bg{
     background-color: var(--bg-color);
