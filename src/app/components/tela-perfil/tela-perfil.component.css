@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     background-color: #f1f1f1;
-    height: 100vh;
+    height: 100%;
     
 }
 
@@ -48,19 +48,7 @@
     justify-content: center;
     margin-right: 10px;
 }
-.gradiente{
-    position: absolute;
-    top: 12%;
-    left: 27%;
-    width: 52.5%;
-    height: 80%;
-    background-image: 
-    linear-gradient(to bottom,  #f1f1f1, #f1f1f11e ),
-    linear-gradient(to top,  #f1f1f1, #f1f1f11e );
-    background-size: 100% 3%; /* Define o tamanho dos gradientes */
-    background-position: top, bottom; /* Posiciona os gradientes */
-    background-repeat: no-repeat;
-}
+
 
 .box-info-perfil{
     display: flex;
@@ -68,8 +56,8 @@
     margin-left: 27vh;
     padding-right: 1vh;
     gap: 2vh;
-    max-height: 80%;
-    overflow-y: scroll;
+    /* max-height: 80%;
+    overflow-y: scroll; */
 
 }
 
