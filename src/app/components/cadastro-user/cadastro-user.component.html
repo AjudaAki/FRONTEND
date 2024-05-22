@@ -114,46 +114,61 @@
         <div class="campos-prof" *ngIf="currentStep === 5">
             <div class="box-discricoes">
                 <div class="box-descri-rapida">
-                    <h2>Descrição rápida</h2>
+                    <h2 class="descricao-rapida">Descrição rápida</h2>
                     <input type="text" class="input-descr" placeholder="">
-                    <p class="p">Fale um pouco sobre suas aulas, qual seu foco, métodos...</p>
+                    <p class="p-descri-rapida">Fale um pouco sobre suas aulas, qual seu foco, métodos...</p>
                 </div>
                 <div class="box-descri-longa">
                     <div class="box-input-descrLonga">
-                        <h2 class="h2-descri">Descrição</h2>
+                        <h2 class="descricao-longa">Descrição</h2>
                         <input type="text" class="input-descrLonga" placeholder="">
-                        <p class="p">Fale um pouco sobre suas aulas, qual seu foco, métodos</p>
+                        <p class="p-descri-longa">Fale um pouco sobre suas aulas, qual seu foco, métodos</p>
+                    </div>
+                    <br><br>
+                    <div class="baixo">
+                        <div class="box-area-precos">
+                            <div class="box-area">
+                                <h2 class="descricao-area">Área de atuação</h2>
+                                <div class="area">
+                                    <select class="input-area"> 
+                                        <option value="valor0">Escolha a área</option>
+                                        <option value="valor1">Front-End</option>
+                                        <option value="valor2">Back-End</option>
+                                        <option value="valor3">Full-Stack</option>
+                                        <option value="valor4">UI/UX</option>
+                                    </select>
+                                    <p class="p-descri-area">Selecione a área que você ensina</p>
+                                </div>
+                                
+                            </div>
+            
+                            <div class="box-precos">
+                                <h2 class="descricao-preco">Faixa de preço hora/aula</h2>
+                                <div class="precos">
+                                    <input type="text" class="input-preco1" placeholder="">
+                                    <p>até</p>
+                                    <input type="text" class="input-preco2" placeholder="">
+                                    
+                                </div>
+                                <p>Defina um preço da sua hora aula</p> 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="box-area-precos">
-                <div class="box-area">
-                    <h2 div="h2-area">Qual sua area ?</h2>
-                    <div class="area">
-                        <input type="text" class="input-area" placeholder="">
-                    </div>
+            
+            <div class="texto_descricao">
+                <h2>Essas <br> informações irão aparecer <br> em seu perfil</h2>
+                <br>
+                <div class="imagem">
+                    <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png">
                 </div>
-
-                <div class="box-precos">
-                    <h2 class="h2-preco">Qual a faixa de preço hora/aula ?</h2>
-                    <div class="precos">
-                        <input type="text" class="input-preco1" placeholder="">
-                        <p>até</p>
-                        <input type="text" class="input-preco2" placeholder="">
-                    </div>
+                <div class="botao">
+                    <button (click)="routerLogin()" class="btn-prox-login">Próximo</button>
                 </div>
-                <div class="box-contatos">
-                    <div class="box-titleInput">
-                        <p class="title-contatoHorario">Contatos</p>
-                        <input type="text" class="input-contato">
-                    </div>
-                </div>
-            </div>
-            <div>
-                <button (click)="previousStep()">voltar</button>
-                <button (click)="routerLogin()">finalizar</button>
-            </div>
+            </div>    
+            
         </div>
-        
     </div>
+    
 </div>
