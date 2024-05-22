@@ -49,10 +49,7 @@
     max-width: 57.08vh;
     height: 48.95vh;
     justify-content: space-between;
-    align-items: center;
-  
-    
-   
+    align-items: center;  
 }
 
 .btn-step {
@@ -89,7 +86,7 @@
     min-width: 100%;
     justify-content:space-between;
     width:  145.55vh;
-    padding: 84px 60px 80px 60px;
+    padding: 8.4vh 6vh 8vh 6vh;
     box-sizing: border-box;
 
 }
