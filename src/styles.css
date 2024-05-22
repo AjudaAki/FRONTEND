@@ -5,15 +5,16 @@
 /* /////////Scroll bar///////// */
 
 ::-webkit-scrollbar {
-    width: 2.1vh; /* Largura da barra de rolagem */
+    width: 2vh; /* Largura da barra de rolagem */
     background-color: #f1f1f1;
-    
-    
+    padding:0 100p
+
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #E80049; /* Cor do polegar da barra de rolagem */
     border-radius: -5px; /* Raio de borda do polegar da barra de rolagem */
+    border-radius: 2vh;
     
     
 }
@@ -276,8 +277,8 @@
     border-radius: 120px;
 }
 .img-logo{
-    width: 80px;
-    height: 80px;
+    width: 8.78vh;
+    height: 8.78vh;
     border-radius: 8px;
 }
 
