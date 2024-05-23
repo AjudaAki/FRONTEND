@@ -20,6 +20,7 @@
 .title {
     display: flex;
     align-items: center;
+    gap: 3vh;
 }
 
 
@@ -34,7 +35,26 @@
     width: 343px;
     justify-content: space-between;
 }
-
+.textos a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black; /* Cor padrão */
+  }
+  
+  .textos a.active {
+    color: var(--main-color); /* Cor quando ativo */
+  }
+.textos a.active:hover {
+    border-bottom:0.05vh solid var(--main-color);
+}
+.border{
+    border-bottom: 0.05vh solid transparent;
+    transition: transform 0.2s ease;
+} 
+.border:hover{
+    border-bottom:0.05vh solid;
+    transform: scale(1.06);
+}
 .le {
     display: flex;
     align-items: center;

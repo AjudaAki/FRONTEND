@@ -16,4 +16,7 @@ export class HomeComponent {
   prevSlide() {
     this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
   }
+  setSlide(slideIndex: number) {
+    this.currentSlide = slideIndex;
+  }
 }
