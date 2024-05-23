@@ -1,8 +1,8 @@
 <div class="conteudo">
     <div class="opcoes">
         <div class="box-voltar">  
-            <button type="button" class="voltar" (click)="routerLogin()">
-                <img class="img-arrow-back" src="../../../assets/images/arrow back.png">Voltar
+            <button type="button" class="btn_back" (click)="routerLogin()">
+                <img class="volta" src="../../../assets/images/arrow back.png">Voltar
             </button>
         </div>
     </div>
@@ -10,7 +10,7 @@
         <h1 class="text_principal">Seu perfil</h1>
     </div>
     <div class="box-infos">
-        <div class="dados-pessoais" *ngIf="currentStep === 1">
+        <div class="dados" *ngIf="currentStep === 1">
             <div class="inputs">
                 <div class="campos-pessoais">
                     <div class="camp-nome">   
@@ -43,72 +43,119 @@
                     </div>
                 </div> 
             
-                <div>
+                <div class="ld">
                     <h2 class="text_sub">Fale um pouco sobre você!</h2>
+                    <img src="../../../assets/images/ph_person.png">
                 </div>
             </div>
-            <div>
-                <button (click)="nextStep()">próximo</button>
+            <div class="inferior">
+                <button (click)="previousStep()"  class="back-step-1 text_medio">vc achou o segredo</button>
+                <div class="steps">
+                    <p class="step-c text_peq-w">1</p>
+                    <p class="step-n text_peq-w">2</p>
+                    <p class="step-n text_peq-w">3</p>
+                </div>
+                <button (click)="nextStep()" class="next-step text_medio">próximo</button>
             </div>
            
         </div>
-        <div class="dados-endereco" *ngIf="currentStep === 2">
-            <div class="campos-endereco">
-                <div class="camp-estado">
-                    <p>Estado</p>
-                    <input type="text" class="input-endereco" placeholder="Estado" >
+        <div class="dados" *ngIf="currentStep === 2">
+            <div class="inputs">
+                <div class="campos-pessoais">
+                    <div class="camp-estado">
+                        <p class="text_peq">Estado</p>
+                        <input type="text" class="input-m" placeholder="Estado" >
+                    </div>
+                    <div class="camp-cidade">
+                        <p class="text_peq">Cidade</p>
+                        <input type="text" class="input-m" placeholder="Cidade">
+                    </div>
+                    <div class="camp-bairro">
+                        <p class="text_peq">Bairro</p>
+                        <input type="text" class="input-m" placeholder="Biarro">
+                    </div>
+                    <div class="camp-rua">
+                        <p class="text_peq">Rua</p>
+                        <input type="text" class="input-m" placeholder="Rua">
+                    </div>
+                    <div class="camp-numero">
+                        <p class="text_peq">Número</p>
+                        <input type="text" class="input-m" placeholder="Número">
+                    </div>
                 </div>
-                <div class="camp-cidade">
-                    <p>Cidade</p>
-                    <input type="text" class="input-endereco" placeholder="Cidade">
+            
+                <div class="ld">
+                    <h2 class="text_sub">Vamos mostrar os <br/> professores mais <br/>próximos de você</h2>
+                    <img src="../../../assets/images/solar_map-point-bold.png">
                 </div>
-                <div class="camp-bairro">
-                    <p>Bairro</p>
-                    <input type="text" class="input-endereco" placeholder="Biarro">
+            </div> 
+            <div class="inferior">
+                <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
+                <div class="steps">
+                    <p class="step-c text_peq-w">1</p>
+                    <p class="step-c text_peq-w">2</p>
+                    <p class="step-n text_peq-w">3</p>
                 </div>
-                <div class="camp-rua">
-                    <p>Rua</p>
-                    <input type="text" class="input-endereco" placeholder="Rua">
-                </div>
-                <div class="camp-numero">
-                    <p>Número</p>
-                    <input type="text" class="input-endereco" placeholder="Número">
-                </div>
-            </div>
-            <div>
-                <h2 class="text_sub">Vamos mostrar os <br/> professores mais <br/>próximos de você</h2>
-            </div>
-            <div>
-                <button (click)="previousStep()">voltar</button>
-                <button (click)="nextStep()">próximo</button>
+                <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
             </div>
         </div>
-        <div class="dados-foto" *ngIf="currentStep === 3">
-            <img class="img-mais" src="../../../assets/images/add_.png">
-            <div>
-                <button (click)="previousStep()">voltar</button>
-                <button (click)="nextStep()">próximo</button>
+        <!-- Terceiro step -->
+        <div class="dados" *ngIf="currentStep === 3">
+            <div class="inputs">
+                <div class="campos-pessoais">
+                    <div class="input-img">
+                        <label for="imageInput" class="botao-img">
+                            <i><img src="../../../assets/images/Plus symbol button.png"></i> 
+                        </label>
+                        <input type="file" accept="image/*" id="imageInput" style="display: none">
+                        <img id="imagePreview" src="" alt="Visualização da Imagem">
+                    </div>
+                </div>
+                <div class="ld">
+                    <h2 class="text_sub">Mostre um pouquinho <br/>de você</h2>
+                    <img src="../../../assets\images\material-symbols-light_ar-on-you-outline.png">
+                </div>
+            </div>
+            
+            <div class="inferior">
+                <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
+                <div class="steps">
+                    <p class="step-c text_peq-w">1</p>
+                    <p class="step-c text_peq-w">2</p>
+                    <p class="step-c text_peq-w">3</p>
+                </div>
+                <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
             </div>
         </div>
-
-        <div class="box-condicional" *ngIf="currentStep === 4">
-            <div class="titulo-conteudo">
-                <h2>Que tal ser professor? </h2>
-            </div>
-            <div class="descricao">
-                <p>é facil e rapido, você só precisa preencher mais algumas informações!</p>
-            </div>
-            <div class="botoes">
-                <button type="submit" class="botao-aluno">
-                    Ser aluno
-                </button>
-                <button type="button" class="botao-prof" (click)="nextStep()">
-                    Ser professor
-                </button>
-            </div>
+            <div class="box-condicional" *ngIf="currentStep === 4">
+                <div class="fundo">
+                    <img class="img-cerebro" src="https://i.postimg.cc/R05RfPTt/arcticons-speed-math.png">
+                    <img class="img-calculo" src="https://i.postimg.cc/brJH84q7/tabler-math.png">
+                    <img class="img-conta" src="https://i.postimg.cc/50fSK6TN/mynaui-math-square.png">
+                    <img class="img-prof" src="https://i.postimg.cc/25Qxx4HK/mdi-teacher.png">
+                    <img class="img-lampada" src="https://i.postimg.cc/hjMbkKR8/lets-icons-lamp-light.png">
+                    <img class="img-cabeca" src="https://i.postimg.cc/fyr7b5LJ/Vector.png">
+                </div>
+                <div class="titulo-conteudo">
+                    <h2>Que tal ser professor? </h2>
+                </div>
+                <div class="descricao">
+                    <p class="escolha-descricao">É facil e rapido, você só <br> precisa preencher mais <br> algumas informações!</p>
+                </div>
+                <div class="botoes">
+                    <button type="submit" class="botao-aluno">
+                        Ser aluno
+                    </button>
+                    <button type="button" class="botao-prof" (click)="nextStep()">
+                        Ser professor
+                    </button>
+                </div>
+                
+            <!--
             <div>
                 <button (click)="previousStep()">voltar</button>
             </div>
+            -->
         </div>
 
         <div class="campos-prof" *ngIf="currentStep === 5">
@@ -152,23 +199,25 @@
                                 </div>
                                 <p>Defina um preço da sua hora aula</p> 
                             </div>
+
+                            <div class="ld">
+                                <h2 class="text_sub">Essas <br>informações irão aparecer em seu perfil</h2>
+                                <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png">
+                            </div>
                         </div>
+                        
+                    </div>
+                    <div class="inferior">
+                        <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
+                        <div class="steps">
+                            <p class="step-c text_peq-w">1</p>
+                            <p class="step-c text_peq-w">2</p>
+                        </div>
+                        <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
                     </div>
                 </div>
+                
             </div>
-            
-            <div class="texto_descricao">
-                <h2>Essas <br> informações irão aparecer <br> em seu perfil</h2>
-                <br>
-                <div class="imagem">
-                    <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png">
-                </div>
-                <div class="botao">
-                    <button (click)="routerLogin()" class="btn-prox-login">Próximo</button>
-                </div>
-            </div>    
-            
-        </div>
+            </div>
     </div>
-    
 </div>

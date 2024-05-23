@@ -1,18 +1,15 @@
 .conteudo{
     display: flex;
     flex-direction: column;
-    margin: 0 ;
-    width: 100%;
+    margin: 0;
+    padding:0 120px;
+
     height: 100vh;
     background-color: var(--bg-color);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 .opcoes{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
     height: 9vh;   
 }
 
@@ -55,21 +52,6 @@
 
 }
 
-
-.box-h1{
-    width: 100%;
-    height: 20px;
-}
-
-
-.h1{
-    display: flex;
-    flex-direction: row;
-    margin-left: 100px;
-    margin-top: 20px;
-}
-
-
 .box-infos{
     display: flex;
     align-items: center;
@@ -77,13 +59,14 @@
 }
 
 
-.dados-pessoais{
+.dados{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     opacity: 1; 
+    gap: 4vh;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -108,8 +91,62 @@
     align-items: center;
     justify-content: space-between;
     width: 70%;
+    height:  63.77vh;
 }
 
+
+.ld{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+}
+
+.steps-1{
+    display: flex;
+    gap: 55px;
+    padding-left: 10%;
+}
+.steps{
+    display: flex;
+    gap: 55px;
+}
+
+.step-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    border-radius: 40px;
+    width: 34px;
+    height: 34px;
+}
+.step-n{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-color);
+    border-radius: 40px;
+    width: 34px;
+    height: 34px;
+}
+
+.inferior{
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.back-step-1{
+    width: 247px;
+    height: 49px;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+}
 .dados-endereco{
     width: 300px;
     height: 500px;
@@ -118,8 +155,17 @@
     border-radius: 13px;
 }
 
-
-
+.input-img{
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 43.46vh;
+    height: 43.46vh;
+    border: 0.3vh black dashed;
+    border-radius: 8px;
+}
 
 .campos-endereco{
     display: flex;
@@ -387,7 +433,7 @@
 }
 .box-input-descrLonga{
     width: 605px;
-    height: 165px;
+    height: 145px;
     border-radius: 2vh;
     background-color: white;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
@@ -414,10 +460,11 @@ margin-left: 20px;
     height: 150px;
     width: 610px;
 }
+
 p{
     font-size: 13px;
 }
-
+*/
 .legenda{
     justify-content: center;
     background-color: palevioletred;
@@ -439,23 +486,12 @@ p{
     font-size: 25px;
     width: 325px;
     height: 325px;
-    font-family: "Inconsolata", monospace;
+    
     font-weight: normal;
 
     transform: translateX(100%);
     gap: 10px;
     
-}
-
-.btn-prox-login{
-    background-color: white;
-    font-size: 23px;
-    width: 160%;
-    height: 40px;
-    border-radius: 0.5vh;
-    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-    border: none;
-
 }
 
 .descricao-rapida{
@@ -486,4 +522,99 @@ p{
 .descricao-preco{
     font-size: 130%;
     margin-right: 25px;
+}
+
+.sub-texto{
+    text-align: center;
+    font-size: 4.44vh;
+    font-family: "Montserrat", sans-serif;
+}
+
+.botao-aluno{
+    width: 180px;
+    height: 39px;
+    border: none;
+    background-color: #75676C;
+    border-radius: 5px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    font-size: 2.22vh;
+    font-family: "PT Sans", sans-serif;
+    color: white;
+}
+
+.botao-prof{
+    width: 180px;
+    height: 39px;
+    border: none;
+    background-color: #E80049;
+    border-radius: 5px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    font-size: 2.22vh;
+    font-family: "PT Sans", sans-serif;
+    color: white;
+    margin-left: 100px;
+}
+
+.box-condicional{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    height: 430px;
+    width: 660px;
+    border-radius: 8px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+    transform: translateX(300px);
+}
+
+.titulo-conteudo{
+    font-size: 200%;
+    margin-bottom: 40px;
+    margin-top: 45px;
+    font-weight: normal;
+}
+
+.escolha-descricao{
+    text-align: left;
+    font-size: 210%;
+    margin-bottom: 40px;
+    margin-left: 105px;
+}
+
+.img-cerebro{
+    position: absolute;
+    top: 345px;
+    left: 670px;
+    transform: rotateZ(35deg);
+}
+
+.img-calculo{
+    position: absolute;
+    left: 735px;
+    top: 75px;
+}
+
+.img-conta{
+    position: absolute;
+    left: 670px;
+    bottom: 350px;
+}
+
+.img-prof{
+    position: absolute;
+    top: 315px;
+    right: 670px;
+}
+
+.img-lampada{
+    position: absolute;
+    right: 850px;
+    top: 100px;
+}
+.img-cabeca{
+    position: absolute;
+    right: 670px;
+    bottom: 350px;
 }

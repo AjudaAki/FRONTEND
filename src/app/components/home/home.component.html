@@ -17,66 +17,94 @@
       </button>
     </div>
   </div>
-  <div class="cor-bg card-inicio">
-    <div class="btn-step">
-      <button class="nada">
-        <img class="img-st" src="../../../assets\images\Return-icon.png" />
-      </button>
-    </div>
-    <div class="le">
-      <img src="../../../assets\images\Faculdade-icon.png" />
-    </div>
-
-    <div class="ld">
-      <div>
-        <p class="text_principal">
-          De alunos <br />
-          Para alunos
-        </p>
-      </div>
-      <div>
-        <button class="btn_branco text_medio" type="button" routerLink="login">
-          Entrar no site
-        </button>
-      </div>
-    </div>
-    <div class="btn-step">
-      <button class="nada">
-        <img class="img-st" src="../../../assets\images\Next-icon.png" />
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- Segunda tela -->
-<div class="tela">                                            <!-- div da tela rosa -->
-  <div class="cor-bg card-inicio">                            <!-- div da tela que troca -->
-    <div class="le">                                          <!-- div do ícone -->
-      <img src="../../../assets\images\Professor-icon.png" />
-    </div>
-    <div class="ld">                                          <!-- div do texto -->
-      <div>
-        <p class="text_principal">
-            Já pensou em poder ajudar seus colegas<br /> e ganhar uma grana extra?
-        </p>
-      </div>
-    </div>
-    
-  </div>
-</div>
-  <!-- Terceira tela -->
-  <div class="tela">                                            <!-- div da tela rosa -->
-    <div class="cor-bg card-inicio">                            <!-- div da tela que troca -->
-      <div class="le">                                          <!-- div do ícone -->
-        <img src="../../../assets\images\Estudante-icon.png" />
-      </div>
-      <div class="ld">                                          <!-- div do texto -->
-        <div>
-          <p class="text_principal">
-            Com dificuldades? <br />Seus colegas podem te ajudar! 
-        </p>
+  <div></div>
+  <div class="carousel">
+    <div class="carousel-inner" [ngStyle]="{'transform': 'translateX(-' + currentSlide * 100 + '%)'}">
+      <!-- Primeira tela -->
+      <div class="carousel-item cor-bg">
+        <div class="btn-step" (click)="prevSlide()">
+          <button class="nada">
+            <img class="img-st" src="../../../assets/images/Return-icon.png" />
+          </button>
+        </div>
+        <div class="le">
+          <img class="icone" src="../../../assets/images/Faculdade-icon.png" />
+        </div>
+        <div class="ld">
+          <div>
+            <p class="text_principal">
+              De alunos <br />
+              Para alunos <a routerLink="perfil"> perfil</a>
+            </p>
+          </div>
+          <div>
+            <button class="btn_branco text_medio" type="button" routerLink="login">
+              Entrar no site
+            </button>
+          </div>
+        </div>
+        <div class="btn-step" (click)="nextSlide()">
+          <button class="nada">
+            <img class="img-st" src="../../../assets/images/Next-icon.png" />
+          </button>
         </div>
       </div>
-      
+      <!-- Segunda tela -->
+      <div class="carousel-item cor-bg">
+        <div class="btn-step" (click)="prevSlide()">
+          <button class="nada">
+            <img class="img-st" src="../../../assets/images/Return-icon.png" />
+          </button>
+        </div>
+        <div class="le">
+          <img class="icone"src="../../../assets/images/Professor-icon.png" />
+        </div>
+        <div class="ld">
+          <div>
+            <p class="text_principal">
+              Que tal ajudar seus colegas<br /> e ganhar uma grana extra?
+            </p>
+          </div>
+          <div>
+            <button class="btn_branco text_medio" type="button" routerLink="login">
+              Entrar no site
+            </button>
+          </div>
+        </div>
+        <div class="btn-step" (click)="nextSlide()">
+          <button class="nada">
+            <img class="img-st" src="../../../assets/images/Next-icon.png" />
+          </button>
+        </div>
+      </div>
+      <!-- Terceira tela -->
+      <div class="carousel-item cor-bg ">
+        <div class="btn-step" (click)="prevSlide()">
+          <button class="nada">
+            <img class="img-st" src="../../../assets/images/Return-icon.png" />
+          </button>
+        </div>
+        <div class="le">
+          <img src="../../../assets/images/Estudante-icon.png" />
+        </div>
+        <div class="ld">
+          <div>
+            <p class="text_principal">
+              Com dificuldades? <br />Seus colegas podem te ajudar!
+            </p>
+          </div>
+          <div>
+            <button class="btn_branco text_medio" type="button" routerLink="login">
+              Entrar no site
+            </button>
+          </div>
+        </div>
+        <div class="btn-step" (click)="nextSlide()">
+          <button class="nada">
+            <img class="img-st" src="../../../assets/images/Next-icon.png" />
+          </button>
+        </div>
+      </div>
     </div>
   </div>
+</div>
