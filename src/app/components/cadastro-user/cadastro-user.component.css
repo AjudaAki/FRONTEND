@@ -24,37 +24,19 @@
     
 }
 
-
-.box-voltar:hover{
-    transform: scale(1.07);
-}
-
-
 .img-arrow-back{
     height: 35px;
     width: 90px;
 }
-
-
-.voltar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: none;
-    background-color: #F1F1F1;
-    font-size: 23px;
-    width: 110px;
-    height: 40px;
-    border-radius: 1vh;
-    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-    
-
+.volta{
+    height: 35px;
+    width: 90px;
 }
 
 .box-infos {
     display: flex;
-    align-items: center;
-    margin-top: 4vh; /* Substituí 40px por 4vh */
+
+   
 }
 
 .dados {
@@ -446,12 +428,6 @@
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
-h2{
-font-weight: normal;
-margin-top: 10px;
-margin-left: 20px;
-
-}
 
 .baixo{
     display: flex;
@@ -460,9 +436,7 @@ margin-left: 20px;
     width: 610px;
 }
 
-p{
-    font-size: 13px;
-}
+
 */
 .legenda{
     justify-content: center;
@@ -477,14 +451,7 @@ p{
 }
 
 .texto_descricao{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    font-size: 25px;
-    width: 325px;
-    height: 325px;
+
     
     font-weight: normal;
 
@@ -557,15 +524,15 @@ p{
 }
 
 .box-condicional{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: white;
-    height: 430px;
-    width: 660px;
-    border-radius: 8px;
-    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
-    transform: translateX(300px);
+  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        opacity: 1;
+        gap: 4vh;
+        transition: opacity 0.5s ease-in-out;
+
 }
 
 .titulo-conteudo{
@@ -581,39 +548,60 @@ p{
     margin-bottom: 40px;
     margin-left: 105px;
 }
+.superior{
+    display: flex;
+    align-items: center;
+    padding: 2vh;
+}
 
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.fundo{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    gap:4vh;
+    background-color:red;
+
+}
 .img-cerebro{
-    position: absolute;
-    top: 345px;
-    left: 670px;
+    max-height: 24vh;
+    max-width: 24vh;
     transform: rotateZ(35deg);
 }
 
 .img-calculo{
-    position: absolute;
-    left: 735px;
-    top: 75px;
+    max-height: 24vh;
+    max-width: 24vh;
+
 }
 
 .img-conta{
-    position: absolute;
-    left: 670px;
-    bottom: 350px;
+    max-height: 24vh;
+    max-width: 24vh;
+
 }
 
 .img-prof{
-    position: absolute;
-    top: 315px;
-    right: 670px;
-}
+    max-height: 24vh;
+    max-width: 24vh;
 
+}
 .img-lampada{
-    position: absolute;
-    right: 850px;
-    top: 100px;
+    max-height: 24vh;
+    max-width: 24vh;
+
 }
 .img-cabeca{
-    position: absolute;
-    right: 670px;
-    bottom: 350px;
+    max-height: 16vh;
+    max-width: 16vh;
+
+}
+.botoes{
+    display: flex;
+    gap: 5vh;
 }
