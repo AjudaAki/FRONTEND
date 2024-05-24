@@ -1,16 +1,18 @@
 <div class="conteudo">
-    <div class="opcoes">
-        <div class="box-voltar">  
-            <button type="button" class="btn_back text_medio" (click)="routerLogin()">
-                <img class="volta" src="../../../assets/images/arrow back.png">Voltar
-            </button>
+    <div *ngIf="currentStep !== 4">
+        <div class="opcoes">
+            <div class="box-voltar">  
+                <button type="button" class="btn_back text_medio" (click)="routerLogin()">
+                    <img class="volta" src="../../../assets/images/arrow back.png">Voltar
+                </button>
+            </div>
+        </div>
+        <div class="box-h1">
+            <h1 class="text_principal">Seu perfil</h1>
         </div>
     </div>
-    <div class="box-h1">
-        <h1 class="text_principal">Seu perfil</h1>
-    </div>
     <div class="box-infos">
-        <div class="dados" *ngIf="currentStep === 4">
+        <div class="dados" *ngIf="currentStep === 1">
             <div class="inputs">
                 <div class="campos-pessoais">
                     <div class="camp-nome">   
@@ -127,40 +129,54 @@
                 <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
             </div>
         </div>
-            <div class="box-condicional" *ngIf="currentStep === 1">
+            <div class="box-condicional" *ngIf="currentStep === 4">
                 <div class="fundo">
-                    <img class="img-cerebro" src="https://i.postimg.cc/R05RfPTt/arcticons-speed-math.png">
-                    <img class="img-calculo" src="https://i.postimg.cc/brJH84q7/tabler-math.png">
-                    <img class="img-conta" src="https://i.postimg.cc/50fSK6TN/mynaui-math-square.png">
+                    <div class=" direita">
+                        <img class="img-lampada" src="https://i.postimg.cc/hjMbkKR8/lets-icons-lamp-light.png">
+                    </div>
+                    <div class="esquerda">
+                        <img class="img-cabeca" src="https://i.postimg.cc/fyr7b5LJ/Vector.png">
+                    </div>
+                    <div class=" direita">
+                        <img class="img-prof" src="https://i.postimg.cc/25Qxx4HK/mdi-teacher.png">
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="superior">
-                            <button (click)="previousStep()">voltar</button>
-                            <h2 class="text_principal">Que tal ser professor? </h2>
+                <div class="fundo">
+                    <div class="esquerda">
+                        <img class="img-conta" src="https://i.postimg.cc/50fSK6TN/mynaui-math-square.png">
+                    </div>
+                    <div class=" direita">
+                        <img class="img-calculo" src="https://i.postimg.cc/brJH84q7/tabler-math.png">
                     </div> 
-                    <div class="descricao">
-                        <p class="text_medio">É facil e rapido, você só <br> precisa preencher mais <br> algumas informações!</p>
+                    <div class="esquerda">
+                        <img class="img-cerebro" src="https://i.postimg.cc/R05RfPTt/arcticons-speed-math.png">
+                    </div>
+                </div>
+               
+                <div class="card">
+                    <div class="texto">
+                        <div class="topo-card">
+                            <button (click)="previousStep()" class="back text_medio"><img class="icone-volta"src="../../../assets\images\svg-images\Vector.svg"></button>
+                        </div>
+                        <div class="superior">
+                               
+                                <h2 class="text_principal">Que tal ser professor? </h2>
+                        </div> 
+                        <div class="descricao">
+                            <p class="text_sub">É fácil e rápido, você só precisa preencher mais <br> algumas informações!</p>
+                        </div>
                     </div>
                     <div class="botoes">
-                        <button type="submit" class="btn_cinza">
+                        <button type="submit" class="btn_cinza text_medio">
                             Ser aluno
                         </button>
-                        <button type="button" class="btn_rosa" (click)="nextStep()">
+                        <button type="button" class="btn_rosa text_medio" (click)="nextStep()">
                             Ser professor
                         </button>
                     </div>
                 </div>
-                <div class="fundo">
-                    <div class=" direita">
-                        <img class="img-prof" src="https://i.postimg.cc/25Qxx4HK/mdi-teacher.png">
-                    </div>
-                    <div class="esquerda">
-                        <img class="img-lampada" src="https://i.postimg.cc/hjMbkKR8/lets-icons-lamp-light.png">
-                    </div>
-                    <div class=" direita">
-                        <img class="img-cabeca" src="https://i.postimg.cc/fyr7b5LJ/Vector.png">
-                    </div>
-                </div>
+               
+           
         </div>
 
         <div class="campos-prof" *ngIf="currentStep === 5">

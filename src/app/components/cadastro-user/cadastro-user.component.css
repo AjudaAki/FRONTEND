@@ -5,7 +5,7 @@
     padding: 0 10vh; /* Substituí 120px por 10vh */
     height: 100vh;
     background-color: var(--bg-color);
-    font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 .opcoes {
@@ -496,42 +496,17 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.botao-aluno{
-    width: 180px;
-    height: 39px;
-    border: none;
-    background-color: #75676C;
-    border-radius: 5px;
-    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
-    font-size: 2.22vh;
-    font-family: "PT Sans", sans-serif;
-    color: white;
-}
-
-.botao-prof{
-    width: 180px;
-    height: 39px;
-    border: none;
-    background-color: #E80049;
-    border-radius: 5px;
-    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
-    font-size: 2.22vh;
-    font-family: "PT Sans", sans-serif;
-    color: white;
-    margin-left: 100px;
-}
-
 .box-condicional{
   
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
+        height: 100vh;
         opacity: 1;
-        gap: 4vh;
+        gap: 50vh;
         transition: opacity 0.5s ease-in-out;
+    
 
 }
 
@@ -551,54 +526,97 @@
 .superior{
     display: flex;
     align-items: center;
-    padding: 2vh;
+    width: 100%;
+    padding-top: 2vh;
 }
 
 .card{
+    position: absolute;
     display: flex;
     flex-direction: column;
+    width: 40vw;
+    height: 52vh;
     background-color: white;
+    padding: 7.58vh 7.45vh;
+    border-radius: 16px;
+    box-shadow: 12px 20px rgba(0,0,0,0.2);
+    justify-content: space-between;
+    align-items: center;
+}
+.topo-card{
+    width: 100%;
+}
+.back{
+    background-color: transparent;
+    border: none;
+    transition: transform 0.2s ease;
+    text-align: left;
+
+}
+
+.back:hover{
+    transform: scale(1.4);
+    color: var(--main-color);
+}
+
+.descricao{
+    padding-left: 40px;
+    color: var(--gray-color);
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+
 }
 .fundo{
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 30%;
     align-items: center;
-    gap:4vh;
-    background-color:red;
-
+    justify-content: space-between;
+    height: 100vh;
+    
+}
+.direita{
+    margin-left: 10vh;
+}
+.esquerda{
+    margin-right: 10vh;
 }
 .img-cerebro{
-    max-height: 24vh;
-    max-width: 24vh;
-    transform: rotateZ(35deg);
+    max-height: 36vh;
+    max-width: 36vh;
+    
 }
 
 .img-calculo{
-    max-height: 24vh;
-    max-width: 24vh;
+    height: 24vh;
+    width: 24vh;
 
 }
 
 .img-conta{
-    max-height: 24vh;
-    max-width: 24vh;
+    height: 36vh;
+    width: 36vh;
 
 }
 
 .img-prof{
-    max-height: 24vh;
-    max-width: 24vh;
+    height: 28vh;
+    width: 28vh;
 
 }
 .img-lampada{
-    max-height: 24vh;
-    max-width: 24vh;
+    max-height: 40vh;
+    max-width: 40vh;
+    margin-left: 4vh;
 
 }
 .img-cabeca{
-    max-height: 16vh;
-    max-width: 16vh;
+    height: 22vh;
+    width: auto;
+    margin-right: 20vh;
 
 }
 .botoes{

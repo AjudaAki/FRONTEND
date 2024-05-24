@@ -62,9 +62,9 @@
 
 /* /////////Fontes/////////// */
 .text_principal{
-    font-size: 5.37vh;
+    font-size: 7vh;
     font-family: "Montserrat", sans-serif;
-    font-weight: 100;
+    font-weight: bold;
 }
 
 .text_sub{
@@ -220,12 +220,12 @@
     color: white;
     text-align: center;
     border: none;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .btn_cinza:hover {
     background-color: #3b3b3b;
-    transform: scale(1.04);
+    transform: scale(0.96);
 }
 
 .next-step {
