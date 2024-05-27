@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TelaPerfilComponent {
 
-  role = 0
+  role = 1
 
 
 }

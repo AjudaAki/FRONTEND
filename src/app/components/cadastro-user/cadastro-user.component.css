@@ -539,7 +539,7 @@
     background-color: white;
     padding: 7.58vh 7.45vh;
     border-radius: 16px;
-    box-shadow: 12px 20px rgba(0,0,0,0.2);
+    box-shadow: 20px 20px rgba(0,0,0,0.2);
     justify-content: space-between;
     align-items: center;
 }
