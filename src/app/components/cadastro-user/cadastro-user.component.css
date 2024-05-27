@@ -407,14 +407,14 @@
 
 .box-descri-rapida{
     width: 605px;
-    height: 100px;
+    height: 113px;
     border-radius: 2vh;
     background-color: white;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
 .box-input-descrLonga{
     width: 605px;
-    height: 145px;
+    height: 157px;
     border-radius: 2vh;
     background-color: white;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
@@ -422,12 +422,19 @@
 
 .box-area{
     width: 230px;
-    height: 100px;
+    height: 110px;
     border-radius: 2vh;
     background-color: white;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
+h2{
+font-weight: normal;
+margin-top: 10px;
+margin-left: 20px;
+margin-bottom: 10px;
+
+}
 
 .baixo{
     display: flex;
@@ -614,12 +621,153 @@
 
 }
 .img-cabeca{
-    height: 22vh;
-    width: auto;
-    margin-right: 20vh;
+    position: absolute;
+    right: 670px;
+    bottom: 350px;
+}
 
+.button{
+   
+    height: 30px;
+    width: 125px;
+    border-radius: 4px;
+    margin: 10px;
+    background-color: #E80049;
+    border: none;
+    color: white;
 }
-.botoes{
+
+.horario{
+    margin-top: 35px;
+    height: 80px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.texto_horario{
     display: flex;
-    gap: 5vh;
+    justify-content: center;
+    font-size: 135%;
+    
 }
+
+.input{
+    margin-left: 25px;
+    height: 35px;
+    width: 90px;
+}
+
+.prof_contatos{
+    height: 353px;
+    width: 500px;
+
+    background-color: #7298f8;
+}
+
+.contatos{
+    width: 500px;
+    height: 360px;
+
+    background-color: transparent;
+}
+
+.discord{
+    width: 380px;
+    height: 70px;
+
+    border-radius: 5px;
+    margin-left: 7px;
+    
+
+    background-color: white;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+}
+.discord_icon{
+    width: 90px;
+    height: 70px;
+
+    background-image: url("https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+
+    margin: 5px;
+}
+
+.input-discord{
+    width: 260px;
+    height: 50px;
+    margin-top: 8px;
+    margin-left: 90px;
+    border-radius: 8px;
+}
+
+.whatsapp{
+    width: 380px;
+    height: 70px;
+
+    border-radius: 5px;
+    margin-left: 7px;
+
+    background-color: white;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+}
+.whatsapp_icon{
+    width: 90px;
+    height: 70px;
+    
+    background-image: url("https://cdn.icon-icons.com/icons2/2699/PNG/512/whatsapp_logo_icon_170905.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+
+    margin: 5px;
+}
+
+.input-whatsapp{
+    width: 260px;
+    height: 50px;
+    margin-top: 8px;
+    margin-left: 90px;
+    border-radius: 8px;
+}
+
+.teams{
+    width: 380px;
+    height: 70px;
+
+    border-radius: 5px;
+    margin-left: 7px;
+
+    background-color: white;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+}
+.teams_icon{
+    width: 90px;
+    height: 70px;
+
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/2203px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+
+    margin: 5px;
+}
+
+.input-teams{
+    width: 260px;
+    height: 50px;
+    margin-top: 8px;
+    margin-left: 90px;
+    border-radius: 8px;
+}
+
+.descricao-prof-contatos{
+    text-align: center;
+    font-weight: normal;
+    margin-right: 110px;
+    margin-top: 15px;
+}
+
