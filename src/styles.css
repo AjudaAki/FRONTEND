@@ -62,9 +62,9 @@
 
 /* /////////Fontes/////////// */
 .text_principal{
-    font-size: 5.37vh;
+    font-size: 7vh;
     font-family: "Montserrat", sans-serif;
-    font-weight: 100;
+    font-weight: bold;
 }
 
 .text_sub{
@@ -127,8 +127,10 @@
     position: absolute;
     top: 3%;
     left: 2%;
-    font-size: 2vh; /* 20px */
+
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
     border: none;
     width: 10vh; /* 100px */
@@ -218,12 +220,12 @@
     color: white;
     text-align: center;
     border: none;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .btn_cinza:hover {
     background-color: #3b3b3b;
-    transform: scale(1.04);
+    transform: scale(0.96);
 }
 
 .next-step {

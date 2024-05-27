@@ -5,7 +5,7 @@
     padding: 0 10vh; /* Substituí 120px por 10vh */
     height: 100vh;
     background-color: var(--bg-color);
-    font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 .opcoes {
@@ -24,37 +24,19 @@
     
 }
 
-
-.box-voltar:hover{
-    transform: scale(1.07);
-}
-
-
 .img-arrow-back{
     height: 35px;
     width: 90px;
 }
-
-
-.voltar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: none;
-    background-color: #F1F1F1;
-    font-size: 23px;
-    width: 110px;
-    height: 40px;
-    border-radius: 1vh;
-    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-    
-
+.volta{
+    height: 35px;
+    width: 90px;
 }
 
 .box-infos {
     display: flex;
-    align-items: center;
-    margin-top: 4vh; /* Substituí 40px por 4vh */
+
+   
 }
 
 .dados {
@@ -461,9 +443,7 @@ margin-bottom: 10px;
     width: 610px;
 }
 
-p{
-    font-size: 13px;
-}
+
 */
 .legenda{
     justify-content: center;
@@ -478,14 +458,7 @@ p{
 }
 
 .texto_descricao{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    font-size: 25px;
-    width: 325px;
-    height: 325px;
+
     
     font-weight: normal;
 
@@ -530,43 +503,18 @@ p{
     font-family: "Montserrat", sans-serif;
 }
 
-.botao-aluno{
-    width: 180px;
-    height: 39px;
-    border: none;
-    background-color: #75676C;
-    border-radius: 5px;
-    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
-    font-size: 2.22vh;
-    font-family: "PT Sans", sans-serif;
-    color: white;
-}
-
-.botao-prof{
-    width: 180px;
-    height: 39px;
-    border: none;
-    background-color: #E80049;
-    border-radius: 5px;
-    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
-    font-size: 2.22vh;
-    font-family: "PT Sans", sans-serif;
-    color: white;
-    margin-left: 100px;
-}
-
 .box-condicional{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: white;
-    height: 430px;
-    width: 660px;
-    border-radius: 8px;
-    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
-    transform: translateX(300px);
+  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+        gap: 50vh;
+        transition: opacity 0.5s ease-in-out;
+    
+
 }
 
 .titulo-conteudo{
@@ -582,36 +530,95 @@ p{
     margin-bottom: 40px;
     margin-left: 105px;
 }
+.superior{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 2vh;
+}
 
-.img-cerebro{
+.card{
     position: absolute;
-    top: 345px;
-    left: 670px;
-    transform: rotateZ(35deg);
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 52vh;
+    background-color: white;
+    padding: 7.58vh 7.45vh;
+    border-radius: 16px;
+    box-shadow: 12px 20px rgba(0,0,0,0.2);
+    justify-content: space-between;
+    align-items: center;
+}
+.topo-card{
+    width: 100%;
+}
+.back{
+    background-color: transparent;
+    border: none;
+    transition: transform 0.2s ease;
+    text-align: left;
+
+}
+
+.back:hover{
+    transform: scale(1.4);
+    color: var(--main-color);
+}
+
+.descricao{
+    padding-left: 40px;
+    color: var(--gray-color);
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+
+}
+.fundo{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    
+}
+.direita{
+    margin-left: 10vh;
+}
+.esquerda{
+    margin-right: 10vh;
+}
+.img-cerebro{
+    max-height: 36vh;
+    max-width: 36vh;
+    
 }
 
 .img-calculo{
-    position: absolute;
-    left: 735px;
-    top: 75px;
+    height: 24vh;
+    width: 24vh;
+
 }
 
 .img-conta{
-    position: absolute;
-    left: 670px;
-    bottom: 350px;
+    height: 36vh;
+    width: 36vh;
+
 }
 
 .img-prof{
-    position: absolute;
-    top: 315px;
-    right: 670px;
-}
+    height: 28vh;
+    width: 28vh;
 
+}
 .img-lampada{
-    position: absolute;
-    right: 850px;
-    top: 100px;
+    max-height: 40vh;
+    max-width: 40vh;
+    margin-left: 4vh;
+
 }
 .img-cabeca{
     position: absolute;

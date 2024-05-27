@@ -39,10 +39,12 @@
     cursor: pointer;
     text-decoration: none;
     color: black; /* Cor padrão */
+    transition: font-size 0.6s ease;
   }
   
   .textos a.active {
     color: var(--main-color); /* Cor quando ativo */
+    font-size:3vh;
   }
 .textos a.active:hover {
     border-bottom:0.05vh solid var(--main-color);
@@ -111,3 +113,8 @@
 
 }
 
+.centro{
+    display: flex;
+    align-items: center;
+    height: 90%;
+}
