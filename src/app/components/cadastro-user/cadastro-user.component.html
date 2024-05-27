@@ -1,55 +1,57 @@
 <div class="conteudo">
-    <div class="opcoes">
-        <div class="box-voltar">
-            <button type="button" class="btn_back" (click)="routerLogin()">
-                <img class="volta" src="../../../assets/images/arrow back.png">Voltar
-            </button>
+    <div *ngIf="currentStep !== 4">
+        <div class="opcoes">
+            <div class="box-voltar">  
+                <button type="button" class="btn_back text_medio" (click)="routerLogin()">
+                    <img class="volta" src="../../../assets/images/arrow back.png">Voltar
+                </button>
+            </div>
         </div>
-    </div>
-    <div class="box-h1">
-        <h1 class="text_principal">Seu perfil</h1>
+        <div class="box-h1">
+            <h1 class="text_principal">Seu perfil</h1>
+        </div>
     </div>
     <div class="box-infos">
         <div class="dados" *ngIf="currentStep === 1">
             <div class="inputs">
                 <div class="campos-pessoais">
-                    <div class="camp-nome">
+                    <div class="camp-nome">   
                         <p class="text_peq">Nome</p>
-                        <input type="text" class="input-g" placeholder="Nome" />
+                        <input type="text" class="input-g" placeholder="Nome"/>
                     </div>
                     <div class="camp-email">
                         <p class="text_peq">E-mail</p>
-                        <input type="email" class="input-g" placeholder="E-mail" />
+                        <input type="email" class="input-g" placeholder="E-mail"/>
                     </div>
                     <div class="camp-senha">
                         <p class="text_peq">Senha</p>
-                        <input type="text" class="input-g" placeholder="Senha" />
+                        <input type="text" class="input-g" placeholder="Senha"/>
                     </div>
                     <div class="camp-confSenha">
                         <p class="text_peq">Confirmar senha</p>
-                        <input type="text" class="input-g" placeholder="Confirmar senha" />
+                        <input type="text" class="input-g" placeholder="Confirmar senha"/>
                     </div>
                     <div class="camp-tel">
                         <p class="text_peq">Telefone</p>
-                        <input type="text" class="input-g" placeholder="Telefone (apenas números)" />
+                        <input type="text" class="input-g" placeholder="Telefone (apenas números)"/>
                     </div>
                     <div class="camp-cpf">
                         <p class="text_peq">CPF</p>
-                        <input type="text" class="input-g" placeholder="CPF (Apenas números)" />
+                        <input type="text" class="input-g" placeholder="CPF (Apenas números)"/>
                     </div>
                     <div class="camp-data">
                         <p class="text_peq">Data de nascimento</p>
-                        <input type="date" class="input-g" placeholder="Data de nascimento" />
+                        <input type="date" class="input-g" placeholder="Data de nascimento"/>
                     </div>
-                </div>
-
+                </div> 
+            
                 <div class="ld">
                     <h2 class="text_sub">Fale um pouco sobre você!</h2>
                     <img src="../../../assets/images/ph_person.png">
                 </div>
             </div>
             <div class="inferior">
-                <button (click)="previousStep()" class="back-step-1 text_medio">vc achou o segredo</button>
+                <button (click)="previousStep()"  class="back-step-1 text_medio">vc achou o segredo</button>
                 <div class="steps">
                     <p class="step-c text_peq-w">1</p>
                     <p class="step-n text_peq-w">2</p>
@@ -57,14 +59,14 @@
                 </div>
                 <button (click)="nextStep()" class="next-step text_medio">próximo</button>
             </div>
-
+           
         </div>
         <div class="dados" *ngIf="currentStep === 2">
             <div class="inputs">
                 <div class="campos-pessoais">
                     <div class="camp-estado">
                         <p class="text_peq">Estado</p>
-                        <input type="text" class="input-m" placeholder="Estado">
+                        <input type="text" class="input-m" placeholder="Estado" >
                     </div>
                     <div class="camp-cidade">
                         <p class="text_peq">Cidade</p>
@@ -83,20 +85,20 @@
                         <input type="text" class="input-m" placeholder="Número">
                     </div>
                 </div>
-
+            
                 <div class="ld">
-                    <h2 class="text_sub">Vamos mostrar os <br /> professores mais <br />próximos de você</h2>
+                    <h2 class="text_sub">Vamos mostrar os <br/> professores mais <br/>próximos de você</h2>
                     <img src="../../../assets/images/solar_map-point-bold.png">
                 </div>
-            </div>
+            </div> 
             <div class="inferior">
-                <button (click)="previousStep()" class="back-step text_medio">voltar</button>
+                <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
                 <div class="steps">
                     <p class="step-c text_peq-w">1</p>
                     <p class="step-c text_peq-w">2</p>
                     <p class="step-n text_peq-w">3</p>
                 </div>
-                <button (click)="nextStep()" class="next-step text_medio">próximo</button>
+                <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
             </div>
         </div>
         <!-- Terceiro step -->
@@ -105,58 +107,76 @@
                 <div class="campos-pessoais">
                     <div class="input-img">
                         <label for="imageInput" class="botao-img">
-                            <i><img src="../../../assets/images/Plus symbol button.png"></i>
+                            <i><img src="../../../assets/images/Plus symbol button.png"></i> 
                         </label>
                         <input type="file" accept="image/*" id="imageInput" style="display: none">
                         <img id="imagePreview" src="" alt="Visualização da Imagem">
                     </div>
                 </div>
                 <div class="ld">
-                    <h2 class="text_sub">Mostre um pouquinho <br />de você</h2>
+                    <h2 class="text_sub">Mostre um pouquinho <br/>de você</h2>
                     <img src="../../../assets\images\material-symbols-light_ar-on-you-outline.png">
                 </div>
             </div>
-
+            
             <div class="inferior">
-                <button (click)="previousStep()" class="back-step text_medio">voltar</button>
+                <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
                 <div class="steps">
                     <p class="step-c text_peq-w">1</p>
                     <p class="step-c text_peq-w">2</p>
                     <p class="step-c text_peq-w">3</p>
                 </div>
-                <button (click)="nextStep()" class="next-step text_medio">próximo</button>
+                <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
             </div>
         </div>
-        <div class="box-condicional" *ngIf="currentStep === 4">
-            <div class="fundo">
-                <img class="img-cerebro" src="https://i.postimg.cc/R05RfPTt/arcticons-speed-math.png">
-                <img class="img-calculo" src="https://i.postimg.cc/brJH84q7/tabler-math.png">
-                <img class="img-conta" src="https://i.postimg.cc/50fSK6TN/mynaui-math-square.png">
-                <img class="img-prof" src="https://i.postimg.cc/25Qxx4HK/mdi-teacher.png">
-                <img class="img-lampada" src="https://i.postimg.cc/hjMbkKR8/lets-icons-lamp-light.png">
-                <img class="img-cabeca" src="https://i.postimg.cc/fyr7b5LJ/Vector.png">
-            </div>
-            <div class="titulo-conteudo">
-                <h2>Que tal ser professor? </h2>
-            </div>
-            <div class="descricao">
-                <p class="escolha-descricao">É facil e rapido, você só <br> precisa preencher mais <br> algumas
-                    informações!</p>
-            </div>
-            <div class="botoes">
-                <button type="submit" class="botao-aluno">
-                    Ser aluno
-                </button>
-                <button type="button" class="botao-prof" (click)="nextStep()">
-                    Ser professor
-                </button>
-            </div>
-
-            <!--
-            <div>
-                <button (click)="previousStep()">voltar</button>
-            </div>
-            -->
+            <div class="box-condicional" *ngIf="currentStep === 4">
+                <div class="fundo">
+                    <div class=" direita">
+                        <img class="img-lampada" src="https://i.postimg.cc/hjMbkKR8/lets-icons-lamp-light.png">
+                    </div>
+                    <div class="esquerda">
+                        <img class="img-cabeca" src="https://i.postimg.cc/fyr7b5LJ/Vector.png">
+                    </div>
+                    <div class=" direita">
+                        <img class="img-prof" src="https://i.postimg.cc/25Qxx4HK/mdi-teacher.png">
+                    </div>
+                </div>
+                <div class="fundo">
+                    <div class="esquerda">
+                        <img class="img-conta" src="https://i.postimg.cc/50fSK6TN/mynaui-math-square.png">
+                    </div>
+                    <div class=" direita">
+                        <img class="img-calculo" src="https://i.postimg.cc/brJH84q7/tabler-math.png">
+                    </div> 
+                    <div class="esquerda">
+                        <img class="img-cerebro" src="https://i.postimg.cc/R05RfPTt/arcticons-speed-math.png">
+                    </div>
+                </div>
+               
+                <div class="card">
+                    <div class="texto">
+                        <div class="topo-card">
+                            <button (click)="previousStep()" class="back text_medio"><img class="icone-volta"src="../../../assets\images\svg-images\Vector.svg"></button>
+                        </div>
+                        <div class="superior">
+                               
+                                <h2 class="text_principal">Que tal ser professor? </h2>
+                        </div> 
+                        <div class="descricao">
+                            <p class="text_sub">É fácil e rápido, você só precisa preencher mais <br> algumas informações!</p>
+                        </div>
+                    </div>
+                    <div class="botoes">
+                        <button type="submit" class="btn_cinza text_medio">
+                            Ser aluno
+                        </button>
+                        <button type="button" class="btn_rosa text_medio" (click)="nextStep()">
+                            Ser professor
+                        </button>
+                    </div>
+                </div>
+               
+           
         </div>
 
         <div class="campos-prof" *ngIf="currentStep === 5">
@@ -178,7 +198,7 @@
                             <div class="box-area">
                                 <h2 class="descricao-area">Área de atuação</h2>
                                 <div class="area">
-                                    <select class="input-area">
+                                    <select class="input-area"> 
                                         <option value="valor0">Escolha a área</option>
                                         <option value="valor1">Front-End</option>
                                         <option value="valor2">Back-End</option>
@@ -187,18 +207,18 @@
                                     </select>
                                     <p class="p-descri-area">Selecione a área que você ensina</p>
                                 </div>
-
+                                
                             </div>
-
+            
                             <div class="box-precos">
                                 <h2 class="descricao-preco">Faixa de preço hora/aula</h2>
                                 <div class="precos">
                                     <input type="text" class="input-preco1" placeholder="">
                                     <p>até</p>
                                     <input type="text" class="input-preco2" placeholder="">
-
+                                    
                                 </div>
-                                <p>Defina um preço da sua hora aula</p>
+                                <p>Defina um preço da sua hora aula</p> 
                             </div>
 
                             <div class="ld">
@@ -206,71 +226,19 @@
                                 <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png">
                             </div>
                         </div>
-
+                        
                     </div>
                     <div class="inferior">
-                        <button (click)="previousStep()" class="back-step text_medio">voltar</button>
+                        <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
                         <div class="steps">
                             <p class="step-c text_peq-w">1</p>
                             <p class="step-c text_peq-w">2</p>
                         </div>
-                        <button (click)="nextStep()" class="next-step text_medio">próximo</button>
+                        <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
                     </div>
                 </div>
-
+                
             </div>
-        </div>
-        <div class="prof-horarios"  *ngIf="currentStep === 6">
-            <div class="botoes-semana">
-                <button class="button">Segunda-Feira</button>
-                <button class="button">Terça-Feira</button>
-                <button class="button">Quarta-Feira</button>
-                <button class="button">Quinta-Feira</button>
-                <button class="button">Sexta-Feira</button>
             </div>
-            <div class="horario">
-                <h2 class="texto_horario">Horario de Aula</h2>
-                <input class="input" type="time">
-                <input class="input" type="time">
-            </div>
-            <div class="contatos">
-                <br>
-                <h2>Seus contatos</h2>
-                <div class="discord">
-                    <div class="discord_icon">
-                        <input class="input-discord" type="text">
-                    </div>
-            
-                </div>
-                <br>
-                <div class="whatsapp">
-                    <div class="whatsapp_icon">
-                        <input class="input-whatsapp" type="number">
-                    </div>
-                </div>
-                <br>
-                <div class="teams">
-                    <div class="teams_icon">
-                        <input class="input-teams" type="text">
-                    </div>
-                    <br>
-                </div>
-                <h4 class="descricao-prof-contatos">Adicione no mínimo um contato <br> para que possam conversar com você</h4>
-
-                <div class="ld">
-                    <h2 class="text_sub">Essas <br>informações irão aparecer em seu perfil</h2>
-                    <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png">
-                </div>
-
-                <div class="inferior">
-                    <button (click)="previousStep()" class="back-step text_medio">voltar</button>
-                    <div class="steps">
-                        <p class="step-c text_peq-w">1</p>
-                        <p class="step-c text_peq-w">2</p>
-                    </div>
-                    <button (click)="nextStep()" class="next-step text_medio" style="background-color: #E80049; color: white;">Finalizar</button>
-                </div>          
-            </div>
-        </div>
     </div>
 </div>
