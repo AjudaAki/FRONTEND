@@ -4,7 +4,10 @@
     padding: 0px;
     font-family: "Inconsolata", monospace;
 }
-
+.volta{
+    width: 2.6vh;
+    height: 2.6vh;
+}
 .LE{
     display: flex;
     flex-direction: column;

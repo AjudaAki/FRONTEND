@@ -7,13 +7,15 @@
                 </button>
             </div>
         </div>
-        <div class="box-h1">
-            <h1 class="text_principal">Seu perfil</h1>
-        </div>
+
     </div>
     <div class="box-infos">
         <div class="dados" *ngIf="currentStep === 1">
             <div class="inputs">
+                <div class="LE">
+                <div class="box-h1">
+                    <h1 class="text_principal">Seu perfil</h1>
+                </div>
                 <div class="campos-pessoais">
                     <div class="camp-nome">   
                         <p class="text_peq">Nome</p>
@@ -44,7 +46,7 @@
                         <input type="date" class="input-g" placeholder="Data de nascimento"/>
                     </div>
                 </div> 
-            
+            </div>
                 <div class="ld">
                     <h2 class="text_sub">Fale um pouco sobre você!</h2>
                     <img src="../../../assets/images/ph_person.png">
@@ -63,29 +65,33 @@
         </div>
         <div class="dados" *ngIf="currentStep === 2">
             <div class="inputs">
+                <div class="LE">
+                <div class="box-h1">
+                    <h1 class="text_principal">Seu perfil</h1>
+                </div>
                 <div class="campos-pessoais">
                     <div class="camp-estado">
                         <p class="text_peq">Estado</p>
-                        <input type="text" class="input-m" placeholder="Estado" >
+                        <input type="text" class="input-g" placeholder="Estado" >
                     </div>
                     <div class="camp-cidade">
                         <p class="text_peq">Cidade</p>
-                        <input type="text" class="input-m" placeholder="Cidade">
+                        <input type="text" class="input-g" placeholder="Cidade">
                     </div>
                     <div class="camp-bairro">
                         <p class="text_peq">Bairro</p>
-                        <input type="text" class="input-m" placeholder="Biarro">
+                        <input type="text" class="input-g" placeholder="Biarro">
                     </div>
                     <div class="camp-rua">
                         <p class="text_peq">Rua</p>
-                        <input type="text" class="input-m" placeholder="Rua">
+                        <input type="text" class="input-g" placeholder="Rua">
                     </div>
                     <div class="camp-numero">
                         <p class="text_peq">Número</p>
-                        <input type="text" class="input-m" placeholder="Número">
+                        <input type="text" class="input-g" placeholder="Número">
                     </div>
                 </div>
-            
+            </div>
                 <div class="ld">
                     <h2 class="text_sub">Vamos mostrar os <br/> professores mais <br/>próximos de você</h2>
                     <img src="../../../assets/images/solar_map-point-bold.png">
@@ -104,13 +110,18 @@
         <!-- Terceiro step -->
         <div class="dados" *ngIf="currentStep === 3">
             <div class="inputs">
-                <div class="campos-pessoais">
-                    <div class="input-img">
-                        <label for="imageInput" class="botao-img">
-                            <i><img src="../../../assets/images/Plus symbol button.png"></i> 
-                        </label>
-                        <input type="file" accept="image/*" id="imageInput" style="display: none">
-                        <img id="imagePreview" src="" alt="Visualização da Imagem">
+                <div class="LE">
+                    <div class="box-h1">
+                        <h1 class="text_principal">Seu perfil</h1>
+                    </div>
+                    <div class="campo-img">
+                        <div class="input-img">
+                            <label for="imageInput" class="botao-img">
+                                <i><img src="../../../assets/images/Plus symbol button.png"></i> 
+                            </label>
+                            <input type="file" accept="image/*" id="imageInput" style="display: none">
+                            <img id="imagePreview" src="" alt="Visualização da Imagem">
+                        </div>
                     </div>
                 </div>
                 <div class="ld">
@@ -156,7 +167,7 @@
                 <div class="card">
                     <div class="texto">
                         <div class="topo-card">
-                            <button (click)="previousStep()" class="back text_medio"><img class="icone-volta"src="../../../assets\images\svg-images\Vector.svg"></button>
+                            <button (click)="previousStep()" class="back text_sub"><img class="icone-volta"src="../../../assets\images\svg-images\Vector.svg">voltar</button>
                         </div>
                         <div class="superior">
                                
@@ -232,7 +243,7 @@
                         <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
                         <div class="steps">
                             <p class="step-c text_peq-w">1</p>
-                            <p class="step-c text_peq-w">2</p>
+                            <p class="step-n text_peq-w">2</p>
                         </div>
                         <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
                     </div>
@@ -240,5 +251,66 @@
                 
             </div>
             </div>
+            <div class="campos-prof" *ngIf="currentStep === 6">
+                <div class="box-discricoes">
+                    <div class="box-descri-rapida">
+                        <h2 class="descricao-rapida">Descrição rápida</h2>
+                        <input type="text" class="input-descr" placeholder="">
+                        <p class="p-descri-rapida">Fale um pouco sobre suas aulas, qual seu foco, métodos...</p>
+                    </div>
+                    <div class="box-descri-longa">
+                        <div class="box-input-descrLonga">
+                            <h2 class="descricao-longa">Descrição</h2>
+                            <input type="text" class="input-descrLonga" placeholder="">
+                            <p class="p-descri-longa">Fale um pouco sobre suas aulas, qual seu foco, métodos</p>
+                        </div>
+                        <br><br>
+                        <div class="baixo">
+                            <div class="box-area-precos">
+                                <div class="box-area">
+                                    <h2 class="descricao-area">Área de atuação</h2>
+                                    <div class="area">
+                                        <select class="input-area"> 
+                                            <option value="valor0">Escolha a área</option>
+                                            <option value="valor1">Front-End</option>
+                                            <option value="valor2">Back-End</option>
+                                            <option value="valor3">Full-Stack</option>
+                                            <option value="valor4">UI/UX</option>
+                                        </select>
+                                        <p class="p-descri-area">Selecione a área que você ensina</p>
+                                    </div>
+                                    
+                                </div>
+                
+                                <div class="box-precos">
+                                    <h2 class="descricao-preco">Faixa de preço hora/aula</h2>
+                                    <div class="precos">
+                                        <input type="text" class="input-preco1" placeholder="">
+                                        <p>até</p>
+                                        <input type="text" class="input-preco2" placeholder="">
+                                        
+                                    </div>
+                                    <p>Defina um preço da sua hora aula</p> 
+                                </div>
+    
+                                <div class="ld">
+                                    <h2 class="text_sub">Essas <br>informações irão aparecer em seu perfil</h2>
+                                    <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="inferior">
+                            <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
+                            <div class="steps">
+                                <p class="step-c text_peq-w">1</p>
+                                <p class="step-c text_peq-w">2</p>
+                            </div>
+                            <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
     </div>
 </div>

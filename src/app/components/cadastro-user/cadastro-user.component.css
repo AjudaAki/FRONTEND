@@ -7,7 +7,9 @@
     background-color: var(--bg-color);
   
 }
-
+.box-h1{
+    padding-left: 2vh;
+}
 .opcoes {
     height: 9vh;
 }
@@ -28,10 +30,12 @@
     height: 35px;
     width: 90px;
 }
+
 .volta{
-    height: 35px;
-    width: 90px;
+    width: 2.6vh;
+    height: 2.6vh;
 }
+
 
 .box-infos {
     display: flex;
@@ -62,6 +66,23 @@
     background-color: white;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
     gap: 1.2vh; /* Substituí 12px por 1.2vh */
+    height: 56vh;
+    width: 44vh;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.campo-img {
+    display: flex;
+    flex-direction: column;
+    padding: 4vh 2vh; /* Substituí 40px 20px por 4vh 2vh */
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
+    gap: 1.2vh; /* Substituí 12px por 1.2vh */
+    align-items: center;
+    justify-content: center;
 }
 
 .inputs {
@@ -534,8 +555,8 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 40vw;
-    height: 52vh;
+    width: 32vw;
+    height: 38vh;
     background-color: white;
     padding: 7.58vh 7.45vh;
     border-radius: 16px;
@@ -547,16 +568,21 @@
     width: 100%;
 }
 .back{
+    display: flex;
+    align-items: center;
     background-color: transparent;
     border: none;
     transition: transform 0.2s ease;
     text-align: left;
+    gap: 2vh;
+    transition: 0.2s ease;
 
 }
 
 .back:hover{
-    transform: scale(1.4);
+    transform: scale(1.16);
     color: var(--main-color);
+    gap: 0;
 }
 
 .descricao{

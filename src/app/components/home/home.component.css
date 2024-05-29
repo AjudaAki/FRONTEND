@@ -115,6 +115,8 @@
 
 .centro{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    justify-content: center;
     height: 90%;
 }
