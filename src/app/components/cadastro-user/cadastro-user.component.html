@@ -10,7 +10,7 @@
 
     </div>
     <div class="box-infos">
-        <div class="dados" *ngIf="currentStep === 1">
+        <div class="dados" *ngIf="currentStep === 5">
             <div class="inputs">
                 <div class="LE">
                 <div class="box-h1">
@@ -80,7 +80,7 @@
                     </div>
                     <div class="camp-bairro">
                         <p class="text_peq">Bairro</p>
-                        <input type="text" class="input-g" placeholder="Biarro">
+                        <input type="text" class="input-g" placeholder="Bairro">
                     </div>
                     <div class="camp-rua">
                         <p class="text_peq">Rua</p>
@@ -190,46 +190,46 @@
            
         </div>
 
-        <div class="campos-prof" *ngIf="currentStep === 5">
+        <div class="campos-prof" *ngIf="currentStep === 1">
+            <div class="box-h1">
+                <h1 class="text_principal">Seu perfil</h1>
+            </div>
             <div class="box-discricoes">
                 <div class="box-descri-rapida">
-                    <h2 class="descricao-rapida">Descrição rápida</h2>
-                    <input type="text" class="input-descr" placeholder="">
-                    <p class="p-descri-rapida">Fale um pouco sobre suas aulas, qual seu foco, métodos...</p>
+                    <h2 class="text_medio">Descrição rápida</h2>
+                    <input type="text" class="input-gg" placeholder="">
+                    <p class="text_peq">Fale um pouco sobre suas aulas, qual seu foco, métodos...</p>
                 </div>
                 <div class="box-descri-longa">
                     <div class="box-input-descrLonga">
-                        <h2 class="descricao-longa">Descrição</h2>
-                        <input type="text" class="input-descrLonga" placeholder="">
-                        <p class="p-descri-longa">Fale um pouco sobre suas aulas, qual seu foco, métodos</p>
+                        <h2 class="text_medio">Descrição</h2>
+                        <input type="text" class="input-d" placeholder="">
+                        <p class="text_peq">Fale um pouco sobre suas aulas, qual seu foco, métodos</p>
                     </div>
-                    <br><br>
                     <div class="baixo">
                         <div class="box-area-precos">
                             <div class="box-area">
-                                <h2 class="descricao-area">Área de atuação</h2>
+                                <h2 class="text_medio">Área de atuação</h2>
                                 <div class="area">
-                                    <select class="input-area"> 
-                                        <option value="valor0">Escolha a área</option>
-                                        <option value="valor1">Front-End</option>
-                                        <option value="valor2">Back-End</option>
-                                        <option value="valor3">Full-Stack</option>
-                                        <option value="valor4">UI/UX</option>
+                                    <select class="input-p"> 
+                                        <option value="text_peq">Escolha a área</option>
+                                        <option value="text_peq">Front-End</option>
+                                        <option value="text_peq">Back-End</option>
+                                        <option value="text_peq">Full-Stack</option>
+                                        <option value="vtext_peq">UI/UX</option>
                                     </select>
-                                    <p class="p-descri-area">Selecione a área que você ensina</p>
-                                </div>
-                                
+                                    <p class="text_peq">Selecione a área que você ensina</p>
+                                </div>                   
                             </div>
             
                             <div class="box-precos">
-                                <h2 class="descricao-preco">Faixa de preço hora/aula</h2>
+                                <h2 class="text_medio">Faixa de preço hora/aula</h2>
                                 <div class="precos">
-                                    <input type="text" class="input-preco1" placeholder="">
-                                    <p>até</p>
-                                    <input type="text" class="input-preco2" placeholder="">
-                                    
+                                    <input type="text" class="input-p" placeholder="">
+                                    <p class="text_peq">até</p>
+                                    <input type="text" class="input-p" placeholder=""> 
                                 </div>
-                                <p>Defina um preço da sua hora aula</p> 
+                                <p class="text_peq">Defina um preço da sua hora aula</p> 
                             </div>
 
                             <div class="ld">
@@ -251,66 +251,56 @@
                 
             </div>
             </div>
-            <div class="campos-prof" *ngIf="currentStep === 6">
-                <div class="box-discricoes">
-                    <div class="box-descri-rapida">
-                        <h2 class="descricao-rapida">Descrição rápida</h2>
-                        <input type="text" class="input-descr" placeholder="">
-                        <p class="p-descri-rapida">Fale um pouco sobre suas aulas, qual seu foco, métodos...</p>
-                    </div>
-                    <div class="box-descri-longa">
-                        <div class="box-input-descrLonga">
-                            <h2 class="descricao-longa">Descrição</h2>
-                            <input type="text" class="input-descrLonga" placeholder="">
-                            <p class="p-descri-longa">Fale um pouco sobre suas aulas, qual seu foco, métodos</p>
+            <div class="dados" *ngIf="currentStep === 6">
+                <div class="inputs">
+                    <div class="le">
+                        <div class="box-h1">
+                            <h1 class="text_principal">Seu perfil</h1>
                         </div>
-                        <br><br>
-                        <div class="baixo">
-                            <div class="box-area-precos">
-                                <div class="box-area">
-                                    <h2 class="descricao-area">Área de atuação</h2>
-                                    <div class="area">
-                                        <select class="input-area"> 
-                                            <option value="valor0">Escolha a área</option>
-                                            <option value="valor1">Front-End</option>
-                                            <option value="valor2">Back-End</option>
-                                            <option value="valor3">Full-Stack</option>
-                                            <option value="valor4">UI/UX</option>
-                                        </select>
-                                        <p class="p-descri-area">Selecione a área que você ensina</p>
+                        <div class="add">
+                            <div class="semana">
+                                <button class="btn-semanais text_peq" >Segunda <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
+                                <button class="btn-semanais text_peq" >Terça <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
+                                <button class="btn-semanais text_peq" >Quarta <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
+                                <button class="btn-semanais text_peq" >Quinta <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
+                                <button class="btn-semanais text_peq" >Sexta <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
+                                <button class="btn-semanais text_peq" >Sábado <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
+                                <button class="btn-semanais text_peq" >Domingo <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
+                            </div>
+                            <div>
+                                <div class="contatos">         
+                                    <div class="contatin">
+                                        <img class="icon-contato" src="../../../assets\images\svg-images\discord-icon.svg ">
+                                        <input type="text" class="input-g" placeholder="Discord">
                                     </div>
-                                    
-                                </div>
-                
-                                <div class="box-precos">
-                                    <h2 class="descricao-preco">Faixa de preço hora/aula</h2>
-                                    <div class="precos">
-                                        <input type="text" class="input-preco1" placeholder="">
-                                        <p>até</p>
-                                        <input type="text" class="input-preco2" placeholder="">
-                                        
+                                    <div class="contatin">
+                                        <img class="icon-contato" src="../../../assets\images\svg-images\teams-icon.svg ">
+                                        <input type="text" class="input-g" placeholder="Teams">
                                     </div>
-                                    <p>Defina um preço da sua hora aula</p> 
+                                    <div class="contatin">
+                                        <img class="icon-contato" src="../../../assets\images\svg-images\whats-icon.svg ">
+                                        <input type="text" class="input-g" placeholder="WahtsApp">
+                                    </div>
                                 </div>
-    
-                                <div class="ld">
-                                    <h2 class="text_sub">Essas <br>informações irão aparecer em seu perfil</h2>
-                                    <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png">
+                                <div>
+                                    <p class="text_peq">preencha no mínimo um contato</p>
                                 </div>
                             </div>
-                            
-                        </div>
-                        <div class="inferior">
-                            <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
-                            <div class="steps">
-                                <p class="step-c text_peq-w">1</p>
-                                <p class="step-c text_peq-w">2</p>
-                            </div>
-                            <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
                         </div>
                     </div>
-                    
+                    <div class="ld">
+                        <h2 class="text_sub">Onde e quando seus alunos podem conversar com você?</h2>
+                        <img src="../../assets\images\svg-images\octicon_question-16.svg">
+                    </div>                   
                 </div>
+            <div class="inferior">
+                <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
+                <div class="steps">
+                    <p class="step-c text_peq-w">1</p>
+                    <p class="step-c text_peq-w">2</p>
                 </div>
+                <button (click)="nextStep()"  class="btn_rosa text_medio">Finalizar</button>
+            </div>  
+        </div>
     </div>
 </div>

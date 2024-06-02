@@ -99,7 +99,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 30%;
+    width: 15%;
+    height: 100%;
+
 }
 
 .steps-1 {
@@ -136,7 +138,8 @@
 .inferior {
     display: flex;
     width: 100%;
-    gap: 4vh; /* Substituí 40px por 4vh */
+    margin-top: 10vh;
+    gap: 4vh; 
     justify-content: center;
     align-items: center;
 }
@@ -651,3 +654,75 @@
     display: flex;
     gap: 5vh;
 }
+
+.le{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.add{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85%;
+}
+.semana{
+    display: flex;
+    gap: 4vh;
+}
+.btn-semanais{ 
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+.btn-semana{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    border-radius: 20vh;
+    border: none;
+    padding: 0.5vh;
+    transition: transform 0.2s ease;
+    width: 3vh;
+    height: 3vh;
+}
+.btn-semana:hover{
+    background-color: #cf0344;
+    transform: scale(0.87);
+}
+.plus-semana{
+    filter: invert();
+    width: 2vh;
+    height: 2vh;
+}
+.contatos{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 5vh 2vh;
+    margin-bottom: 1vh;
+    gap: 2vh;
+    border-radius: 16px;
+    box-shadow: 1vh 1vh rgba(29, 29, 29, 0.146);
+    width: max-content;
+}
+.icon-contato{
+    padding: 0.5vh;
+    width: 5vh;
+    height: 5vh;
+}
+
+.contatin{
+    
+    display: flex;
+    width: max-content;
+
+    align-content: center;
+}
+

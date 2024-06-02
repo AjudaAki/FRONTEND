@@ -285,6 +285,8 @@
 /* /////////inputs/////////// */
 
 .input-p {
+    padding-left: 8px;
+    font-size: 1.8vh;
     height: 4.8vh; /* 48px */
     width: 17vh; /* 170px */
     background-color: none;
@@ -298,6 +300,8 @@
 }
 
 .input-m {
+    padding-left: 8px;
+    font-size: 1.8vh;
     height: 4.8vh; /* 48px */
     width: 24.8vh; /* 248px */
     background-color: none;
@@ -312,6 +316,8 @@
 }
 
 .input-g {
+    padding-left: 8px;
+    font-size: 1.8vh;
     height: 4.8vh; /* 48px */
     width: 40vh; /* 400px */
     background-color: none;
@@ -326,6 +332,8 @@
 }
 
 .input-gg {
+    padding-left: 8px;
+    font-size: 1.8vh;
     height: 4.8vh; /* 48px */
     width: 60vh; /* 600px */
     background-color: none;
@@ -340,7 +348,9 @@
 }
 
 .input-d {
-    height: 8vh; /* 80px */
+    padding-left: 8px;
+    font-size: 1.8vh;
+    height: 20vh; /* 80px */
     width: 60vh; /* 600px */
     background-color: none;
     border-radius: 0.8vh; /* 8px */
