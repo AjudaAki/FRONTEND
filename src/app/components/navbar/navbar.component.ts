@@ -17,4 +17,11 @@ export class NavbarComponent {
       this.router.navigate(['/professores'])
     }
   
+    botaoFavs(){
+      this.router.navigate(['/favoritos'])
+    }
+
+    botaoSair(){
+      this.router.navigate([''])
+    }
 }
