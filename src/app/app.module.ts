@@ -11,6 +11,7 @@ import { CadastroUserComponent } from './components/cadastro-user/cadastro-user.
 import { LoginCadastroComponent } from './components/login-cadastro/login-cadastro.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TelaPerfilComponent } from './components/tela-perfil/tela-perfil.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { TelaPerfilComponent } from './components/tela-perfil/tela-perfil.compon
     NavbarComponent,
     TelaPerfilComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
