@@ -283,7 +283,20 @@
 }
 
 /* /////////inputs/////////// */
+.input-pp {
+    padding-left: 8px;
+    font-size: 1.8vh;
+    height: 3vh; /* 48px */
+    width: 10vh; /* 170px */
+    background-color: none;
+    border-radius: 0.8vh; /* 8px */
+    border: 0.05vh solid rgb(66, 66, 66); /* 0.5px */
+}
 
+.input-p:hover {
+    border: 0.05vh solid var(--main-color); /* 0.5px */
+    transform: scale(1.02);
+}
 .input-p {
     padding-left: 8px;
     font-size: 1.8vh;

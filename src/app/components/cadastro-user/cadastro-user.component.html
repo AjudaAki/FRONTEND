@@ -190,7 +190,7 @@
            
         </div>
 
-        <div class="campos-prof" *ngIf="currentStep === 1">
+        <div class="campos-prof" *ngIf="currentStep === 6">
             <div class="box-h1">
                 <h1 class="text_principal">Seu perfil</h1>
             </div>
@@ -251,7 +251,7 @@
                 
             </div>
             </div>
-            <div class="dados" *ngIf="currentStep === 6">
+            <div class="dados" *ngIf="currentStep === 1">
                 <div class="inputs">
                     <div class="le">
                         <div class="box-h1">
@@ -259,14 +259,73 @@
                         </div>
                         <div class="add">
                             <div class="semana">
-                                <button class="btn-semanais text_peq" >Segunda <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
-                                <button class="btn-semanais text_peq" >Terça <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
-                                <button class="btn-semanais text_peq" >Quarta <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
-                                <button class="btn-semanais text_peq" >Quinta <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
-                                <button class="btn-semanais text_peq" >Sexta <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
-                                <button class="btn-semanais text_peq" >Sábado <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
-                                <button class="btn-semanais text_peq" >Domingo <div class="btn-semana"><img class="plus-semana" src="../../../assets/images/Plus symbol button.png"></div>  </button>
-                            </div>
+                                <button class="btn-semanais text_peq" (click)="openCard('monday')">
+                                  Segunda
+                                  <div class="btn-semana">
+                                    <img *ngIf="!savedTimes['monday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
+                                    <span *ngIf="savedTimes['monday']" class="saved-time text_peq-w">{{ savedTimes['monday'].start }} - {{ savedTimes['monday'].end }}</span>
+                                  </div>
+                                </button>
+                                <button class="btn-semanais text_peq" (click)="openCard('tuesday')">
+                                  Terça
+                                  <div class="btn-semana">
+                                    <img *ngIf="!savedTimes['tuesday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
+                                    <span *ngIf="savedTimes['tuesday']" class="saved-time text_peq-w">{{ savedTimes['tuesday'].start }} - {{ savedTimes['tuesday'].end }}</span>
+                                  </div>
+                                </button>
+                                <button class="btn-semanais text_peq" (click)="openCard('wednesday')">
+                                  Quarta
+                                  <div class="btn-semana">
+                                    <img *ngIf="!savedTimes['wednesday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
+                                    <span *ngIf="savedTimes['wednesday']" class="saved-time text_peq-w">{{ savedTimes['wednesday'].start }} - {{ savedTimes['wednesday'].end }}</span>
+                                  </div>
+                                </button>
+                                <button class="btn-semanais text_peq" (click)="openCard('thursday')">
+                                  Quinta
+                                  <div class="btn-semana">
+                                    <img *ngIf="!savedTimes['thursday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
+                                    <span *ngIf="savedTimes['thursday']" class="saved-time text_peq-w">{{ savedTimes['thursday'].start }} - {{ savedTimes['thursday'].end }}</span>
+                                  </div>
+                                </button>
+                                <button class="btn-semanais text_peq" (click)="openCard('friday')">
+                                  Sexta
+                                  <div class="btn-semana">
+                                    <img *ngIf="!savedTimes['friday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
+                                    <span *ngIf="savedTimes['friday']" class="saved-time text_peq-w">{{ savedTimes['friday'].start }} - {{ savedTimes['friday'].end }}</span>
+                                  </div>
+                                </button>
+                                <button class="btn-semanais text_peq" (click)="openCard('saturday')">
+                                  Sábado
+                                  <div class="btn-semana">
+                                    <img *ngIf="!savedTimes['saturday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
+                                    <span *ngIf="savedTimes['saturday']" class="saved-time text_peq-w">{{ savedTimes['saturday'].start }} - {{ savedTimes['saturday'].end }}</span>
+                                  </div>
+                                </button>
+                                <button class="btn-semanais text_peq" (click)="openCard('sunday')">
+                                  Domingo
+                                  <div class="btn-semana">
+                                    <img *ngIf="!savedTimes['sunday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
+                                    <span *ngIf="savedTimes['sunday']" class="saved-time text_peq-w">{{ savedTimes['sunday'].start }} - {{ savedTimes['sunday'].end }}</span>
+                                  </div>
+                                </button>
+                              </div>
+                              
+                              <div *ngIf="currentCard" class="card-b">
+                                <h3 class="text_medio">{{ getCardTitle(currentCard) }}</h3>
+                                <div style="display: flex; gap: 2vh;">
+                                  <div>
+                                    <p class="text_peq" style="color: gray;">Início</p>
+                                    <input type="time" #startTime placeholder="Horário de início" class="input-pp">
+                                  </div>
+                                  <div>
+                                    <p class="text_peq" style="color: gray;">Término</p>
+                                    <input type="time" #endTime placeholder="Horário de término" class="input-pp">
+                                  </div>
+                                </div>
+                                <button class="btn_rosa" (click)="saveTime(currentCard, startTime.value, endTime.value)">Salvar</button>
+                                <button class="btn_cinza" (click)="closeCard()">Fechar</button>
+                              </div>
+                              
                             <div>
                                 <div class="contatos">         
                                     <div class="contatin">

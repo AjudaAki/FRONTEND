@@ -7,10 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./cadastro-user.component.css'],
 })
 export class CadastroUserComponent {
-  
-
   currentStep = 1;
+  currentCard: string | null = null;
 
+  savedTimes: { [key: string]: { start: string, end: string } } = {};
+  
   constructor(private router: Router) {}
 
   routerLogin() {
@@ -29,4 +30,28 @@ export class CadastroUserComponent {
     }
   }
 
+  openCard(card: string) {
+    this.currentCard = card;
+  }
+
+  closeCard() {
+    this.currentCard = null;
+  }
+
+  getCardTitle(card: string): string {
+    const titles: { [key: string]: string } = {
+      monday: 'Segunda',
+      tuesday: 'Terça',
+      wednesday: 'Quarta',
+      thursday: 'Quinta',
+      friday: 'Sexta',
+      saturday: 'Sábado',
+      sunday: 'Domingo'
+    };
+    return titles[card] || '';
+  }
+  saveTime(card: string, start: string, end: string) {
+    this.savedTimes[card] = { start, end };
+    this.closeCard();
+  }
 }

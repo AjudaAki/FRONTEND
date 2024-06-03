@@ -120,17 +120,6 @@
     margin-top: 3vh;
 }
 
-
-
-.linha-divisoria{
-    height: 0.2vh;
-    width: 43vh;
-    margin-top: 2vh;
-    background-color: var(--main-color);
-}
-
-
-
 .email-tel-cpf{
     display: flex;
     flex-direction: column;
@@ -151,6 +140,11 @@
     font-size: 5vh;
     margin-top: 12vh;
     margin-left: 3vh;
+}
+.localizacao{
+    display: flex;
+    margin-top: 1vh;
+    gap: 2.5vh;
 }
 
 

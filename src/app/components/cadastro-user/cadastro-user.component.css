@@ -689,8 +689,7 @@
     border: none;
     padding: 0.5vh;
     transition: transform 0.2s ease;
-    width: 3vh;
-    height: 3vh;
+
 }
 .btn-semana:hover{
     background-color: #cf0344;
@@ -700,6 +699,21 @@
     filter: invert();
     width: 2vh;
     height: 2vh;
+}
+.card-b{
+    display: flex;
+    width: max-content;
+    padding: 0.2vh 2vh;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 2vh;
+    gap: 1vh;
+    justify-content: center;
+    align-items: center;
+}
+.saved-time{
+    
+
 }
 .contatos{
     display: flex;
@@ -718,11 +732,9 @@
     height: 5vh;
 }
 
-.contatin{
-    
+.contatin{  
     display: flex;
     width: max-content;
-
     align-content: center;
 }
 
