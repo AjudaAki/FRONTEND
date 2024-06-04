@@ -86,7 +86,7 @@ export class CadastroUserComponent implements OnInit {
       this.saveFormData(2);
     }
 
-    if (this.currentStep < 4) {
+    if (this.currentStep < 6) {
       this.currentStep++;
     }
   }
