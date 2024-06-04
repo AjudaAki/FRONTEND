@@ -11,6 +11,9 @@ import { CadastroUserComponent } from './components/cadastro-user/cadastro-user.
 import { LoginCadastroComponent } from './components/login-cadastro/login-cadastro.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TelaPerfilComponent } from './components/tela-perfil/tela-perfil.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TelaProfessoresComponent } from './components/tela-professores/tela-professores.component';
+import { TelaFavoritosComponent } from './components/tela-favoritos/tela-favoritos.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,11 @@ import { TelaPerfilComponent } from './components/tela-perfil/tela-perfil.compon
     CadastroUserComponent,
     LoginCadastroComponent,
     NavbarComponent,
-    TelaPerfilComponent
+    TelaPerfilComponent,
+    TelaProfessoresComponent,
+    TelaFavoritosComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

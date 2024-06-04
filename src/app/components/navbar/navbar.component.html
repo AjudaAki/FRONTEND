@@ -1,7 +1,7 @@
 <div class="box-navbar">
     <div class="opcoes">
         <div class="box-botao-prof">
-            <button type="button" class="botao-prof">
+            <button type="button" class="botao-prof" (click)="botaoProfs()">
                 <div class="imagem-botao">
                     <img class="img-teste" src="../../../assets//images/imagem teste icone.jpeg">
                 </div>
@@ -11,7 +11,7 @@
             </button>
         </div>
         <div class="box-botao-fav">
-            <button type="button" class="botao-fav">
+            <button type="button" class="botao-fav" (click)="botaoFavs()">
                 <div class="imagem-botao">
                     <img class="img-teste" src="../../../assets//images/imagem teste icone.jpeg">
                 </div>
@@ -21,7 +21,7 @@
             </button>
         </div>
         <div class="box-botao-perfil">
-            <button type="button" class="botao-perfil" >
+            <button type="button" class="botao-perfil" (click)="botaoPerfil()">
                 <div class="imagem-botao">
                     <img class="img-teste" src="../../../assets//images/imagem teste icone.jpeg">
                 </div>
@@ -32,15 +32,10 @@
         </div>
     </div>
     <div class="box-botao-sair">
-        <button type="button" class="botao-sair">
-            <!-- <div class="imagem-botao">
-                <img class="img-teste" src="../../../assets//images/imagem teste icone.jpeg">
-            </div> -->
+        <button type="button" class="botao-sair" (click)="botaoSair()">
             <div class="box-nome-botao-sair">
                 <p class="nome-botao-sair text_medio">Sair</p>
             </div>
         </button>
     </div>    
-
-   
 </div>

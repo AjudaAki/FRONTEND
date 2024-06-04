@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -6,15 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  constructor(private router: Router) {}
+    
+    botaoPerfil(){
+      this.router.navigate(['/perfil'])
+    }
 
-  botaoProf = 1
-  botaoFav = 2
-  botaoPerfil = 3
-    // botaoProf(){
-    //   const profButton = document.querySelector('.botao-prof') as HTMLElement;
-    //     if (profButton) {
-    //       profButton.style.backgroundColor = 'white';
-    //     }
-    // }
+    botaoProfs(){
+      this.router.navigate(['/professores'])
+    }
+  
+    botaoFavs(){
+      this.router.navigate(['/favoritos'])
+    }
 
+    botaoSair(){
+      this.router.navigate([''])
+    }
 }
