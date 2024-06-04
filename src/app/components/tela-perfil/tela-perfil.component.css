@@ -14,6 +14,8 @@
 
 .box-perfil{
     margin-left: 30vh;
+    min-height: 100vh;
+    max-height: max-content;
 }
 
 
@@ -107,6 +109,7 @@
     align-items: center;
     margin-top: 6vh;
     gap: 5vh;
+    border-bottom: 1px solid var(--main-color);
 }
 
 
@@ -193,11 +196,18 @@
     align-items: center;
     width: 44vh;
     height: 22vh;
-    /* background-color: blue; */
     background-color: #ffff;
     border-radius: 1.6vh;
+    padding: 0 2vh;
     box-shadow: 1vh 1vh rgba(0,0,0,0.03);
-    gap: 2vh
+    justify-content: space-between;
+    border: none;
+    transition: transform 0.3s ease;
+}
+.box-fav:hover{
+    background-color: #f6f6f6;
+    transform: scale(0.99);
+
 }
 
 
@@ -205,37 +215,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 22vh;
-    height: 22vh;
+    width: 12vh;
+    height: 12vh;
     /* background-color: aqua; */
 }
 
 
 .img-fav{
 
-    width: 20vh;
-    height: 20vh;
+    width: 100%;
+    height: 100%;
 }
 
 
 .box-prof-fav{
     display: flex;
     width: 20vh;
-    height: 22vh;
     flex-direction: column;
     justify-content: center;
-    /* background-color: green; */
-    gap: 2.1vh;
+    
+    padding: 2vh 0 2vh 0;
 }
 
 
 .texto-fav{
     font-size: 2.5vh;
+    color: gray;
+    font-weight: lighter;
 }
 
 
 .numero-fav{
-    font-size: 8vh;
+    font-size: 6vh;
 }
 
 
@@ -486,5 +497,3 @@
     border-radius: 2vh;
     background-color: var(--main-color);
 }
-
-

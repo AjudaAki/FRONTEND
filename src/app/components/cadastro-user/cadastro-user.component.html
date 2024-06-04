@@ -10,7 +10,6 @@
 
     </div>
     <div class="box-infos">
-        <div class="dados" *ngIf="currentStep === 5">
         <div class="dados" *ngIf="currentStep === 1"  [formGroup]="formStep1">
             <div class="inputs">
                 <div class="LE">
@@ -192,7 +191,7 @@
            
         </div>
 
-        <div class="campos-prof" *ngIf="currentStep === 6">
+        <div class="campos-prof" *ngIf="currentStep === 5">
             <div class="box-h1">
                 <h1 class="text_principal">Seu perfil</h1>
             </div>
@@ -253,7 +252,7 @@
                 
             </div>
             </div>
-            <div class="dados" *ngIf="currentStep === 1">
+            <div class="dados" *ngIf="currentStep === 6">
                 <div class="inputs">
                     <div class="le">
                         <div class="box-h1">

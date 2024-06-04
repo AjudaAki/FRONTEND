@@ -17,7 +17,9 @@ export class CadastroUserComponent implements OnInit {
   formStep2!: FormGroup;
   formStep5!: FormGroup;
   formStep4!: FormGroup;
+  currentCard: string | null = null;
 
+  savedTimes: { [key: string]: { start: string, end: string } } = {};
   constructor( private router: Router, private fb: FormBuilder, private apiService: ApiService ) {}
 
   ngOnInit(): void {
@@ -119,5 +121,31 @@ export class CadastroUserComponent implements OnInit {
         // Mostrar mensagem de erro
       }
     );
+  }
+
+  openCard(card: string) {
+    this.currentCard = card;
+  }
+
+  closeCard() {
+    this.currentCard = null;
+  }
+
+  getCardTitle(card: string): string {
+    const titles: { [key: string]: string } = {
+      monday: 'Segunda',
+      tuesday: 'Terça',
+      wednesday: 'Quarta',
+      thursday: 'Quinta',
+      friday: 'Sexta',
+      saturday: 'Sábado',
+      sunday: 'Domingo'
+    };
+    return titles[card] || '';
+  }
+
+  saveTime(card: string, start: string, end: string) {
+    this.savedTimes[card] = { start, end };
+    this.closeCard();
   }
 }

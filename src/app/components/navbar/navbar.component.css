@@ -15,7 +15,6 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 12vh;
-    margin-left: 1vh;
     gap: 2vh
 }
 
@@ -34,19 +33,6 @@
     width: 30vh;
     height: 8vh;
 }
-
-
-.botao-prof{
-    display: flex;
-    flex-direction: row;
-    width: 28vh;
-    height: 6vh;
-    background-color: var(--main-color);
-    border: none;
-    gap: 2vh;
-    cursor: pointer;
-}
-
 
 .box-nome-botao-prof{
     display: flex;
@@ -67,19 +53,6 @@
     width: 30vh;
     height: 8vh;
 }
-
-
-.botao-fav{
-    display: flex;
-    flex-direction: row;
-    width: 28vh;
-    height: 6vh;
-    background-color: var(--main-color);
-    border: none;
-    cursor: pointer;
-    gap: 2vh;
-}
-
 
 .box-nome-botao-fav{
     display: flex;
@@ -104,15 +77,30 @@
 }
 
 
-.botao-perfil{
+.botao{
     display: flex;
     flex-direction: row;
-    width: 28vh;
-    height: 6vh;
+    width: 100%;
     background-color: var(--main-color);
     border: none;
     cursor: pointer;
     gap: 2vh;
+    padding: 0.8vh;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s linear;
+    position: relative;
+}
+.botao::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.2vh;
+    background: #ffffffaa; /* Cor da borda animada */
+    transition: width 0.3s ease-in-out; /* Transição para a largura */
+}
+.botao:hover::after {
+    width: 100%; /* Expande a borda animada */
 }
 
 
@@ -165,3 +153,17 @@
     font-size: 2.5vh;
     color: white;
 }
+
+.active {
+    background-color: #ffffff;
+    color: black;
+    animation: all 0.2s ease;
+
+  }
+  .botao-prof, .botao-fav, .botao-perfil {
+    transition: background-color 0.3s ease;
+  }
+  
+  .nome-botao-prof.active, .nome-botao-fav.active, .nome-botao-perfil.active {
+    transition: color 0.3s ease;
+  }
