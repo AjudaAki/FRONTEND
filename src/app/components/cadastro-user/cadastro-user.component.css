@@ -49,7 +49,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    opacity: 1;
     gap: 4vh;
     transition: opacity 0.5s ease-in-out;
 }
@@ -275,6 +274,7 @@
     gap: 45px;
     width: 180vh;
     height: 500px;
+    
     margin-left: 80px;
     margin-top: 20px;
 }
@@ -283,8 +283,7 @@
 .box-discricoes{
     display: flex;
     flex-direction: column;
-    height: 460px;
-    width: 500px;
+    background-color: #7298f8;
     
 }
 
@@ -293,8 +292,7 @@
     margin-left: 15px;
     border: 1px solid black;
     border-radius: 8px;
-    width: 560px;
-    height: 45px;
+
 }
 
 
@@ -310,15 +308,7 @@
     margin-top: 8px;
 }
 
-
-.box-input-descrLonga{
-    margin-top: 50px;
-}
-
-
 .input-descrLonga{
-    width: 560px;
-    height: 100px;
     border: 1px solid  black;
     border-radius: 8px;
     margin-left: 15px;
@@ -328,24 +318,13 @@
 .box-area-precos{
     display: flex;
     flex-direction: row;
-    height: 140px;
-    width: 300px;
     gap: 45px;
-    
 }
-
-
-.area{
-    width: 300px;
-    height: 100px;
-}
-
 
 .input-area{
     border: 1px solid  black;
     border-radius: 7px;
-    width: 150px;
-    height: 40px;
+
     margin-left: 34px;
 }
 
@@ -353,11 +332,9 @@
 .box-precos{
     display: flex;
     flex-direction: column;
+    padding: 1.5vh;
     align-items: center;
     justify-content: center;
-
-    width: 295px;
-    height: 100px;
     background-color: white;
     border-radius: 2vh;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
@@ -366,45 +343,20 @@
 
 .precos{
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    height: 100px;
-    gap: 20px
+    gap:1vh;
 }
-
-
-.input-preco1{
-    border: 1px solid  black;
-    border-radius: 6px;
-    width: 100px;
-    height: 35px;
-}
-
-
-.input-preco2{
-    border: 1px solid  black;
-    border-radius: 6px;
-    width: 100px;
-    height: 35px;
-}
-
 
 .campos-prof-contatoHorario{
     display: flex;
     justify-content: center;
-    width: 600px;
-    height: 500px;
-    gap: 20px;
-    
+    gap: 20px; 
 }
-
 
 .title-contatoHorario{
     font-size: 18px;
 }
-
 
 .box-contatos{  
     display: flex;
@@ -415,7 +367,6 @@
     border-color:  black;
     border-radius: 14px;
 }
-
 
 .box-titleInput{
     margin-top: 10px;
@@ -430,43 +381,37 @@
 }
 
 .box-descri-rapida{
-    width: 605px;
-    height: 100px;
+    width: max-content;
+    padding: 1.5vh;
     border-radius: 2vh;
     background-color: white;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
 .box-input-descrLonga{
-    width: 605px;
-    height: 145px;
+    width: max-content;
+    padding: 1.5vh;
     border-radius: 2vh;
     background-color: white;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
 .box-area{
-    width: 230px;
-    height: 100px;
+    padding: 1.5vh;
     border-radius: 2vh;
     background-color: white;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
-
 .baixo{
     display: flex;
     flex-direction: row;
-    height: 150px;
-    width: 610px;
+
 }
 
-
-*/
 .legenda{
     justify-content: center;
     background-color: palevioletred;
-    width: 355px;
-    height: 150px;
+
 }
 
 .texto_legenda{
@@ -475,13 +420,9 @@
 }
 
 .texto_descricao{
-
-    
     font-weight: normal;
-
     transform: translateX(100%);
     gap: 10px;
-    
 }
 
 .descricao-rapida{
@@ -493,10 +434,6 @@
     margin-top: 10px;
 }
 
-.box-descri-longa{
-    height: 230px;
-    width: 605px;
-}
 
 .descricao-area{
     font-size: 130%;
@@ -520,18 +457,15 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.box-condicional{
-  
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
-        opacity: 1;
-        gap: 50vh;
-        transition: opacity 0.5s ease-in-out;
-    
-
+.box-condicional{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    gap: 50vh;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .titulo-conteudo{
@@ -711,10 +645,7 @@
     justify-content: center;
     align-items: center;
 }
-.saved-time{
-    
 
-}
 .contatos{
     display: flex;
     flex-direction: column;

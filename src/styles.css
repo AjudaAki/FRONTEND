@@ -291,9 +291,10 @@
     background-color: none;
     border-radius: 0.8vh; /* 8px */
     border: 0.05vh solid rgb(66, 66, 66); /* 0.5px */
+    transition: transform 0.3s ease; 
 }
 
-.input-p:hover {
+.input-pp:hover {
     border: 0.05vh solid var(--main-color); /* 0.5px */
     transform: scale(1.02);
 }
@@ -305,13 +306,28 @@
     background-color: none;
     border-radius: 0.8vh; /* 8px */
     border: 0.05vh solid rgb(66, 66, 66); /* 0.5px */
+    transition: transform 0.3s ease; 
 }
 
 .input-p:hover {
     border: 0.05vh solid var(--main-color); /* 0.5px */
     transform: scale(1.02);
 }
+.input-p2 {
+    padding-left: 8px;
+    font-size: 1.8vh;
+    height: 4.8vh; /* 48px */
+    width: 8vh; /* 170px */
+    background-color: none;
+    border-radius: 0.8vh; /* 8px */
+    border: 0.05vh solid rgb(66, 66, 66); /* 0.5px */
+    transition: transform 0.3s ease; 
+}
 
+.input-p2:hover {
+    border: 0.05vh solid var(--main-color); /* 0.5px */
+    transform: scale(1.02);
+}
 .input-m {
     padding-left: 8px;
     font-size: 1.8vh;

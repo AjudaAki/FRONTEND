@@ -6,15 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  activeButton: string = 'professores'; // Inicialmente define 'professores' como ativo
 
-  botaoProf = 1
-  botaoFav = 2
-  botaoPerfil = 3
-    // botaoProf(){
-    //   const profButton = document.querySelector('.botao-prof') as HTMLElement;
-    //     if (profButton) {
-    //       profButton.style.backgroundColor = 'white';
-    //     }
-    // }
-
+  setActiveButton(button: string) {
+    this.activeButton = button;
+  }
+  isActive(button: string): boolean {
+    return this.activeButton === button;
+  }
 }

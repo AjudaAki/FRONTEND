@@ -10,7 +10,7 @@
 
     </div>
     <div class="box-infos">
-        <div class="dados" *ngIf="currentStep === 5">
+        <div class="dados" *ngIf="currentStep === 1">
             <div class="inputs">
                 <div class="LE">
                 <div class="box-h1">
@@ -190,23 +190,25 @@
            
         </div>
 
-        <div class="campos-prof" *ngIf="currentStep === 6">
-            <div class="box-h1">
-                <h1 class="text_principal">Seu perfil</h1>
-            </div>
-            <div class="box-discricoes">
-                <div class="box-descri-rapida">
-                    <h2 class="text_medio">Descrição rápida</h2>
-                    <input type="text" class="input-gg" placeholder="">
-                    <p class="text_peq">Fale um pouco sobre suas aulas, qual seu foco, métodos...</p>
-                </div>
-                <div class="box-descri-longa">
+        <div class="dados" *ngIf="currentStep === 5">
+            <div class="inputs">
+                <div class="le">
+                    <div class="box-h1">
+                        <h1 class="text_principal">Seu perfil</h1>
+                    </div>
+                    
+                        <div class="box-descri-rapida">
+                            <h2 class="text_medio">Descrição rápida</h2>
+                            <input type="text" class="input-gg" placeholder="">
+                            <p class="text_peq">Fale um pouco sobre suas aulas, qual seu foco, métodos...</p>
+                        </div>
+                
                     <div class="box-input-descrLonga">
                         <h2 class="text_medio">Descrição</h2>
                         <input type="text" class="input-d" placeholder="">
                         <p class="text_peq">Fale um pouco sobre suas aulas, qual seu foco, métodos</p>
                     </div>
-                    <div class="baixo">
+                    
                         <div class="box-area-precos">
                             <div class="box-area">
                                 <h2 class="text_medio">Área de atuação</h2>
@@ -216,7 +218,7 @@
                                         <option value="text_peq">Front-End</option>
                                         <option value="text_peq">Back-End</option>
                                         <option value="text_peq">Full-Stack</option>
-                                        <option value="vtext_peq">UI/UX</option>
+                                        <option value="text_peq">UI/UX</option>
                                     </select>
                                     <p class="text_peq">Selecione a área que você ensina</p>
                                 </div>                   
@@ -225,20 +227,20 @@
                             <div class="box-precos">
                                 <h2 class="text_medio">Faixa de preço hora/aula</h2>
                                 <div class="precos">
-                                    <input type="text" class="input-p" placeholder="">
+                                    <input type="text" class="input-p2" placeholder="">
                                     <p class="text_peq">até</p>
-                                    <input type="text" class="input-p" placeholder=""> 
+                                    <input type="text" class="input-p2" placeholder=""> 
                                 </div>
                                 <p class="text_peq">Defina um preço da sua hora aula</p> 
                             </div>
-
+                        </div>
+                    </div>
+                
                             <div class="ld">
-                                <h2 class="text_sub">Essas <br>informações irão aparecer em seu perfil</h2>
+                                <h2 class="text_sub">Essas informações irão aparecer em seu perfil</h2>
                                 <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png">
                             </div>
                         </div>
-                        
-                    </div>
                     <div class="inferior">
                         <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
                         <div class="steps">
@@ -247,11 +249,11 @@
                         </div>
                         <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
                     </div>
-                </div>
                 
+                
+            
             </div>
-            </div>
-            <div class="dados" *ngIf="currentStep === 1">
+            <div class="dados" *ngIf="currentStep === 6">
                 <div class="inputs">
                     <div class="le">
                         <div class="box-h1">

@@ -1,46 +1,42 @@
 <div class="box-navbar">
     <div class="opcoes">
         <div class="box-botao-prof">
-            <button type="button" class="botao-prof">
-                <div class="imagem-botao">
-                    <img class="img-teste" src="../../../assets//images/imagem teste icone.jpeg">
-                </div>
-                <div class="box-nome-botao-prof">
-                    <p class="nome-botao-prof text_medio">Professores</p>
-                </div>
-            </button>
+          <button type="button" class="botao" [ngClass]="{'active': activeButton === 'professores'}" (click)="setActiveButton('professores')">
+            <div class="imagem-botao">
+              <img class="img-teste" [src]="activeButton === 'professores' ? '../../../assets/images/svg-images/professor-rosa.svg' : '../../../assets/images/svg-images/professor.svg'">
+            </div>
+            <div class="box-nome-botao-prof">
+              <p class="nome-botao-prof text_medio" [ngClass]="{'active': activeButton === 'professores'}">Professores</p>
+            </div>
+          </button>
         </div>
         <div class="box-botao-fav">
-            <button type="button" class="botao-fav">
-                <div class="imagem-botao">
-                    <img class="img-teste" src="../../../assets//images/imagem teste icone.jpeg">
-                </div>
-                <div class="box-nome-botao-fav">
-                    <p class="nome-botao-fav text_medio">Favoritos</p>
-                </div>
-            </button>
+          <button type="button" class="botao" [ngClass]="{'active': activeButton === 'favoritos'}" (click)="setActiveButton('favoritos')">
+            <div class="imagem-botao">
+              <img class="img-teste" [src]="activeButton === 'favoritos' ? '../../../assets/images/svg-images/estrela-rosa.svg' : '../../../assets/images/svg-images/estrela.svg'">
+            </div>
+            <div class="box-nome-botao-fav">
+              <p class="nome-botao-fav text_medio" [ngClass]="{'active': activeButton === 'favoritos'}">Favoritos</p>
+            </div>
+          </button>
         </div>
         <div class="box-botao-perfil">
-            <button type="button" class="botao-perfil" >
-                <div class="imagem-botao">
-                    <img class="img-teste" src="../../../assets//images/imagem teste icone.jpeg">
-                </div>
-                <div class="box-nome-botao-perfil">
-                    <p class="nome-botao-perfil text_medio">Perfil</p>
-                </div>
-            </button>
-        </div>
-    </div>
-    <div class="box-botao-sair">
-        <button type="button" class="botao-sair">
-            <!-- <div class="imagem-botao">
-                <img class="img-teste" src="../../../assets//images/imagem teste icone.jpeg">
-            </div> -->
-            <div class="box-nome-botao-sair">
-                <p class="nome-botao-sair text_medio">Sair</p>
+          <button type="button" class="botao" [ngClass]="{'active': activeButton === 'perfil'}" (click)="setActiveButton('perfil')">
+            <div class="imagem-botao">
+              <img class="img-teste" [src]="activeButton === 'perfil' ? '../../../assets/images/svg-images/perfil-rosa.svg' : '../../../assets/images/svg-images/perfil.svg'">
             </div>
-        </button>
+            <div class="box-nome-botao-perfil">
+              <p class="nome-botao-perfil text_medio" [ngClass]="{'active': activeButton === 'perfil'}">Perfil</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    <div class="box-botao-sair">
+      <button type="button" class="botao">
+        <div class="box-nome-botao-sair">
+          <p class="nome-botao-sair text_medio">Sair</p>
+        </div>
+      </button>
     </div>    
-
-   
-</div>
+  </div>
+  
