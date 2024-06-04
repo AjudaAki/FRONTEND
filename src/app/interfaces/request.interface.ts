@@ -14,3 +14,8 @@ export interface registerDataAluno{
 }
 
 
+export interface profListado{
+    nome: string;
+    descricao_rapida: string;
+    
+}
