@@ -283,8 +283,23 @@
 }
 
 /* /////////inputs/////////// */
+.input-pp {
+    padding-left: 8px;
+    font-size: 1.8vh;
+    height: 3vh; /* 48px */
+    width: 10vh; /* 170px */
+    background-color: none;
+    border-radius: 0.8vh; /* 8px */
+    border: 0.05vh solid rgb(66, 66, 66); /* 0.5px */
+}
 
+.input-p:hover {
+    border: 0.05vh solid var(--main-color); /* 0.5px */
+    transform: scale(1.02);
+}
 .input-p {
+    padding-left: 8px;
+    font-size: 1.8vh;
     height: 4.8vh; /* 48px */
     width: 17vh; /* 170px */
     background-color: none;
@@ -298,6 +313,8 @@
 }
 
 .input-m {
+    padding-left: 8px;
+    font-size: 1.8vh;
     height: 4.8vh; /* 48px */
     width: 24.8vh; /* 248px */
     background-color: none;
@@ -312,6 +329,8 @@
 }
 
 .input-g {
+    padding-left: 8px;
+    font-size: 1.8vh;
     height: 4.8vh; /* 48px */
     width: 40vh; /* 400px */
     background-color: none;
@@ -326,6 +345,8 @@
 }
 
 .input-gg {
+    padding-left: 8px;
+    font-size: 1.8vh;
     height: 4.8vh; /* 48px */
     width: 60vh; /* 600px */
     background-color: none;
@@ -340,7 +361,9 @@
 }
 
 .input-d {
-    height: 8vh; /* 80px */
+    padding-left: 8px;
+    font-size: 1.8vh;
+    height: 20vh; /* 80px */
     width: 60vh; /* 600px */
     background-color: none;
     border-radius: 0.8vh; /* 8px */

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,21 +6,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  constructor(private router: Router) {}
-    
-    botaoPerfil(){
-      this.router.navigate(['/perfil'])
-    }
+  activeButton: string = 'professores'; // Inicialmente define 'professores' como ativo
 
-    botaoProfs(){
-      this.router.navigate(['/professores'])
-    }
-  
-    botaoFavs(){
-      this.router.navigate(['/favoritos'])
-    }
-
-    botaoSair(){
-      this.router.navigate([''])
-    }
+  setActiveButton(button: string) {
+    this.activeButton = button;
+  }
+  isActive(button: string): boolean {
+    return this.activeButton === button;
+  }
 }
