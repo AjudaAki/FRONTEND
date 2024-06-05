@@ -77,49 +77,38 @@
 }
 
 
-.botao{
-.botao{
+
+.botao {
     display: flex;
     flex-direction: row;
-    width: 100%;
     width: 100%;
     background-color: var(--main-color);
     border: none;
     cursor: pointer;
     gap: 2vh;
     padding: 0.8vh;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s linear;
+    transition: background-color 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
     position: relative;
-}
-.botao::after {
+  }
+  
+  .botao:hover {
+    border-bottom: 2px solid pink;
+  }
+  
+  .botao::after {
     content: '';
     position: absolute;
-    bottom: 0;
     left: 0;
-    width: 0;
-    height: 0.2vh;
-    background: #ffffffaa; /* Cor da borda animada */
-    transition: width 0.3s ease-in-out; /* Transição para a largura */
-}
-.botao:hover::after {
-    width: 100%; /* Expande a borda animada */
-    padding: 0.8vh;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s linear;
-    position: relative;
-}
-.botao::after {
-    content: '';
-    position: absolute;
     bottom: 0;
-    left: 0;
     width: 0;
-    height: 0.2vh;
-    background: #ffffffaa; /* Cor da borda animada */
-    transition: width 0.3s ease-in-out; /* Transição para a largura */
-}
-.botao:hover::after {
-    width: 100%; /* Expande a borda animada */
-}
+    height: 2px;
+    background-color: pink;
+    transition: width 0.3s ease;
+  }
+  
+  .botao:hover::after {
+    width: 100%;
+  }
 
 
 .box-nome-botao-perfil{
@@ -185,4 +174,3 @@
   .nome-botao-prof.active, .nome-botao-fav.active, .nome-botao-perfil.active {
     transition: color 0.3s ease;
   }
-}
