@@ -13,6 +13,7 @@
     align-items: center;
     padding: 1vh 4.39vh 0 4.39vh;
     width: 145.55vh;
+    height: 8.94vh;
     border-radius: 16px 16px 0 0 ;
     box-shadow: 12px 20px rgba(0,0,0,0.4);
 }
@@ -28,12 +29,20 @@
     display: flex;
     align-items: center;
     gap: 40px;
+    height: 100%;
+    
 }
 
 .textos {
     display: flex;
     width: 343px;
     justify-content: space-between;
+    height: 100%;
+}
+.caixa{
+    width: 12vh;
+    height: 100%;
+    cursor: pointer;
 }
 .textos a {
     cursor: pointer;
@@ -50,13 +59,12 @@
     border-bottom:0.05vh solid var(--main-color);
 }
 .border{
-    border-bottom: 0.05vh solid transparent;
-    transition: transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 } 
-.border:hover{
-    border-bottom:0.05vh solid;
-    transform: scale(1.06);
-}
+
 .le {
     display: flex;
     align-items: center;

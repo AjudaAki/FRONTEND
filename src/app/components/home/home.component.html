@@ -9,20 +9,26 @@
     </div>
     <div class="login">
       <div class="textos">
-        <div class="border">
-          <a class="text_medio " 
-             [ngClass]="{'active': currentSlide === 0}" 
-             (click)="setSlide(0)">Site</a>
+        <div class="caixa" (click)="setSlide(0)">
+          <div class="border">
+            <a class="text_medio" 
+              [ngClass]="{'active': currentSlide === 0}" 
+              >Site</a>
+          </div>
         </div>
-        <div class="border">
-          <a class="text_medio" 
-             [ngClass]="{'active': currentSlide === 1}" 
-             (click)="setSlide(1)">Professor</a>
+        <div class="caixa"(click)="setSlide(1)">
+          <div class="border" >
+            <a class="text_medio" 
+              [ngClass]="{'active': currentSlide === 1}" 
+              >Professor</a>
+          </div>
         </div>
-        <div class="border">
-          <a class="text_medio" 
-             [ngClass]="{'active': currentSlide === 2}" 
-             (click)="setSlide(2)">Aluno</a>
+        <div class="caixa" (click)="setSlide(2)">
+          <div class="border" >
+            <a class="text_medio" 
+              [ngClass]="{'active': currentSlide === 2}" 
+              >Aluno</a>
+          </div>
         </div>
       </div>
       <button class="btn_azul text_medio" type="button" routerLink="login">
