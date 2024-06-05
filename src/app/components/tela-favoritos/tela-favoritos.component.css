@@ -1,0 +1,182 @@
+.tela{
+    display: flex;
+}
+
+
+.lado-direito{
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    width: 100%;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+
+.parte-superior{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    gap: 70vh;
+    /* background-color: red; */
+
+}
+
+
+.titulo-profs{
+    display: flex;
+    align-items: center;
+    margin-left: 5vh;
+    gap: 2vh;
+}
+
+
+.professores{
+    margin-left: 4vh;
+}
+
+
+.imagem-prof{
+    width: 8vh;
+    height: 8vh;
+}
+
+
+.box-barraPesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48vh;
+    height: 6vh;
+    background-color: #ffff;
+    border-radius: 1.6vh;
+    box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+    /* background-color: purple; */
+}
+
+
+.input-pesquisa{
+    width: 45vh;
+    height: 4.5vh;
+    margin-left: 2vh;
+    border: none;
+    
+}   
+
+
+.botao-pesquisa{
+    background: none;
+    border: none ;
+}
+
+
+.imagem-lupa{
+    width: 4vh;
+    height: 5vh;
+    margin-right: 2vh;
+}
+
+
+.parte-inferior{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 85vh;
+    background-color: pink;
+}
+
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6vh;
+    gap: 2vh;
+}
+
+
+.box-card{
+    display: flex;
+    width: 120vh;
+    height: 25vh;
+    /* background-color: blue; */
+    background-color: #ffff;
+    border-radius: 1.6vh;
+    box-shadow: 1vh 1vh rgba(0,0,0,0.03);
+    gap: 5vh;
+}
+
+
+.box-foto-perfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    width: 25vh;
+    height: 25vh;
+    /* background-color: red; */
+
+}
+
+
+.foto-perfil{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 20vh;
+}
+
+
+.box-conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-left: 2vh; */
+}
+
+
+.box-nome{
+    display: flex;
+    flex-direction: column;
+    width: 65vh;
+    height: 11vh;
+    gap: 2vh;
+    /* background-color: purple;   */
+}
+
+
+.divisoria{
+    width: 65vh;
+    border-bottom: 1px solid var(--main-color);
+}
+
+
+.box-descricao{
+    display: flex;
+    flex-direction: column;
+    width: 65vh;
+    height: 13.8vh;
+    gap: 1vh;
+    /* background-color: green; */
+}
+
+
+.box-area{
+    display: flex;
+    justify-content: center;
+    width: 16vh;
+    height: 25vh;
+    margin-top: 2vh;
+    /* background-color: black; */
+}
+
+
+.area-prof{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14vh;
+    height: 5vh;
+    color: white;
+    border-radius: 1vh;
+    background-color: var(--main-color);
+}

@@ -7,10 +7,9 @@
                 </button>
             </div>
         </div>
-
     </div>
     <div class="box-infos">
-        <div class="dados" *ngIf="currentStep === 1">
+        <div class="dados" *ngIf="currentStep === 1"  [formGroup]="formStep1">
             <div class="inputs">
                 <div class="LE">
                 <div class="box-h1">
@@ -19,31 +18,31 @@
                 <div class="campos-pessoais">
                     <div class="camp-nome">   
                         <p class="text_peq">Nome</p>
-                        <input type="text" class="input-g" placeholder="Nome"/>
+                        <input type="text" formControlName="nome" class="input-g" placeholder="Nome"/>
                     </div>
                     <div class="camp-email">
                         <p class="text_peq">E-mail</p>
-                        <input type="email" class="input-g" placeholder="E-mail"/>
+                        <input type="email" formControlName="email" class="input-g" placeholder="E-mail"/>
                     </div>
                     <div class="camp-senha">
                         <p class="text_peq">Senha</p>
-                        <input type="text" class="input-g" placeholder="Senha"/>
+                        <input type="text" formControlName="senha" class="input-g" placeholder="Senha"/>
                     </div>
                     <div class="camp-confSenha">
                         <p class="text_peq">Confirmar senha</p>
-                        <input type="text" class="input-g" placeholder="Confirmar senha"/>
+                        <input type="text"  class="input-g" placeholder="Confirmar senha"/>
                     </div>
                     <div class="camp-tel">
                         <p class="text_peq">Telefone</p>
-                        <input type="text" class="input-g" placeholder="Telefone (apenas números)"/>
+                        <input type="text" formControlName="telefone" class="input-g" placeholder="Telefone (apenas números)"/>
                     </div>
                     <div class="camp-cpf">
                         <p class="text_peq">CPF</p>
-                        <input type="text" class="input-g" placeholder="CPF (Apenas números)"/>
+                        <input type="text"  formControlName="cpf" class="input-g" placeholder="CPF (Apenas números)"/>
                     </div>
                     <div class="camp-data">
                         <p class="text_peq">Data de nascimento</p>
-                        <input type="date" class="input-g" placeholder="Data de nascimento"/>
+                        <input type="date" formControlName="data_nascimento" class="input-g" placeholder="Data de nascimento"/>
                     </div>
                 </div> 
             </div>
@@ -63,7 +62,7 @@
             </div>
            
         </div>
-        <div class="dados" *ngIf="currentStep === 2">
+        <div class="dados" *ngIf="currentStep === 2" [formGroup]="formStep2">
             <div class="inputs">
                 <div class="LE">
                 <div class="box-h1">
@@ -72,23 +71,24 @@
                 <div class="campos-pessoais">
                     <div class="camp-estado">
                         <p class="text_peq">Estado</p>
-                        <input type="text" class="input-g" placeholder="Estado" >
+                        <input type="text" formControlName="estado" class="input-g" placeholder="Estado" >
                     </div>
                     <div class="camp-cidade">
                         <p class="text_peq">Cidade</p>
-                        <input type="text" class="input-g" placeholder="Cidade">
+                        <input type="text" formControlName="cidade" class="input-g" placeholder="Cidade">
                     </div>
                     <div class="camp-bairro">
                         <p class="text_peq">Bairro</p>
                         <input type="text" class="input-g" placeholder="Bairro">
+                        <input type="text" formControlName="bairro" class="input-g" placeholder="Biarro">
                     </div>
                     <div class="camp-rua">
                         <p class="text_peq">Rua</p>
-                        <input type="text" class="input-g" placeholder="Rua">
+                        <input type="text" formControlName="rua" class="input-g" placeholder="Rua">
                     </div>
                     <div class="camp-numero">
                         <p class="text_peq">Número</p>
-                        <input type="text" class="input-g" placeholder="Número">
+                        <input type="text" formControlName="numero" class="input-g" placeholder="Número">
                     </div>
                 </div>
             </div>
@@ -178,7 +178,7 @@
                         </div>
                     </div>
                     <div class="botoes">
-                        <button type="submit" class="btn_cinza text_medio">
+                        <button type="submit" class="btn_cinza text_medio" (click)="submitFormAluno()">
                             Ser aluno
                         </button>
                         <button type="button" class="btn_rosa text_medio" (click)="nextStep()">
@@ -186,23 +186,19 @@
                         </button>
                     </div>
                 </div>
-               
-           
         </div>
 
-        <div class="dados" *ngIf="currentStep === 5">
-            <div class="inputs">
-                <div class="le">
-                    <div class="box-h1">
-                        <h1 class="text_principal">Seu perfil</h1>
-                    </div>
-                    
-                        <div class="box-descri-rapida">
-                            <h2 class="text_medio">Descrição rápida</h2>
-                            <input type="text" class="input-gg" placeholder="">
-                            <p class="text_peq">Fale um pouco sobre suas aulas, qual seu foco, métodos...</p>
-                        </div>
-                
+        <div class="campos-prof" *ngIf="currentStep === 5">
+            <div class="box-h1">
+                <h1 class="text_principal">Seu perfil</h1>
+            </div>
+            <div class="box-discricoes">
+                <div class="box-descri-rapida">
+                    <h2 class="text_medio">Descrição rápida</h2>
+                    <input type="text" class="input-gg" placeholder="">
+                    <p class="text_peq">Fale um pouco sobre suas aulas, qual seu foco, métodos...</p>
+                </div>
+                <div class="box-descri-longa">
                     <div class="box-input-descrLonga">
                         <h2 class="text_medio">Descrição</h2>
                         <input type="text" class="input-d" placeholder="">
@@ -252,6 +248,7 @@
                 
                 
             
+            </div>
             </div>
             <div class="dados" *ngIf="currentStep === 6">
                 <div class="inputs">

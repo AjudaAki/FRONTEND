@@ -6,6 +6,8 @@ import { CadastroUserComponent } from "./components/cadastro-user/cadastro-user.
 import { LoginCadastroComponent } from "./components/login-cadastro/login-cadastro.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { TelaPerfilComponent } from "./components/tela-perfil/tela-perfil.component";
+import { TelaProfessoresComponent } from "./components/tela-professores/tela-professores.component";
+import { TelaFavoritosComponent } from "./components/tela-favoritos/tela-favoritos.component";
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -13,7 +15,9 @@ const routes: Routes = [
     {path: 'cadastro-user', component: CadastroUserComponent},
     {path: 'login', component: LoginCadastroComponent},
     {path: 'navbar', component: NavbarComponent },
-    {path: 'perfil', component: TelaPerfilComponent}
+    {path: 'perfil', component: TelaPerfilComponent},
+    {path: 'professores', component: TelaProfessoresComponent},
+    {path: 'favoritos', component: TelaFavoritosComponent},
 ];
 
 

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { loginForm } from '../interfaces/request.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +13,11 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   register(user: any): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/register', user);
+    return this.http.post<any>('http://localhost:3333/users/aluno', user);
   }
 
-  login(credentials: { email: string, senha: string }): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/login', credentials);
+  login(credentials: loginForm): Observable<any> {
+    return this.http.post<any>('http://localhost:3333/login', credentials);
   }
 
   logout(): void {
