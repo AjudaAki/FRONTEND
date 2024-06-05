@@ -26,6 +26,7 @@
     box-shadow: 4px 4px rgba(0,0,0,0.2);
     padding: 10px  10px 10px 10px;
     transition: transform 0.2s ease;
+    cursor: pointer;
 }
 .nada:hover{
     box-shadow: none;
@@ -134,6 +135,7 @@
     border: none;
     width: 10vh; /* 100px */
     transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
 }
 
 .btn_back:hover {
@@ -150,6 +152,7 @@
     text-align: center;
     border: none;
     transition: transform 0.2s ease;
+    cursor: pointer;
 }
 
 .btn_rosa:hover {
@@ -167,6 +170,7 @@
     border: none;
     transition: transform 0.2s ease;
     border: 0.1vh solid var(--main-color); /* 1px */
+    cursor: pointer;
 }
 
 .btn_branco:hover {
@@ -185,6 +189,7 @@
     border: none;
     transition: transform 0.2s ease;
     border: 0.1vh solid var(--main-color); /* 1px */
+    cursor: pointer;
 }
 
 .btn_branco-w:hover {
@@ -202,6 +207,7 @@
     border: none;
     border: 0.1vh solid var(--blue-color); /* 1px */
     transition: transform 0.2s ease;
+    cursor: pointer;
 }
 
 .btn_azul:hover {
@@ -220,6 +226,7 @@
     text-align: center;
     border: none;
     transition: transform 0.2s ease;
+    cursor: pointer;
 }
 
 .btn_cinza:hover {
@@ -235,6 +242,7 @@
     border-radius: 0.8vh; /* 8px */
     box-shadow: 0.4vh 0.4vh rgba(0,0,0,0.2); /* 4px */
     transition: transform 0.2s ease;
+    cursor: pointer;
 }
 
 .next-step:hover {
@@ -251,6 +259,7 @@
     border-radius: 0.8vh; /* 8px */
     box-shadow: 0.4vh 0.4vh rgba(0,0,0,0.2); /* 4px */
     transition: transform 0.2s ease;
+    cursor: pointer;
 }
 
 .back-step:hover {
@@ -291,9 +300,10 @@
     background-color: none;
     border-radius: 0.8vh; /* 8px */
     border: 0.05vh solid rgb(66, 66, 66); /* 0.5px */
+    
 }
 
-.input-p:hover {
+.input-pp:hover {
     border: 0.05vh solid var(--main-color); /* 0.5px */
     transform: scale(1.02);
 }
