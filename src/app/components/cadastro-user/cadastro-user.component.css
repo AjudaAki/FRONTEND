@@ -595,7 +595,25 @@
     height: 100%;
     justify-content: space-between;
 }
-
+.back-ground{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1vh;
+    padding: 1.6vh;
+    justify-content: space-between;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.preço{
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
+.baixo{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
 .add{
     display: flex;
     flex-direction: column;

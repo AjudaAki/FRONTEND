@@ -185,3 +185,4 @@
   .nome-botao-prof.active, .nome-botao-fav.active, .nome-botao-perfil.active {
     transition: color 0.3s ease;
   }
+}

@@ -4,10 +4,12 @@
             <img src="../../../assets/images/loginImages/back.png" class="volta"><div>Voltar</div>
         </button>
         <div class="conteudo">
-            <h1 class="text_principal">Entre na sua conta</h1>
-            <h2 class="text_modal titulo">
-                Boas vindas
-            </h2>
+            <div>
+                <h1 class="text_principal">Entre na sua conta</h1>
+                <h2 class="text_modal titulo">
+                    Boas vindas
+                </h2>
+            </div>
             <form class="formulario">
                 <div class="inputs" [formGroup]="form">
                     <div class="campo">
@@ -18,25 +20,25 @@
                         <label for="senha" class="text_peq label">Senha</label>
                         <input type="password" id="senha" name="senha" formControlName="senha" class="input-m" required autocomplete="current-password" minlength="8" maxlength="255" placeholder="Sua senha"/>
                     </div>
-                </div>
-                <div class="botao">
+                </div>   
+            </form>
+            <div class="botao">
                     <button type="submit" class="btn_rosa text_medio" (click)="loginUser()">Entrar</button>   
                 </div>
-            </form>
         </div>
     </div>
     <div class="centro">
     <img src="../../../assets/images/loginImages/(Logo)site_metade.png" class="centro">
     </div>
     <div class="LD">
-        <div class="conteudo-ld">
+        <div class="conteudo">
             <div>
-            <h1 class="text_principal-w titulo">Crie uma conta</h1>
-            <h2 class="text_modal-w titulo">
-                Conhecimento é poder
-            </h2>
-            <p class="text_peq-w titulo">De alunos para alunos</p>
-        </div>
+                <h1 class="text_principal-w titulo">Crie uma conta</h1>
+                <h2 class="text_modal-w titulo">
+                    Conhecimento é poder
+                </h2>
+                <p class="text_peq-w titulo">De alunos para alunos</p>
+            </div>
             <form>
                 <div class="botao">
                     <button class="btn_branco-w text_medio cad" type="button" routerLink="/cadastro-user"> 
