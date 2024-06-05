@@ -113,16 +113,27 @@
                     <div class="box-h1">
                         <h1 class="text_principal">Seu perfil</h1>
                     </div>
-                    <div class="campo-img">
-                        <div class="input-img">
-                            <label for="imageInput" class="botao-img">
-                                <i><img src="../../../assets/images/Plus symbol button.png"></i> 
-                            </label>
-                            <input type="file" accept="image/*" id="imageInput" style="display: none">
-                           
-                        </div> 
-                        <img id="imagePreview" src="" alt="Visualização da Imagem" class="text_peq gray bold">
+                    <h2 class="text_medio">Escolha uma foto para seu perfil</h2>
+                    <div class="upload-img">
+                        <div class="campo-img">
+                            <div class="input-img">
+                                <label for="imageInput" class="botao-img">
+                                    <i *ngIf="!imagePreview">
+                                        <img src="../../../assets/images/Plus symbol button.png" alt="Ícone de Adicionar Imagem">
+                                    </i>
+                                </label>
+                                <input type="file" accept="image/*" id="imageInput" style="display: none" (change)="onImageChange($event)">
+                                <img *ngIf="imagePreview" [src]="imagePreview" alt="Visualização da Imagem" class="text_peq gray bold image-preview">
+                            </div> 
+                            <p class="text_medio gray bold">Visualização da imagem</p>
+                        </div>
+                        <button class="btn-img" (click)="changeImage()" *ngIf="imagePreview">
+                            <img src="../../../assets/images/svg-images/fa6-solid_rotate.svg" class="alterar-img">
+                        </button>
                     </div>
+                    
+                    
+                    
                 </div>
                 <div class="ld">
                     <h2 class="text_sub">Mostre um pouquinho <br/>de você</h2>
