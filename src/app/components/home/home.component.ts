@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   startAutoSlide() {
     this.intervalId = setInterval(() => {
       this.nextSlide();
-    }, 5000); // Muda de slide a cada 5 segundos
+    }, 10000); // Muda de slide a cada 10 segundos
   }
 
   stopAutoSlide() {
