@@ -11,7 +11,7 @@
     <div class="box-infos">
         <div class="dados" *ngIf="currentStep === 1"  [formGroup]="formStep1">
             <div class="inputs">
-                <div class="LE">
+                <div class="le">
                 <div class="box-h1">
                     <h1 class="text_principal">Seu perfil</h1>
                 </div>
@@ -64,7 +64,7 @@
         </div>
         <div class="dados" *ngIf="currentStep === 2" [formGroup]="formStep2">
             <div class="inputs">
-                <div class="LE">
+                <div class="le">
                 <div class="box-h1">
                     <h1 class="text_principal">Seu perfil</h1>
                 </div>
@@ -109,7 +109,7 @@
         <!-- Terceiro step -->
         <div class="dados" *ngIf="currentStep === 3">
             <div class="inputs">
-                <div class="LE">
+                <div class="le">
                     <div class="box-h1">
                         <h1 class="text_principal">Seu perfil</h1>
                     </div>
@@ -119,8 +119,9 @@
                                 <i><img src="../../../assets/images/Plus symbol button.png"></i> 
                             </label>
                             <input type="file" accept="image/*" id="imageInput" style="display: none">
-                            <img id="imagePreview" src="" alt="Visualização da Imagem">
-                        </div>
+                           
+                        </div> 
+                        <img id="imagePreview" src="" alt="Visualização da Imagem" class="text_peq gray bold">
                     </div>
                 </div>
                 <div class="ld">
