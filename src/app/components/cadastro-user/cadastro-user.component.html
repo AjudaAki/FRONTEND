@@ -11,7 +11,7 @@
     <div class="box-infos">
         <div class="dados" *ngIf="currentStep === 1"  [formGroup]="formStep1">
             <div class="inputs">
-                <div class="LE">
+                <div class="le">
                 <div class="box-h1">
                     <h1 class="text_principal">Seu perfil</h1>
                 </div>
@@ -64,7 +64,7 @@
         </div>
         <div class="dados" *ngIf="currentStep === 2" [formGroup]="formStep2">
             <div class="inputs">
-                <div class="LE">
+                <div class="le">
                 <div class="box-h1">
                     <h1 class="text_principal">Seu perfil</h1>
                 </div>
@@ -79,8 +79,7 @@
                     </div>
                     <div class="camp-bairro">
                         <p class="text_peq">Bairro</p>
-                        <input type="text" class="input-g" placeholder="Bairro">
-                        <input type="text" formControlName="bairro" class="input-g" placeholder="Biarro">
+                        <input type="text" formControlName="bairro" class="input-g" placeholder="Bairro">
                     </div>
                     <div class="camp-rua">
                         <p class="text_peq">Rua</p>
@@ -110,19 +109,31 @@
         <!-- Terceiro step -->
         <div class="dados" *ngIf="currentStep === 3">
             <div class="inputs">
-                <div class="LE">
+                <div class="le">
                     <div class="box-h1">
                         <h1 class="text_principal">Seu perfil</h1>
                     </div>
-                    <div class="campo-img">
-                        <div class="input-img">
-                            <label for="imageInput" class="botao-img">
-                                <i><img src="../../../assets/images/Plus symbol button.png"></i> 
-                            </label>
-                            <input type="file" accept="image/*" id="imageInput" style="display: none">
-                            <img id="imagePreview" src="" alt="Visualização da Imagem">
+                    <h2 class="text_medio">Escolha uma foto para seu perfil</h2>
+                    <div class="upload-img">
+                        <div class="campo-img">
+                            <div class="input-img">
+                                <label for="imageInput" class="botao-img">
+                                    <i *ngIf="!imagePreview">
+                                        <img src="../../../assets/images/Plus symbol button.png" alt="Ícone de Adicionar Imagem">
+                                    </i>
+                                </label>
+                                <input type="file" accept="image/*" id="imageInput" style="display: none" (change)="onImageChange($event)">
+                                <img *ngIf="imagePreview" [src]="imagePreview" alt="Visualização da Imagem" class="text_peq gray bold image-preview">
+                            </div> 
+                            <p class="text_medio gray bold">Visualização da imagem</p>
                         </div>
+                        <button class="btn-img" (click)="changeImage()" *ngIf="imagePreview">
+                            <img src="../../../assets/images/svg-images/fa6-solid_rotate.svg" class="alterar-img">
+                        </button>
                     </div>
+                    
+                    
+                    
                 </div>
                 <div class="ld">
                     <h2 class="text_sub">Mostre um pouquinho <br/>de você</h2>
@@ -188,65 +199,70 @@
                 </div>
         </div>
 
-        <div class="campos-prof" *ngIf="currentStep === 5">
-            <div class="box-h1">
-                <h1 class="text_principal">Seu perfil</h1>
-            </div>
-            <div class="box-discricoes">
-                <div class="box-descri-rapida">
-                    <h2 class="text_medio">Descrição rápida</h2>
-                    <input type="text" class="input-gg" placeholder="">
-                    <p class="text_peq">Fale um pouco sobre suas aulas, qual seu foco, métodos...</p>
+        <div class="dados" *ngIf="currentStep === 5">
+            <div class="inputs">
+                <div class="le">
+                <div class="box-h1">
+                    <h1 class="text_principal">Seu perfil</h1>
                 </div>
-                <div class="box-descri-longa">
-                    <div class="box-input-descrLonga">
-                        <h2 class="text_medio">Descrição</h2>
-                        <input type="text" class="input-d" placeholder="">
-                        <p class="text_peq">Fale um pouco sobre suas aulas, qual seu foco, métodos</p>
-                    </div>
-                    <div class="baixo">
-                        <div class="box-area-precos">
-                            <div class="box-area">
-                                <h2 class="text_medio">Área de atuação</h2>
-                                <div class="area">
-                                    <select class="input-p"> 
-                                        <option value="text_peq">Escolha a área</option>
-                                        <option value="text_peq">Front-End</option>
-                                        <option value="text_peq">Back-End</option>
-                                        <option value="text_peq">Full-Stack</option>
-                                        <option value="vtext_peq">UI/UX</option>
-                                    </select>
-                                    <p class="text_peq">Selecione a área que você ensina</p>
-                                </div>                   
-                            </div>
-            
-                            <div class="box-precos">
-                                <h2 class="text_medio">Faixa de preço hora/aula</h2>
-                                <div class="precos">
-                                    <input type="text" class="input-p" placeholder="">
-                                    <p class="text_peq">até</p>
-                                    <input type="text" class="input-p" placeholder=""> 
-                                </div>
-                                <p class="text_peq">Defina um preço da sua hora aula</p> 
-                            </div>
-
-                            <div class="ld">
-                                <h2 class="text_sub">Essas <br>informações irão aparecer em seu perfil</h2>
-                                <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png">
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="inferior">
-                        <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
-                        <div class="steps">
-                            <p class="step-c text_peq-w">1</p>
-                            <p class="step-n text_peq-w">2</p>
-                        </div>
-                        <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
-                    </div>
+                <div class="back-ground" >
+                    <p class="text_medio bold"> Descrição rápida</p>
+                    <input type="text" class="input-gg" placeholder="descrição rápida">                   
                 </div>
                 
+                <div class="back-ground">
+                    <p class="text_medio bold"> Descrição longa</p>
+                    <input type="text" class="input-d" placeholder="descrição rápida">
+                </div>
+
+                <div class="baixo">
+                    <div class="back-ground">
+                        <p class="text_medio bold">Escolha uma área de ensino</p>
+                        <select id="opcoes" name="opcoes" class="input-p">
+                            <option value="opcao1">Escolha uma área</option>
+                            <option value="opcao2">Back-end</option>
+                            <option value="opcao3">Front-end</option>
+                            <option value="opcao3">Full-stack</option>
+                            <option value="opcao3">Ui - Ux</option>
+                        </select>
+                        <p class="text_peq gray">Defina qual a área que você <br/> deseja ensinar</p>
+                    </div>
+                    <div class="back-ground">
+                        <div>
+                            <p class="text_medio bold">Faixa de preço por hora</p>
+                            <div class="preço">
+                                <div>
+                                    <p class="text_peq gray">Preço Mínimo</p>
+                                    <input class="input-p2" type="number" id="preco" name="preco" min="0.00" step="0.01" placeholder="0.00" required>
+                                </div>
+                                <p class="text_medio gray">Até</p>
+                                <div>
+                                    <p class="text_peq gray">Preço Máximo</p>
+                                    <input class="input-p2" type="number" id="preco" name="preco" min="0.00" step="0.01" placeholder="0.00" required>
+                                </div>
+                            </div>
+                            <p class="text_peq gray">Defina uma faixa de preço <br/> por hora de aula</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="ld">
+                    <h2 class="text_sub">Essas informações irão aparecer em seu perfil</h2>
+                    <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png">
+                </div>
+            </div> 
+            <div class="inferior">
+                <button (click)="previousStep()"  class="back-step text_medio">Voltar</button>
+                <div class="steps">
+                    <p class="step-c text_peq-w">1</p>
+                    <p class="step-n text_peq-w">2</p>
+                </div>
+                <button (click)="nextStep()"  class="next-step text_medio">Próximo</button>
+            </div>
+                
+                
+            <!-- <h2 class="text_sub">Essas informações irão aparecer em seu perfil</h2>
+                                <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png"> -->
             </div>
             </div>
             <div class="dados" *ngIf="currentStep === 6">
@@ -360,4 +376,3 @@
             </div>  
         </div>
     </div>
-</div>

@@ -4,13 +4,11 @@ import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { registerDataAluno } from 'src/app/interfaces/request.interface';
 
-
 @Component({
   selector: 'app-cadastro-user',
   templateUrl: './cadastro-user.component.html',
   styleUrls: ['./cadastro-user.component.css'],
 })
-
 export class CadastroUserComponent implements OnInit {
   currentStep = 1;
   formStep1!: FormGroup;
@@ -18,12 +16,17 @@ export class CadastroUserComponent implements OnInit {
   formStep5!: FormGroup;
   formStep4!: FormGroup;
   currentCard: string | null = null;
+  imagePreview: string | ArrayBuffer | null = '';
 
   savedTimes: { [key: string]: { start: string, end: string } } = {};
-  constructor( private router: Router, private fb: FormBuilder, private apiService: ApiService ) {}
+  
+  constructor(
+    private router: Router, 
+    private fb: FormBuilder, 
+    private apiService: ApiService 
+  ) {}
 
   ngOnInit(): void {
-    
     this.formStep1 = this.fb.group({
       nome: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -32,7 +35,6 @@ export class CadastroUserComponent implements OnInit {
       cpf: ['', Validators.required],
       data_nascimento: ['', Validators.required],
     });
-
 
     this.formStep2 = this.fb.group({
       estado: ['', Validators.required],
@@ -49,8 +51,7 @@ export class CadastroUserComponent implements OnInit {
       precoHora: [''],
     });
 
-    this.formStep4 = this.fb.group({
-    });
+    this.formStep4 = this.fb.group({});
 
     // Carregar dados do localStorage se disponíveis
     this.loadFormData();
@@ -105,15 +106,13 @@ export class CadastroUserComponent implements OnInit {
       // ...this.formStep4.value,
     };
 
-    console.log(registerData)
-    
-    
+    console.log(registerData);
 
     this.apiService.cadastroUser(registerData).subscribe(
       response => {
         console.log('Cadastro realizado com sucesso', response);
         localStorage.clear();
-        this.router.navigate(['/login'])
+        this.router.navigate(['/login']);
         // Redirecionar ou mostrar mensagem de sucesso
       },
       error => {
@@ -148,4 +147,20 @@ export class CadastroUserComponent implements OnInit {
     this.savedTimes[card] = { start, end };
     this.closeCard();
   }
+
+  onImageChange(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.imagePreview = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+  changeImage() {
+    const input = document.getElementById('imageInput') as HTMLInputElement;
+    input.value = ''; // Limpa o valor atual do input de arquivo
+    input.click(); // Simula um clique no input de arquivo para abrir a caixa de diálogo
+}
 }
