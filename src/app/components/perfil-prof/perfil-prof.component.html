@@ -1,7 +1,7 @@
 <div class="tela">
     <div class="parte-superior">
         <div class="box-voltar">  
-            <button type="button" class="btn_back text_medio">
+            <button type="button" class="btn_back text_medio" (click)="botaoVoltar()">
                 <img class="volta" src="../../../assets/images/arrow back.png">Voltar
             </button>
         </div>
@@ -18,9 +18,102 @@
                 </div>
             </div>
             <div class="box-infos">
-                <div class="box-descr"></div>
-                <div class="box-coment-contatos"></div>
-                <div class="box-precos-dias"></div>
+                <div class="box-descr">
+                    <p class="titulo-descricao text_medio">Descrição</p>
+                    <p class="descricao text_medio">descrição legal ebaaaa</p>
+                </div>
+                <div class="box-coment-contatos">
+                    <div class="box-coment">
+                        <div class="parte-superior-coment">
+                            <p class="titulo-coment text_medio">Oque estão dizendo</p>
+                        </div>
+                        <div class="parte-inferior-coment">
+                            <div class="cards-coment">
+                                <div class="box-card">
+                                    <div class="box-foto-coment">
+                                        <img class="foto-coment" src="../../../assets//images/imagem teste icone.jpeg">
+                                    </div>
+                                    <div class="box-nome-coment">
+                                        <p class="nome-coment text_medio">Felipe Rosse Cavalcante</p>
+                                        <p class="coment text_medio">comentario sobre o professor</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-comentar">
+                                <div class="box-card">
+                                    <div class="box-foto-coment">
+                                        <img class="foto-coment" src="../../../assets//images/imagem teste icone.jpeg">
+                                    </div>
+                                    <div class="box-nome-coment">
+                                        <p class="nome-coment text_medio">Você</p>
+                                        <input type="text" class="comentario-user" placeholder="Fazer comentario">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-contatos">
+                        <div class="box-whats">
+                            <div class="box-icone">
+                                <img class="img-contato" src="../../../assets//images/svg-images/whats-icon.svg">
+                            </div>
+                            <p class="nome-contato text_medio">Whatsapp</p>
+                        </div>
+                        <div class="box-discord">
+                            <div class="box-icone">
+                                <img class="img-contato" src="../../../assets//images/svg-images/discord-icon.svg">
+                            </div>
+                            <p class="nome-contato text_medio">Discord</p>
+                        </div>
+                        <div class="box-teams">
+                            <div class="box-icone">
+                                <img class="img-contato" src="../../../assets//images/svg-images/teams-icon.svg">
+                            </div>
+                            <p class="nome-contato text_medio">Teams</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-precos-dias">
+                    <div class="box-especialidade-preco">
+                        <p class="infos text_medio">Infos</p>
+                        <div class="box-titulo-especialidade">
+                            <p class="titulo-especialidade text_medio">Especialidade</p>
+                        </div>
+                        <div class="box-especialidade">
+                            <p class="especialidade text_medio">full-stack</p>
+                        </div>
+                        <div class="box-faixa-preco">
+                            <p class="titulo-faixa-preco text_medio">Faixa de preço</p>
+                            <p class="menor-preco text_medio">R$80,00</p>
+                            <p class="maior-preco text_medio">RS$200,00</p>
+                        </div>
+                    </div>
+                    <div class="box-dias">
+                        <div class="box-titulo">
+                            <p class="titulo-dias text_medio">Horarios</p>
+                        </div>
+                        <div class="box-dias-horarios">
+                            <div class="box-dias">
+                                <p class="dia text_medio">Segunda</p>
+                                <p class="dia text_medio">Terça</p>
+                                <p class="dia text_medio">Quarta</p>
+                                <p class="dia text_medio">Quinta</p>
+                                <p class="dia text_medio">Sexta</p>
+                                <p class="dia text_medio">Sábado</p>
+                                <p class="dia text_medio">Domingo</p>
+                            </div>
+                            <div class="box-horarios">
+                                <p class="horario text_medio">11:00 - 15:00</p>
+                                <p class="horario text_medio">11:00 - 15:00</p>
+                                <p class="horario text_medio">11:00 - 15:00</p>
+                                <p class="horario text_medio">11:00 - 15:00</p>
+                                <p class="horario text_medio">11:00 - 15:00</p>
+                                <p class="horario text_medio">11:00 - 15:00</p>
+                                <p class="horario text_medio">11:00 - 15:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

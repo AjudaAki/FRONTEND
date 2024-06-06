@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,6 +13,14 @@ import { Component } from '@angular/core';
 export class PerfilProfComponent {
   
   img_estrela: string = '/assets/images/estrela_sem_like.png'; // Caminho inicial da imagem
+
+  constructor(private router: Router) {}
+
+
+botaoVoltar(){
+  this.router.navigate(['/professores'])
+}
+
 
 trocarImagem() {
   if (this.img_estrela === '/assets/images/estrela_sem_like.png') {
