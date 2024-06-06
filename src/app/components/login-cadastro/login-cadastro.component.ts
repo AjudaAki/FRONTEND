@@ -42,6 +42,7 @@ export class LoginCadastroComponent implements OnInit {
           var token = JSON.parse(JSON.stringify(post)).token;
           localStorage.setItem('token', token);
           this.form.reset();
+          this.router.navigate(['/perfil'])
         },
         (error) => {
           console.error('Login failed', error);
@@ -52,5 +53,9 @@ export class LoginCadastroComponent implements OnInit {
 
   cadastrar() {
     this.router.navigate(['/cadastro']);
+  }
+
+  voltar(){
+    this.router.navigate(['']);
   }
 }

@@ -13,8 +13,9 @@ export class CadastroUserComponent implements OnInit {
   currentStep = 1;
   formStep1!: FormGroup;
   formStep2!: FormGroup;
+  formStep3!: FormGroup;
   formStep5!: FormGroup;
-  formStep4!: FormGroup;
+  formStep6!: FormGroup;
   currentCard: string | null = null;
   imagePreview: string | ArrayBuffer | null = '';
 
@@ -27,6 +28,7 @@ export class CadastroUserComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+
     this.formStep1 = this.fb.group({
       nome: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -44,14 +46,9 @@ export class CadastroUserComponent implements OnInit {
       numero: ['', Validators.required],
     });
 
-    this.formStep5 = this.fb.group({
-      descricaoRapida: [''],
-      descricaoLonga: [''],
-      areaAtuacao: [''],
-      precoHora: [''],
-    });
-
-    this.formStep4 = this.fb.group({});
+    this.formStep3 = this.fb.group({
+      img_perfil: ['', Validators.required],
+    })
 
     // Carregar dados do localStorage se disponíveis
     this.loadFormData();
@@ -66,6 +63,10 @@ export class CadastroUserComponent implements OnInit {
     if (step2Data) {
       this.formStep2.setValue(JSON.parse(step2Data));
     }
+    const step3Data = localStorage.getItem('formStep3');
+    if (step3Data) {
+      this.formStep2.setValue(JSON.parse(step3Data));
+    }
   }
 
   saveFormData(step: number) {
@@ -73,6 +74,9 @@ export class CadastroUserComponent implements OnInit {
       localStorage.setItem('formStep1', JSON.stringify(this.formStep1.value));
     } else if (step === 2) {
       localStorage.setItem('formStep2', JSON.stringify(this.formStep2.value));
+    }
+    else if (step === 3) {
+      localStorage.setItem('formStep3', JSON.stringify(this.formStep3.value));
     }
   }
 
@@ -102,7 +106,7 @@ export class CadastroUserComponent implements OnInit {
     const registerData: registerDataAluno = {
       ...this.formStep1.value,
       ...this.formStep2.value,
-      // ...this.formStep3.value,
+      ...this.formStep3.value,
       // ...this.formStep4.value,
     };
 
@@ -148,16 +152,30 @@ export class CadastroUserComponent implements OnInit {
     this.closeCard();
   }
 
+  // onImageChange(event: any) {
+  //   const file = event.target.files[0];
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     reader.onload = (e: any) => {
+  //       this.imagePreview = e.target.result;
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // }
+
   onImageChange(event: any) {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = (e: any) => {
         this.imagePreview = e.target.result;
+        this.formStep3.patchValue({ img_perfil: e.target.result });
       };
       reader.readAsDataURL(file);
     }
   }
+
+
   changeImage() {
     const input = document.getElementById('imageInput') as HTMLInputElement;
     input.value = ''; // Limpa o valor atual do input de arquivo

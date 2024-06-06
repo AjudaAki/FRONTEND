@@ -16,13 +16,13 @@
                 </div>
                 <div class="box-nome-email-tel">
                     <div class="nome-nascimento">
-                        <p class="nome text_principal">Felipe Cavalcante</p>
-                        <p class="nascimento text_peq">11/01/2005</p>
+                        <p class="nome text_principal">{{userData?.nome}}</p>
+                        <p class="nascimento text_peq">{{userData?.data_nascimento_formatada}}</p>
                     </div>
                     <div class="email-tel-cpf">
-                        <div class="email text_peq"><p>emailTeste123@gmail.com</p></div>
-                        <div class="telefone text_peq"><p>(XX)XXXXX-XXXX</p></div>
-                        <div class="cpf text_peq"><p>XXX-XXX-XXX-XX</p></div>
+                        <div class="email text_peq"><p>{{userData?.email}}</p></div>
+                        <div class="telefone text_peq"><p>{{userData?.telefone}}</p></div>
+                        <div class="cpf text_peq"><p>{{userData?.cpf}}</p></div>
                     </div>
                     <div class="localizacao">
                         <p>SP</p>

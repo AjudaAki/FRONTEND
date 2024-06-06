@@ -1,14 +1,15 @@
-import { registerDataAluno } from './interfaces/request.interface';
+import { perfilUsuario, registerDataAluno } from './interfaces/request.interface';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { GetTokenService } from './services/getToken.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private token: GetTokenService) { }
 
   cadastroUser(data: registerDataAluno): Observable<any>{
 
@@ -28,4 +29,12 @@ export class ApiService {
       return this.http.post( url, data, {headers})
     }
 
+
+    perfil(): Observable<any> {
+      const headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${this.token.getToken()}`
+      });
+      return this.http.get<any>('http://localhost:3333/users/aluno/log', { headers });
+    }
 }
