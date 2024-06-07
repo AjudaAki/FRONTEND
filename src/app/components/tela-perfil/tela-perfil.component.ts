@@ -16,11 +16,6 @@ export class TelaPerfilComponent implements OnInit{
   constructor(private api: ApiService) {}
 
   ngOnInit(): void {
-    const token = localStorage.getItem('token');
-    // if (token) {
-    //   const decodedToken: any = jwt_decode(token);
-    //   this.role = decodedToken.role;
-    // }
     this.getUserData();
   }
 
