@@ -2,32 +2,34 @@
   <div class="navbar cor-bg">
     <div class="title">
       <div class="box-logo">
-        <img class="img-logo" src="../../../assets/images/svg-images/(Logo)site 2.svg" />
+        <img
+          class="img-logo"
+          src="../../../assets/images/svg-images/(Logo)site 2.svg"
+        />
       </div>
       <h1 class="text_principal">Ajudaki</h1>
-      
     </div>
     <div class="login">
       <div class="textos">
         <div class="caixa" (click)="setSlide(0)">
           <div class="border">
-            <a class="text_medio" 
-              [ngClass]="{'active': currentSlide === 0}" 
-              >Site</a>
+            <a class="text_medio" [ngClass]="{ active: currentSlide === 0 }"
+              >Site</a
+            >
           </div>
         </div>
-        <div class="caixa"(click)="setSlide(1)">
-          <div class="border" >
-            <a class="text_medio" 
-              [ngClass]="{'active': currentSlide === 1}" 
-              >Professor</a>
+        <div class="caixa" (click)="setSlide(1)">
+          <div class="border">
+            <a class="text_medio" [ngClass]="{ active: currentSlide === 1 }"
+              >Professor</a
+            >
           </div>
         </div>
         <div class="caixa" (click)="setSlide(2)">
-          <div class="border" >
-            <a class="text_medio" 
-              [ngClass]="{'active': currentSlide === 2}" 
-              >Aluno</a>
+          <div class="border">
+            <a class="text_medio" [ngClass]="{ active: currentSlide === 2 }"
+              >Aluno</a
+            >
           </div>
         </div>
       </div>
@@ -38,7 +40,10 @@
   </div>
   <div></div>
   <div class="carousel">
-    <div class="carousel-inner" [ngStyle]="{'transform': 'translateX(-' + currentSlide * 100 + '%)'}">
+    <div
+      class="carousel-inner"
+      [ngStyle]="{ transform: 'translateX(-' + currentSlide * 100 + '%)' }"
+    >
       <!-- Primeira tela -->
       <div class="carousel-item cor-bg">
         <div class="btn-step" (click)="prevSlide()">
@@ -55,10 +60,18 @@
               De alunos <br />
               Para alunos <a routerLink="perfil"> perfil</a>
             </p>
-            <p class="text_modal">Conectamos alunos e profissionais a professores de tecnologia. Nosso site oferece uma plataforma fácil de usar para buscar aulas. Aprenda no seu ritmo!</p>
+            <p class="text_modal">
+              Conectamos alunos e profissionais a professores de tecnologia.
+              Nosso site oferece uma plataforma fácil de usar para buscar aulas.
+              Aprenda no seu ritmo!
+            </p>
           </div>
           <div>
-            <button class="btn_branco text_medio" type="button" routerLink="login">
+            <button
+              class="btn_branco text_medio"
+              type="button"
+              routerLink="login"
+            >
               Entrar no site
             </button>
           </div>
@@ -77,17 +90,28 @@
           </button>
         </div>
         <div class="le">
-          <img class="icone"src="../../../assets/images/Professor-icon.png" />
+          <img class="icone" src="../../../assets/images/Professor-icon.png" />
         </div>
         <div class="ld">
           <div class="centro">
             <p class="text_sub">
-              Que tal ajudar seus colegas<br /> e ganhar uma grana extra? <a routerLink="perfil-prof">perfil prof</a>
+              Que tal ajudar seus colegas<br />
+              e ganhar uma grana extra?
+              <a routerLink="perfil-prof">perfil prof</a>
             </p>
-            <p class="text_modal">No nosso site, qualquer pessoa com conhecimento e paixão por tecnologia e programação pode se tornar um professor. Isso inclui desde profissionais experientes na área, até autodidatas talentosos e entusiastas da tecnologia.</p>
+            <p class="text_modal">
+              No nosso site, qualquer pessoa com conhecimento e paixão por
+              tecnologia e programação pode se tornar um professor. Isso inclui
+              desde profissionais experientes na área, até autodidatas
+              talentosos e entusiastas da tecnologia.
+            </p>
           </div>
           <div>
-            <button class="btn_branco text_medio" type="button" routerLink="login">
+            <button
+              class="btn_branco text_medio"
+              type="button"
+              routerLink="login"
+            >
               Entrar no site
             </button>
           </div>
@@ -99,7 +123,7 @@
         </div>
       </div>
       <!-- Terceira tela -->
-      <div class="carousel-item cor-bg ">
+      <div class="carousel-item cor-bg">
         <div class="btn-step" (click)="prevSlide()">
           <button class="nada">
             <img class="img-st" src="../../../assets/images/Return-icon.png" />
@@ -110,13 +134,21 @@
         </div>
         <div class="ld">
           <div class="centro">
-            <p class="text_sub ">
+            <p class="text_sub">
               Com dificuldades? <br />Seus colegas podem te ajudar!
             </p>
-            <p class="text_modal">Nosso site é projetado para atender alunos de todos os níveis, desde iniciantes curiosos até profissionais que desejam aprimorar suas habilidades em tecnologia e programação.</p>
+            <p class="text_modal">
+              Nosso site é projetado para atender alunos de todos os níveis,
+              desde iniciantes curiosos até profissionais que desejam aprimorar
+              suas habilidades em tecnologia e programação.
+            </p>
           </div>
           <div>
-            <button class="btn_branco text_medio" type="button" routerLink="login">
+            <button
+              class="btn_branco text_medio"
+              type="button"
+              routerLink="login"
+            >
               Entrar no site
             </button>
           </div>
@@ -130,6 +162,5 @@
     </div>
   </div>
 </div>
-
 
 <!-- fhiysbufijnsuis para commitar -->

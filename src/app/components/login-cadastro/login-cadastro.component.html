@@ -1,55 +1,88 @@
 <div class="tela">
-    <div class="LE">
-        <button type="button" class="btn_back text_medio" (click)="voltar()">
-            <img src="../../../assets/images/loginImages/back.png" class="volta"><div>Voltar</div>
+  <div class="LE">
+    <button type="button" class="btn_back text_medio" (click)="voltar()">
+      <img src="../../../assets/images/loginImages/back.png" class="volta" />
+      <div>Voltar</div>
+    </button>
+    <div class="conteudo">
+      <div>
+        <h1 class="text_principal">Entre na sua conta</h1>
+        <h2 class="text_modal titulo">Boas vindas</h2>
+      </div>
+      <form class="formulario">
+        <div class="inputs" [formGroup]="form">
+          <div class="campo">
+            <label for="email" class="text_peq label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              formControlName="email"
+              class="input-m"
+              required
+              autocomplete="email"
+              maxlength="255"
+              placeholder="Seu email"
+            />
+          </div>
+          <div class="campo">
+            <label for="senha" class="text_peq label">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              formControlName="senha"
+              class="input-m"
+              required
+              autocomplete="current-password"
+              minlength="8"
+              maxlength="255"
+              placeholder="Sua senha"
+            />
+          </div>
+        </div>
+      </form>
+      <div class="botao">
+        <button type="submit" class="btn_rosa text_medio" (click)="loginUser()">
+          Entrar
         </button>
-        <div class="conteudo">
+      </div>
+    </div>
+  </div>
+  <div class="centro">
+    <img
+      src="../../../assets/images/loginImages/(Logo)site_metade.png"
+      class="centro"
+    />
+  </div>
+  <div class="LD">
+    <div class="conteudo">
+      <div>
+        <h1 class="text_principal-w titulo">Crie uma conta</h1>
+        <h2 class="text_modal-w titulo">Conhecimento é poder</h2>
+        <p class="text_peq-w titulo">De alunos para alunos</p>
+      </div>
+      <form>
+        <div class="botao">
+          <button
+            class="btn_branco-w text_medio cad"
+            type="button"
+            routerLink="/cadastro-user"
+          >
+            <div>Fazer cadastro</div>
             <div>
-                <h1 class="text_principal">Entre na sua conta</h1>
-                <h2 class="text_modal titulo">
-                    Boas vindas
-                </h2>
+              <img
+                src="../../../assets\images\fe_arrow-upcadastrar.png"
+                class="nav"
+              />
             </div>
-            <form class="formulario">
-                <div class="inputs" [formGroup]="form">
-                    <div class="campo">
-                        <label for="email" class="text_peq label">Email</label>
-                        <input type="email" id="email" name="email" formControlName="email" class="input-m" required autocomplete="email" maxlength="255" placeholder="Seu email"/>
-                    </div>
-                    <div class="campo">
-                        <label for="senha" class="text_peq label">Senha</label>
-                        <input type="password" id="senha" name="senha" formControlName="senha" class="input-m" required autocomplete="current-password" minlength="8" maxlength="255" placeholder="Sua senha"/>
-                    </div>
-                </div>   
-            </form>
-            <div class="botao">
-                    <button type="submit" class="btn_rosa text_medio" (click)="loginUser()">Entrar</button>   
-                </div>
+          </button>
         </div>
+      </form>
     </div>
-    <div class="centro">
-    <img src="../../../assets/images/loginImages/(Logo)site_metade.png" class="centro">
-    </div>
-    <div class="LD">
-        <div class="conteudo">
-            <div>
-                <h1 class="text_principal-w titulo">Crie uma conta</h1>
-                <h2 class="text_modal-w titulo">
-                    Conhecimento é poder
-                </h2>
-                <p class="text_peq-w titulo">De alunos para alunos</p>
-            </div>
-            <form>
-                <div class="botao">
-                    <button class="btn_branco-w text_medio cad" type="button" routerLink="/cadastro-user"> 
-                        <div>Fazer cadastro</div> 
-                        <div>
-                            <img src="../../../assets\images\fe_arrow-upcadastrar.png" class="nav">
-                        </div>
-                    </button>
-                </div>
-            </form>
-        </div>
-        <img src="../../../assets/images/loginImages/(Logo) canva.png" class="logo">
-    </div>
+    <img
+      src="../../../assets/images/loginImages/(Logo) canva.png"
+      class="logo"
+    />
+  </div>
 </div>

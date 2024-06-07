@@ -1,378 +1,640 @@
 <div class="conteudo">
-    <div *ngIf="currentStep !== 4">
-        <div class="opcoes">
-            <div class="box-voltar">  
-                <button type="button" class="btn_back text_medio" (click)="routerLogin()">
-                    <img class="volta" src="../../../assets/images/arrow back.png">Voltar
-                </button>
-            </div>
-        </div>
+  <div *ngIf="currentStep !== 4">
+    <div class="opcoes">
+      <div class="box-voltar">
+        <button
+          type="button"
+          class="btn_back text_medio"
+          (click)="routerLogin()"
+        >
+          <img
+            class="volta"
+            src="../../../assets/images/arrow back.png"
+          />Voltar
+        </button>
+      </div>
     </div>
-    <div class="box-infos">
-        <div class="dados" *ngIf="currentStep === 1"  [formGroup]="formStep1">
-            <div class="inputs">
-                <div class="le">
-                <div class="box-h1">
-                    <h1 class="text_principal">Seu perfil</h1>
-                </div>
-                <div class="campos-pessoais">
-                    <div class="camp-nome">   
-                        <p class="text_peq">Nome</p>
-                        <input type="text" formControlName="nome" class="input-g" placeholder="Nome"/>
-                    </div>
-                    <div class="camp-email">
-                        <p class="text_peq">E-mail</p>
-                        <input type="email" formControlName="email" class="input-g" placeholder="E-mail"/>
-                    </div>
-                    <div class="camp-senha">
-                        <p class="text_peq">Senha</p>
-                        <input type="text" formControlName="senha" class="input-g" placeholder="Senha"/>
-                    </div>
-                    <div class="camp-confSenha">
-                        <p class="text_peq">Confirmar senha</p>
-                        <input type="text"  class="input-g" placeholder="Confirmar senha"/>
-                    </div>
-                    <div class="camp-tel">
-                        <p class="text_peq">Telefone</p>
-                        <input type="text" formControlName="telefone" class="input-g" placeholder="Telefone (apenas números)"/>
-                    </div>
-                    <div class="camp-cpf">
-                        <p class="text_peq">CPF</p>
-                        <input type="text"  formControlName="cpf" class="input-g" placeholder="CPF (Apenas números)"/>
-                    </div>
-                    <div class="camp-data">
-                        <p class="text_peq">Data de nascimento</p>
-                        <input type="date" formControlName="data_nascimento" class="input-g" placeholder="Data de nascimento"/>
-                    </div>
-                </div> 
+  </div>
+  <div class="box-infos">
+    <div class="dados" *ngIf="currentStep === 1" [formGroup]="formStep1">
+      <div class="inputs">
+        <div class="le">
+          <div class="box-h1">
+            <h1 class="text_principal">Seu perfil</h1>
+          </div>
+          <div class="campos-pessoais">
+            <div class="camp-nome">
+              <p class="text_peq">Nome</p>
+              <input
+                type="text"
+                formControlName="nome"
+                class="input-g"
+                placeholder="Nome"
+              />
             </div>
-                <div class="ld">
-                    <h2 class="text_sub">Fale um pouco sobre você!</h2>
-                    <img src="../../../assets/images/ph_person.png">
-                </div>
+            <div class="camp-email">
+              <p class="text_peq">E-mail</p>
+              <input
+                type="email"
+                formControlName="email"
+                class="input-g"
+                placeholder="E-mail"
+              />
             </div>
-            <div class="inferior">
-                <button (click)="previousStep()"  class="back-step-1 text_medio">vc achou o segredo</button>
-                <div class="steps">
-                    <p class="step-c text_peq-w">1</p>
-                    <p class="step-n text_peq-w">2</p>
-                    <p class="step-n text_peq-w">3</p>
-                </div>
-                <button (click)="nextStep()" class="next-step text_medio">próximo</button>
+            <div class="camp-senha">
+              <p class="text_peq">Senha</p>
+              <input
+                type="text"
+                formControlName="senha"
+                class="input-g"
+                placeholder="Senha"
+              />
             </div>
-           
+            <div class="camp-confSenha">
+              <p class="text_peq">Confirmar senha</p>
+              <input
+                type="text"
+                class="input-g"
+                placeholder="Confirmar senha"
+              />
+            </div>
+            <div class="camp-tel">
+              <p class="text_peq">Telefone</p>
+              <input
+                type="text"
+                formControlName="telefone"
+                class="input-g"
+                placeholder="Telefone (apenas números)"
+              />
+            </div>
+            <div class="camp-cpf">
+              <p class="text_peq">CPF</p>
+              <input
+                type="text"
+                formControlName="cpf"
+                class="input-g"
+                placeholder="CPF (Apenas números)"
+              />
+            </div>
+            <div class="camp-data">
+              <p class="text_peq">Data de nascimento</p>
+              <input
+                type="date"
+                formControlName="data_nascimento"
+                class="input-g"
+                placeholder="Data de nascimento"
+              />
+            </div>
+          </div>
         </div>
-        <div class="dados" *ngIf="currentStep === 2" [formGroup]="formStep2">
-            <div class="inputs">
-                <div class="le">
-                <div class="box-h1">
-                    <h1 class="text_principal">Seu perfil</h1>
-                </div>
-                <div class="campos-pessoais">
-                    <div class="camp-estado">
-                        <p class="text_peq">Estado</p>
-                        <input type="text" formControlName="estado" class="input-g" placeholder="Estado" >
-                    </div>
-                    <div class="camp-cidade">
-                        <p class="text_peq">Cidade</p>
-                        <input type="text" formControlName="cidade" class="input-g" placeholder="Cidade">
-                    </div>
-                    <div class="camp-bairro">
-                        <p class="text_peq">Bairro</p>
-                        <input type="text" formControlName="bairro" class="input-g" placeholder="Bairro">
-                    </div>
-                    <div class="camp-rua">
-                        <p class="text_peq">Rua</p>
-                        <input type="text" formControlName="rua" class="input-g" placeholder="Rua">
-                    </div>
-                    <div class="camp-numero">
-                        <p class="text_peq">Número</p>
-                        <input type="text" formControlName="numero" class="input-g" placeholder="Número">
-                    </div>
-                </div>
-            </div>
-                <div class="ld">
-                    <h2 class="text_sub">Vamos mostrar os <br/> professores mais <br/>próximos de você</h2>
-                    <img src="../../../assets/images/solar_map-point-bold.png">
-                </div>
-            </div> 
-            <div class="inferior">
-                <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
-                <div class="steps">
-                    <p class="step-c text_peq-w">1</p>
-                    <p class="step-c text_peq-w">2</p>
-                    <p class="step-n text_peq-w">3</p>
-                </div>
-                <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
-            </div>
+        <div class="ld">
+          <h2 class="text_sub">Fale um pouco sobre você!</h2>
+          <img src="../../../assets/images/ph_person.png" />
         </div>
-        <!-- Terceiro step -->
-        <div class="dados" *ngIf="currentStep === 3">
-            <div class="inputs">
-                <div class="le">
-                    <div class="box-h1">
-                        <h1 class="text_principal">Seu perfil</h1>
-                    </div>
-                    <h2 class="text_medio">Escolha uma foto para seu perfil</h2>
-                    <div class="upload-img">
-                        <div class="campo-img">
-                            <div class="input-img">
-                                <label for="imageInput" class="botao-img">
-                                    <i *ngIf="!imagePreview">
-                                        <img src="../../../assets/images/Plus symbol button.png" alt="Ícone de Adicionar Imagem">
-                                    </i>
-                                </label>
-                                <input type="file" accept="image/*" id="imageInput" style="display: none" (change)="onImageChange($event)">
-                                <img *ngIf="imagePreview" [src]="imagePreview" alt="Visualização da Imagem" class="text_peq gray bold image-preview">
-                            </div> 
-                            <p class="text_medio gray bold">Visualização da imagem</p>
-                        </div>
-                        <button class="btn-img" (click)="changeImage()" *ngIf="imagePreview">
-                            <img src="../../../assets/images/svg-images/fa6-solid_rotate.svg" class="alterar-img">
-                        </button>
-                    </div>
-                    
-                    
-                    
-                </div>
-                <div class="ld">
-                    <h2 class="text_sub">Mostre um pouquinho <br/>de você</h2>
-                    <img src="../../../assets\images\material-symbols-light_ar-on-you-outline.png">
-                </div>
-            </div>
-            
-            <div class="inferior">
-                <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
-                <div class="steps">
-                    <p class="step-c text_peq-w">1</p>
-                    <p class="step-c text_peq-w">2</p>
-                    <p class="step-c text_peq-w">3</p>
-                </div>
-                <button (click)="nextStep()"  class="next-step text_medio">próximo</button>
-            </div>
+      </div>
+      <div class="inferior">
+        <button (click)="previousStep()" class="back-step-1 text_medio">
+          vc achou o segredo
+        </button>
+        <div class="steps">
+          <p class="step-c text_peq-w">1</p>
+          <p class="step-n text_peq-w">2</p>
+          <p class="step-n text_peq-w">3</p>
         </div>
-            <div class="box-condicional" *ngIf="currentStep === 4">
-                <div class="fundo">
-                    <div class=" direita">
-                        <img class="img-lampada" src="https://i.postimg.cc/hjMbkKR8/lets-icons-lamp-light.png">
-                    </div>
-                    <div class="esquerda">
-                        <img class="img-cabeca" src="https://i.postimg.cc/fyr7b5LJ/Vector.png">
-                    </div>
-                    <div class=" direita">
-                        <img class="img-prof" src="https://i.postimg.cc/25Qxx4HK/mdi-teacher.png">
-                    </div>
-                </div>
-                <div class="fundo">
-                    <div class="esquerda">
-                        <img class="img-conta" src="https://i.postimg.cc/50fSK6TN/mynaui-math-square.png">
-                    </div>
-                    <div class=" direita">
-                        <img class="img-calculo" src="https://i.postimg.cc/brJH84q7/tabler-math.png">
-                    </div> 
-                    <div class="esquerda">
-                        <img class="img-cerebro" src="https://i.postimg.cc/R05RfPTt/arcticons-speed-math.png">
-                    </div>
-                </div>
-               
-                <div class="card">
-                    <div class="texto">
-                        <div class="topo-card">
-                            <button (click)="previousStep()" class="back text_sub"><img class="icone-volta"src="../../../assets\images\svg-images\Vector.svg">voltar</button>
-                        </div>
-                        <div class="superior">
-                               
-                                <h2 class="text_principal">Que tal ser professor? </h2>
-                        </div> 
-                        <div class="descricao">
-                            <p class="text_sub">É fácil e rápido, você só precisa preencher mais <br> algumas informações!</p>
-                        </div>
-                    </div>
-                    <div class="botoes">
-                        <button type="submit" class="btn_cinza text_medio" (click)="submitFormAluno()">
-                            Ser aluno
-                        </button>
-                        <button type="button" class="btn_rosa text_medio" (click)="nextStep()">
-                            Ser professor
-                        </button>
-                    </div>
-                </div>
+        <button (click)="nextStep()" class="next-step text_medio">
+          próximo
+        </button>
+      </div>
+    </div>
+    <div class="dados" *ngIf="currentStep === 2" [formGroup]="formStep2">
+      <div class="inputs">
+        <div class="le">
+          <div class="box-h1">
+            <h1 class="text_principal">Seu perfil</h1>
+          </div>
+          <div class="campos-pessoais">
+            <div class="camp-estado">
+              <p class="text_peq">Estado</p>
+              <input
+                type="text"
+                formControlName="estado"
+                class="input-g"
+                placeholder="Estado"
+              />
+            </div>
+            <div class="camp-cidade">
+              <p class="text_peq">Cidade</p>
+              <input
+                type="text"
+                formControlName="cidade"
+                class="input-g"
+                placeholder="Cidade"
+              />
+            </div>
+            <div class="camp-bairro">
+              <p class="text_peq">Bairro</p>
+              <input
+                type="text"
+                formControlName="bairro"
+                class="input-g"
+                placeholder="Bairro"
+              />
+            </div>
+            <div class="camp-rua">
+              <p class="text_peq">Rua</p>
+              <input
+                type="text"
+                formControlName="rua"
+                class="input-g"
+                placeholder="Rua"
+              />
+            </div>
+            <div class="camp-numero">
+              <p class="text_peq">Número</p>
+              <input
+                type="text"
+                formControlName="numero"
+                class="input-g"
+                placeholder="Número"
+              />
+            </div>
+          </div>
         </div>
+        <div class="ld">
+          <h2 class="text_sub">
+            Vamos mostrar os <br />
+            professores mais <br />próximos de você
+          </h2>
+          <img src="../../../assets/images/solar_map-point-bold.png" />
+        </div>
+      </div>
+      <div class="inferior">
+        <button (click)="previousStep()" class="back-step text_medio">
+          voltar
+        </button>
+        <div class="steps">
+          <p class="step-c text_peq-w">1</p>
+          <p class="step-c text_peq-w">2</p>
+          <p class="step-n text_peq-w">3</p>
+        </div>
+        <button (click)="nextStep()" class="next-step text_medio">
+          próximo
+        </button>
+      </div>
+    </div>
+    <!-- Terceiro step -->
+    <div class="dados" *ngIf="currentStep === 3">
+      <div class="inputs">
+        <div class="le">
+          <div class="box-h1">
+            <h1 class="text_principal">Seu perfil</h1>
+          </div>
+          <h2 class="text_medio">Escolha uma foto para seu perfil</h2>
+          <div class="upload-img">
+            <div class="campo-img">
+              <div class="input-img">
+                <label for="imageInput" class="botao-img">
+                  <i *ngIf="!imagePreview">
+                    <img
+                      src="../../../assets/images/Plus symbol button.png"
+                      alt="Ícone de Adicionar Imagem"
+                    />
+                  </i>
+                </label>
+                <input
+                  type="file"
+                  accept="image/*"
+                  id="imageInput"
+                  style="display: none"
+                  (change)="onImageChange($event)"
+                />
+                <img
+                  *ngIf="imagePreview"
+                  [src]="imagePreview"
+                  alt="Visualização da Imagem"
+                  class="text_peq gray bold image-preview"
+                />
+              </div>
+              <p class="text_medio gray bold">Visualização da imagem</p>
+            </div>
+            <button
+              class="btn-img"
+              (click)="changeImage()"
+              *ngIf="imagePreview"
+            >
+              <img
+                src="../../../assets/images/svg-images/fa6-solid_rotate.svg"
+                class="alterar-img"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="ld">
+          <h2 class="text_sub">Mostre um pouquinho <br />de você</h2>
+          <img
+            src="../../../assets\images\material-symbols-light_ar-on-you-outline.png"
+          />
+        </div>
+      </div>
 
-        <div class="dados" *ngIf="currentStep === 5">
-            <div class="inputs">
-                <div class="le">
-                <div class="box-h1">
-                    <h1 class="text_principal">Seu perfil</h1>
-                </div>
-                <div class="back-ground" >
-                    <p class="text_medio bold"> Descrição rápida</p>
-                    <input type="text" class="input-gg" placeholder="descrição rápida">                   
-                </div>
-                
-                <div class="back-ground">
-                    <p class="text_medio bold"> Descrição longa</p>
-                    <input type="text" class="input-d" placeholder="descrição rápida">
-                </div>
+      <div class="inferior">
+        <button (click)="previousStep()" class="back-step text_medio">
+          voltar
+        </button>
+        <div class="steps">
+          <p class="step-c text_peq-w">1</p>
+          <p class="step-c text_peq-w">2</p>
+          <p class="step-c text_peq-w">3</p>
+        </div>
+        <button (click)="nextStep()" class="next-step text_medio">
+          próximo
+        </button>
+      </div>
+    </div>
+    <div class="box-condicional" *ngIf="currentStep === 4">
+      <div class="fundo">
+        <div class="direita">
+          <img
+            class="img-lampada"
+            src="https://i.postimg.cc/hjMbkKR8/lets-icons-lamp-light.png"
+          />
+        </div>
+        <div class="esquerda">
+          <img
+            class="img-cabeca"
+            src="https://i.postimg.cc/fyr7b5LJ/Vector.png"
+          />
+        </div>
+        <div class="direita">
+          <img
+            class="img-prof"
+            src="https://i.postimg.cc/25Qxx4HK/mdi-teacher.png"
+          />
+        </div>
+      </div>
+      <div class="fundo">
+        <div class="esquerda">
+          <img
+            class="img-conta"
+            src="https://i.postimg.cc/50fSK6TN/mynaui-math-square.png"
+          />
+        </div>
+        <div class="direita">
+          <img
+            class="img-calculo"
+            src="https://i.postimg.cc/brJH84q7/tabler-math.png"
+          />
+        </div>
+        <div class="esquerda">
+          <img
+            class="img-cerebro"
+            src="https://i.postimg.cc/R05RfPTt/arcticons-speed-math.png"
+          />
+        </div>
+      </div>
 
-                <div class="baixo">
-                    <div class="back-ground">
-                        <p class="text_medio bold">Escolha uma área de ensino</p>
-                        <select id="opcoes" name="opcoes" class="input-p">
-                            <option value="opcao1">Escolha uma área</option>
-                            <option value="opcao2">Back-end</option>
-                            <option value="opcao3">Front-end</option>
-                            <option value="opcao3">Full-stack</option>
-                            <option value="opcao3">Ui - Ux</option>
-                        </select>
-                        <p class="text_peq gray">Defina qual a área que você <br/> deseja ensinar</p>
-                    </div>
-                    <div class="back-ground">
-                        <div>
-                            <p class="text_medio bold">Faixa de preço por hora</p>
-                            <div class="preço">
-                                <div>
-                                    <p class="text_peq gray">Preço Mínimo</p>
-                                    <input class="input-p2" type="number" id="preco" name="preco" min="0.00" step="0.01" placeholder="0.00" required>
-                                </div>
-                                <p class="text_medio gray">Até</p>
-                                <div>
-                                    <p class="text_peq gray">Preço Máximo</p>
-                                    <input class="input-p2" type="number" id="preco" name="preco" min="0.00" step="0.01" placeholder="0.00" required>
-                                </div>
-                            </div>
-                            <p class="text_peq gray">Defina uma faixa de preço <br/> por hora de aula</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="card">
+        <div class="texto">
+          <div class="topo-card">
+            <button (click)="previousStep()" class="back text_sub">
+              <img
+                class="icone-volta"
+                src="../../../assets\images\svg-images\Vector.svg"
+              />voltar
+            </button>
+          </div>
+          <div class="superior">
+            <h2 class="text_principal">Que tal ser professor?</h2>
+          </div>
+          <div class="descricao">
+            <p class="text_sub">
+              É fácil e rápido, você só precisa preencher mais <br />
+              algumas informações!
+            </p>
+          </div>
+        </div>
+        <div class="botoes">
+          <button
+            type="submit"
+            class="btn_cinza text_medio"
+            (click)="submitFormAluno()"
+          >
+            Ser aluno
+          </button>
+          <button
+            type="button"
+            class="btn_rosa text_medio"
+            (click)="nextStep()"
+          >
+            Ser professor
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dados" *ngIf="currentStep === 5">
+      <div class="inputs">
+        <div class="le">
+          <div class="box-h1">
+            <h1 class="text_principal">Seu perfil</h1>
+          </div>
+          <div class="back-ground">
+            <p class="text_medio bold">Descrição rápida</p>
+            <input
+              type="text"
+              class="input-gg"
+              placeholder="descrição rápida"
+            />
+          </div>
+
+          <div class="back-ground">
+            <p class="text_medio bold">Descrição longa</p>
+            <input type="text" class="input-d" placeholder="descrição rápida" />
+          </div>
+
+          <div class="baixo">
+            <div class="back-ground">
+              <p class="text_medio bold">Escolha uma área de ensino</p>
+              <select id="opcoes" name="opcoes" class="input-p">
+                <option value="opcao1">Escolha uma área</option>
+                <option value="opcao2">Back-end</option>
+                <option value="opcao3">Front-end</option>
+                <option value="opcao3">Full-stack</option>
+                <option value="opcao3">Ui - Ux</option>
+              </select>
+              <p class="text_peq gray">
+                Defina qual a área que você <br />
+                deseja ensinar
+              </p>
             </div>
-                <div class="ld">
-                    <h2 class="text_sub">Essas informações irão aparecer em seu perfil</h2>
-                    <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png">
+            <div class="back-ground">
+              <div>
+                <p class="text_medio bold">Faixa de preço por hora</p>
+                <div class="preço">
+                  <div>
+                    <p class="text_peq gray">Preço Mínimo</p>
+                    <input
+                      class="input-p2"
+                      type="number"
+                      id="preco"
+                      name="preco"
+                      min="0.00"
+                      step="0.01"
+                      placeholder="0.00"
+                      required
+                    />
+                  </div>
+                  <p class="text_medio gray">Até</p>
+                  <div>
+                    <p class="text_peq gray">Preço Máximo</p>
+                    <input
+                      class="input-p2"
+                      type="number"
+                      id="preco"
+                      name="preco"
+                      min="0.00"
+                      step="0.01"
+                      placeholder="0.00"
+                      required
+                    />
+                  </div>
                 </div>
-            </div> 
-            <div class="inferior">
-                <button (click)="previousStep()"  class="back-step text_medio">Voltar</button>
-                <div class="steps">
-                    <p class="step-c text_peq-w">1</p>
-                    <p class="step-n text_peq-w">2</p>
-                </div>
-                <button (click)="nextStep()"  class="next-step text_medio">Próximo</button>
+                <p class="text_peq gray">
+                  Defina uma faixa de preço <br />
+                  por hora de aula
+                </p>
+              </div>
             </div>
-                
-                
-            <!-- <h2 class="text_sub">Essas informações irão aparecer em seu perfil</h2>
+          </div>
+        </div>
+        <div class="ld">
+          <h2 class="text_sub">
+            Essas informações irão aparecer em seu perfil
+          </h2>
+          <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png" />
+        </div>
+      </div>
+      <div class="inferior">
+        <button (click)="previousStep()" class="back-step text_medio">
+          Voltar
+        </button>
+        <div class="steps">
+          <p class="step-c text_peq-w">1</p>
+          <p class="step-n text_peq-w">2</p>
+        </div>
+        <button (click)="nextStep()" class="next-step text_medio">
+          Próximo
+        </button>
+      </div>
+
+      <!-- <h2 class="text_sub">Essas informações irão aparecer em seu perfil</h2>
                                 <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png"> -->
-            </div>
-            </div>
-            <div class="dados" *ngIf="currentStep === 6">
-                <div class="inputs">
-                    <div class="le">
-                        <div class="box-h1">
-                            <h1 class="text_principal">Seu perfil</h1>
-                        </div>
-                        <div class="add">
-                            <div class="semana">
-                                <button class="btn-semanais text_peq" (click)="openCard('monday')">
-                                  Segunda
-                                  <div class="btn-semana">
-                                    <img *ngIf="!savedTimes['monday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
-                                    <span *ngIf="savedTimes['monday']" class="saved-time text_peq-w">{{ savedTimes['monday'].start }} - {{ savedTimes['monday'].end }}</span>
-                                  </div>
-                                </button>
-                                <button class="btn-semanais text_peq" (click)="openCard('tuesday')">
-                                  Terça
-                                  <div class="btn-semana">
-                                    <img *ngIf="!savedTimes['tuesday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
-                                    <span *ngIf="savedTimes['tuesday']" class="saved-time text_peq-w">{{ savedTimes['tuesday'].start }} - {{ savedTimes['tuesday'].end }}</span>
-                                  </div>
-                                </button>
-                                <button class="btn-semanais text_peq" (click)="openCard('wednesday')">
-                                  Quarta
-                                  <div class="btn-semana">
-                                    <img *ngIf="!savedTimes['wednesday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
-                                    <span *ngIf="savedTimes['wednesday']" class="saved-time text_peq-w">{{ savedTimes['wednesday'].start }} - {{ savedTimes['wednesday'].end }}</span>
-                                  </div>
-                                </button>
-                                <button class="btn-semanais text_peq" (click)="openCard('thursday')">
-                                  Quinta
-                                  <div class="btn-semana">
-                                    <img *ngIf="!savedTimes['thursday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
-                                    <span *ngIf="savedTimes['thursday']" class="saved-time text_peq-w">{{ savedTimes['thursday'].start }} - {{ savedTimes['thursday'].end }}</span>
-                                  </div>
-                                </button>
-                                <button class="btn-semanais text_peq" (click)="openCard('friday')">
-                                  Sexta
-                                  <div class="btn-semana">
-                                    <img *ngIf="!savedTimes['friday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
-                                    <span *ngIf="savedTimes['friday']" class="saved-time text_peq-w">{{ savedTimes['friday'].start }} - {{ savedTimes['friday'].end }}</span>
-                                  </div>
-                                </button>
-                                <button class="btn-semanais text_peq" (click)="openCard('saturday')">
-                                  Sábado
-                                  <div class="btn-semana">
-                                    <img *ngIf="!savedTimes['saturday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
-                                    <span *ngIf="savedTimes['saturday']" class="saved-time text_peq-w">{{ savedTimes['saturday'].start }} - {{ savedTimes['saturday'].end }}</span>
-                                  </div>
-                                </button>
-                                <button class="btn-semanais text_peq" (click)="openCard('sunday')">
-                                  Domingo
-                                  <div class="btn-semana">
-                                    <img *ngIf="!savedTimes['sunday']" class="plus-semana" src="../../../assets/images/Plus symbol button.png">
-                                    <span *ngIf="savedTimes['sunday']" class="saved-time text_peq-w">{{ savedTimes['sunday'].start }} - {{ savedTimes['sunday'].end }}</span>
-                                  </div>
-                                </button>
-                              </div>
-                              
-                              <div *ngIf="currentCard" class="card-b">
-                                <h3 class="text_medio">{{ getCardTitle(currentCard) }}</h3>
-                                <div style="display: flex; gap: 2vh;">
-                                  <div>
-                                    <p class="text_peq" style="color: gray;">Início</p>
-                                    <input type="time" #startTime placeholder="Horário de início" class="input-pp">
-                                  </div>
-                                  <div>
-                                    <p class="text_peq" style="color: gray;">Término</p>
-                                    <input type="time" #endTime placeholder="Horário de término" class="input-pp">
-                                  </div>
-                                </div>
-                                <button class="btn_rosa" (click)="saveTime(currentCard, startTime.value, endTime.value)">Salvar</button>
-                                <button class="btn_cinza" (click)="closeCard()">Fechar</button>
-                              </div>
-                              
-                            <div>
-                                <div class="contatos">         
-                                    <div class="contatin">
-                                        <img class="icon-contato" src="../../../assets\images\svg-images\discord-icon.svg ">
-                                        <input type="text" class="input-g" placeholder="Discord">
-                                    </div>
-                                    <div class="contatin">
-                                        <img class="icon-contato" src="../../../assets\images\svg-images\teams-icon.svg ">
-                                        <input type="text" class="input-g" placeholder="Teams">
-                                    </div>
-                                    <div class="contatin">
-                                        <img class="icon-contato" src="../../../assets\images\svg-images\whats-icon.svg ">
-                                        <input type="text" class="input-g" placeholder="WahtsApp">
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="text_peq">preencha no mínimo um contato</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ld">
-                        <h2 class="text_sub">Onde e quando seus alunos podem conversar com você?</h2>
-                        <img src="../../assets\images\svg-images\octicon_question-16.svg">
-                    </div>                   
-                </div>
-            <div class="inferior">
-                <button (click)="previousStep()"  class="back-step text_medio">voltar</button>
-                <div class="steps">
-                    <p class="step-c text_peq-w">1</p>
-                    <p class="step-c text_peq-w">2</p>
-                </div>
-                <button (click)="nextStep()"  class="btn_rosa text_medio">Finalizar</button>
-            </div>  
-        </div>
     </div>
+  </div>
+  <div class="dados" *ngIf="currentStep === 6">
+    <div class="inputs">
+      <div class="le">
+        <div class="box-h1">
+          <h1 class="text_principal">Seu perfil</h1>
+        </div>
+        <div class="add">
+          <div class="semana">
+            <button class="btn-semanais text_peq" (click)="openCard('monday')">
+              Segunda
+              <div class="btn-semana">
+                <img
+                  *ngIf="!savedTimes['monday']"
+                  class="plus-semana"
+                  src="../../../assets/images/Plus symbol button.png"
+                />
+                <span *ngIf="savedTimes['monday']" class="saved-time text_peq-w"
+                  >{{ savedTimes["monday"].start }} -
+                  {{ savedTimes["monday"].end }}</span
+                >
+              </div>
+            </button>
+            <button class="btn-semanais text_peq" (click)="openCard('tuesday')">
+              Terça
+              <div class="btn-semana">
+                <img
+                  *ngIf="!savedTimes['tuesday']"
+                  class="plus-semana"
+                  src="../../../assets/images/Plus symbol button.png"
+                />
+                <span
+                  *ngIf="savedTimes['tuesday']"
+                  class="saved-time text_peq-w"
+                  >{{ savedTimes["tuesday"].start }} -
+                  {{ savedTimes["tuesday"].end }}</span
+                >
+              </div>
+            </button>
+            <button
+              class="btn-semanais text_peq"
+              (click)="openCard('wednesday')"
+            >
+              Quarta
+              <div class="btn-semana">
+                <img
+                  *ngIf="!savedTimes['wednesday']"
+                  class="plus-semana"
+                  src="../../../assets/images/Plus symbol button.png"
+                />
+                <span
+                  *ngIf="savedTimes['wednesday']"
+                  class="saved-time text_peq-w"
+                  >{{ savedTimes["wednesday"].start }} -
+                  {{ savedTimes["wednesday"].end }}</span
+                >
+              </div>
+            </button>
+            <button
+              class="btn-semanais text_peq"
+              (click)="openCard('thursday')"
+            >
+              Quinta
+              <div class="btn-semana">
+                <img
+                  *ngIf="!savedTimes['thursday']"
+                  class="plus-semana"
+                  src="../../../assets/images/Plus symbol button.png"
+                />
+                <span
+                  *ngIf="savedTimes['thursday']"
+                  class="saved-time text_peq-w"
+                  >{{ savedTimes["thursday"].start }} -
+                  {{ savedTimes["thursday"].end }}</span
+                >
+              </div>
+            </button>
+            <button class="btn-semanais text_peq" (click)="openCard('friday')">
+              Sexta
+              <div class="btn-semana">
+                <img
+                  *ngIf="!savedTimes['friday']"
+                  class="plus-semana"
+                  src="../../../assets/images/Plus symbol button.png"
+                />
+                <span *ngIf="savedTimes['friday']" class="saved-time text_peq-w"
+                  >{{ savedTimes["friday"].start }} -
+                  {{ savedTimes["friday"].end }}</span
+                >
+              </div>
+            </button>
+            <button
+              class="btn-semanais text_peq"
+              (click)="openCard('saturday')"
+            >
+              Sábado
+              <div class="btn-semana">
+                <img
+                  *ngIf="!savedTimes['saturday']"
+                  class="plus-semana"
+                  src="../../../assets/images/Plus symbol button.png"
+                />
+                <span
+                  *ngIf="savedTimes['saturday']"
+                  class="saved-time text_peq-w"
+                  >{{ savedTimes["saturday"].start }} -
+                  {{ savedTimes["saturday"].end }}</span
+                >
+              </div>
+            </button>
+            <button class="btn-semanais text_peq" (click)="openCard('sunday')">
+              Domingo
+              <div class="btn-semana">
+                <img
+                  *ngIf="!savedTimes['sunday']"
+                  class="plus-semana"
+                  src="../../../assets/images/Plus symbol button.png"
+                />
+                <span *ngIf="savedTimes['sunday']" class="saved-time text_peq-w"
+                  >{{ savedTimes["sunday"].start }} -
+                  {{ savedTimes["sunday"].end }}</span
+                >
+              </div>
+            </button>
+          </div>
+
+          <div *ngIf="currentCard" class="card-b">
+            <h3 class="text_medio">{{ getCardTitle(currentCard) }}</h3>
+            <div style="display: flex; gap: 2vh">
+              <div>
+                <p class="text_peq" style="color: gray">Início</p>
+                <input
+                  type="time"
+                  #startTime
+                  placeholder="Horário de início"
+                  class="input-pp"
+                />
+              </div>
+              <div>
+                <p class="text_peq" style="color: gray">Término</p>
+                <input
+                  type="time"
+                  #endTime
+                  placeholder="Horário de término"
+                  class="input-pp"
+                />
+              </div>
+            </div>
+            <button
+              class="btn_rosa"
+              (click)="saveTime(currentCard, startTime.value, endTime.value)"
+            >
+              Salvar
+            </button>
+            <button class="btn_cinza" (click)="closeCard()">Fechar</button>
+          </div>
+
+          <div>
+            <div class="contatos">
+              <div class="contatin">
+                <img
+                  class="icon-contato"
+                  src="../../../assets\images\svg-images\discord-icon.svg "
+                />
+                <input type="text" class="input-g" placeholder="Discord" />
+              </div>
+              <div class="contatin">
+                <img
+                  class="icon-contato"
+                  src="../../../assets\images\svg-images\teams-icon.svg "
+                />
+                <input type="text" class="input-g" placeholder="Teams" />
+              </div>
+              <div class="contatin">
+                <img
+                  class="icon-contato"
+                  src="../../../assets\images\svg-images\whats-icon.svg "
+                />
+                <input type="text" class="input-g" placeholder="WahtsApp" />
+              </div>
+            </div>
+            <div>
+              <p class="text_peq">preencha no mínimo um contato</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ld">
+        <h2 class="text_sub">
+          Onde e quando seus alunos podem conversar com você?
+        </h2>
+        <img src="../../assets\images\svg-images\octicon_question-16.svg" />
+      </div>
+    </div>
+    <div class="inferior">
+      <button (click)="previousStep()" class="back-step text_medio">
+        voltar
+      </button>
+      <div class="steps">
+        <p class="step-c text_peq-w">1</p>
+        <p class="step-c text_peq-w">2</p>
+      </div>
+      <button (click)="nextStep()" class="btn_rosa text_medio">
+        Finalizar
+      </button>
+    </div>
+  </div>
+</div>

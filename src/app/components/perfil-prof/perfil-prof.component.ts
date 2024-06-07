@@ -24,9 +24,9 @@ botaoVoltar(){
 
 trocarImagem() {
   if (this.img_estrela === '/assets/images/estrela_sem_like.png') {
-    this.img_estrela = '/assets/images/estrela _com_like.png'; // Caminho da segunda imagem
+    this.img_estrela = '/assets/images/estrela _com_like.png'; 
   } else {
-    this.img_estrela = '/assets/images/estrela_sem_like.png'; // Volta para a primeira imagem
+    this.img_estrela = '/assets/images/estrela_sem_like.png';
   }
 }
 

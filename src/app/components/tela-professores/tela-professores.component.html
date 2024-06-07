@@ -1,50 +1,60 @@
 <div class="tela">
-    <div class="navbar">
-        <app-navbar></app-navbar>
+  <div class="navbar">
+    <app-navbar></app-navbar>
+  </div>
+  <div class="lado-direito">
+    <div class="parte-superior">
+      <div class="titulo-profs">
+        <h1 class="professor text_principal">Professores</h1>
+        <img
+          src="../../../assets/images/svg-images/icone-prof.svg"
+          class="imagem-prof"
+        />
+      </div>
+      <div class="box-barraPesquisa">
+        <input type="text" class="input-pesquisa" placeholder="Pesquise" />
+        <button class="botao-pesquisa">
+          <img
+            src="../../../assets/images/svg-images/icone-lupa.svg"
+            class="imagem-lupa"
+          />
+        </button>
+      </div>
     </div>
-    <div class="lado-direito">
-        <div class="parte-superior">
-            <div class="titulo-profs">
-                <h1 class="professor text_principal">Professores</h1>
-                <img src="../../../assets/images/svg-images/icone-prof.svg" class="imagem-prof">
+
+    <div class="parte-inferior">
+      <div class="cards">
+        <div class="box-card" *ngFor="let card of $cards | async">
+          <div class="box-foto-perfil">
+            <img
+              class="foto-perfil"
+              src="../../../assets//images/imagem teste icone.jpeg"
+            />
+          </div>
+          <div class="box-conteudo">
+            <div class="box-nome">
+              <p class="campo-nome">Nome</p>
+              <h2 class="nome-prof">{{ card.name }}</h2>
             </div>
-            <div class="box-barraPesquisa">
-                <input type="text" class="input-pesquisa" placeholder="Pesquise">
-                <button class="botao-pesquisa">
-                    <img src="../../../assets/images/svg-images/icone-lupa.svg" class="imagem-lupa">
-                </button>
+            <div class="divisoria"></div>
+            <div class="box-descricao">
+              <p class="camp-descricao">Descrição</p>
+              <p class="descricao-perfil">{{ card.description }}</p>
             </div>
+          </div>
+          <div class="box-area">
+            <div class="area-prof">
+              <p>Full-stack</p>
+            </div>
+            <button class="like">
+              <img
+                class="estrela"
+                src="../../../assets/images/estrela_sem_like.png"
+              />
+            </button>
+          </div>
         </div>
-        
-        <div class="parte-inferior">    
-            <div class="cards">
-                <div class="box-card" *ngFor="let card of $cards| async">
-                    <div class="box-foto-perfil">
-                        <img class="foto-perfil" src="../../../assets//images/imagem teste icone.jpeg">
-                    </div>
-                    <div class="box-conteudo">
-                        <div class="box-nome">
-                            <p class="campo-nome">Nome</p>
-                            <h2 class="nome-prof">{{card.name}}</h2>
-                        </div>
-                        <div class="divisoria"></div>
-                        <div class="box-descricao">
-                            <p class="camp-descricao">Descrição</p>
-                            <p class="descricao-perfil">{{card.description}}</p>
-                        </div>
-                    </div>
-                    <div class="box-area">
-                        <div class="area-prof">
-                            <p>Full-stack</p>
-                            
-                        </div>
-                        <button class="like">
-                            <img class="estrela" src="../../../assets/images/estrela_sem_like.png">
-                        </button>
-                    </div>
-                </div>
-            </div>
-           
-        </div>
+      </div>
     </div>
+  </div>
 </div>
