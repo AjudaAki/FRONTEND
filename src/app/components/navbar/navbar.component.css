@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--main-color);
     width: 30vh;
     height: 100vh;
@@ -14,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 12vh;
+   
     gap: 2vh
 }
 
@@ -126,9 +127,10 @@
 
 /* botao sair */
 .box-botao-sair{
+    
     width: 30vh;
     height: 8vh;
-    margin-top: 50vh;
+    
 }
 
 
@@ -172,3 +174,50 @@
   .nome-botao-prof.active, .nome-botao-fav.active, .nome-botao-perfil.active {
     transition: color 0.3s ease;
   }
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Braah+One&display=swap");
+
+  svg {
+	font-family: "Braah One", sans-serif;
+	width: 100%;
+    height: 20vh;
+}
+
+svg text {
+	animation: stroke 5s forwards; /* Adicione 'forwards' para manter o estado final da animação */
+	stroke-width: 2;
+	stroke: #000000;
+	font-size: 6vh;
+    fill: rgba(255, 255, 255, 0); /* Começa com o preenchimento transparente */
+}
+
+@keyframes stroke {
+	0%   {
+		fill: rgba(255,50,91,0); 
+        stroke: rgba(0,0,0,1);
+		stroke-dashoffset: 25%; 
+        stroke-dasharray: 0 50%; 
+        stroke-width: 2;
+	}
+	70%  {
+        fill: rgba(255,50,91,0); 
+        stroke: rgba(0,0,0,1); 
+    }
+	80%  {
+        fill: rgba(255,50,91,0); 
+        stroke: rgba(0,0,0,1); 
+        stroke-width: 3; 
+    }
+	100% {
+		fill: rgb(255, 255, 255); /* Preenchimento branco no final */
+        stroke: rgba(0,0,0,0);    /* Remove o traçado */
+		stroke-dashoffset: -25%; 
+        stroke-dasharray: 50% 0; 
+        stroke-width: 0;
+	}
+}
+
+.wrapper {
+    background-color: #ffffff00;
+}

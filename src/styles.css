@@ -63,69 +63,45 @@
 
 /* /////////Fontes/////////// */
 .text_principal{
-    font-size: 4.4vh;
+    font-size: 5.4vh;
     font-family: "Montserrat", sans-serif;
-    font-weight: bold;
+   
 }
 
 .text_sub{
-    font-size: 3.4vh;
+    font-size: 4vh;
     font-family: "Montserrat", sans-serif;
 
 }
 .text_modal{
-    font-size: 2vh;
+    font-size: 3.4vh;
     font-family: "PT Sans", sans-serif;
 
 }
 .text_medio{
-    font-size: 1.8vh;
+    font-size: 2.4vh;
     font-family: "PT Sans", sans-serif;
 }
 .text_aviso{
-    font-size: 1.6vh;
+    font-size: 2.2vh;
     font-family: "PT Sans", sans-serif;
 }
 .text_peq{
-    font-size: 1.4vh;
+    font-size: 1.8vh;
     font-family: "PT Sans", sans-serif;
 }
 
-.text_principal-w{
-    font-size: 4.4vh;
-    font-family: "PT Mono", monospace;
-    color: white;
-}
-.text_sub-w{
-    font-size: 3.4vh;
-    font-family: "PT Mono", monospace;
-    color: white;
-}
-.text_modal-w{
-    font-size: 2vh;
-    font-family: "PT Sans", sans-serif;
-    color: white;
-}
-.text_medio-w{
-    font-size: 1.8vh;
-    font-family: "PT Sans", sans-serif;
-    color: white;
-}
-.text_aviso-w{
-    font-size: 1.6vh;
-    font-family: "PT Sans", sans-serif;
-    color: white;
-}
-.text_peq-w{
-    font-size: 1.4vh;
-    font-family: "PT Sans", sans-serif;
-    color: white;
+.italico{
+    font-style: italic;
 }
 .bold{
-    font-weight:600;
+    font-weight:700;
 }
 .gray{
     color: gray;
+}
+.white{
+    color: white;
 }
 /* /////////Buttons/////////// */
 .btn_back {
