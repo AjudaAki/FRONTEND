@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { registerDataAluno } from 'src/app/interfaces/request.interface';
 
 @Component({
@@ -24,7 +25,8 @@ export class CadastroUserComponent implements OnInit {
   constructor(
     private router: Router, 
     private fb: FormBuilder, 
-    private apiService: ApiService 
+    private apiService: ApiService,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -65,7 +67,7 @@ export class CadastroUserComponent implements OnInit {
     }
     const step3Data = localStorage.getItem('formStep3');
     if (step3Data) {
-      this.formStep2.setValue(JSON.parse(step3Data));
+      this.formStep3.setValue(JSON.parse(step3Data));
     }
   }
 
@@ -74,8 +76,7 @@ export class CadastroUserComponent implements OnInit {
       localStorage.setItem('formStep1', JSON.stringify(this.formStep1.value));
     } else if (step === 2) {
       localStorage.setItem('formStep2', JSON.stringify(this.formStep2.value));
-    }
-    else if (step === 3) {
+    } else if (step === 3) {
       localStorage.setItem('formStep3', JSON.stringify(this.formStep3.value));
     }
   }
@@ -108,31 +109,38 @@ export class CadastroUserComponent implements OnInit {
       ...this.formStep2.value,
       ...this.formStep3.value,
     };
-
-
-  // submitFormProf() {
-  //   const registerDataProf: registerDataAluno = {
-  //     ...this.formStep1.value,
-  //     ...this.formStep2.value,
-  //     ...this.formStep3.value,
-  //     ...this.formStep5.value,
-  //     ...this.formStep6.value,
-  //   };
-
-
-
+  
     console.log(registerData);
-
+  
     this.apiService.cadastroUser(registerData).subscribe(
       response => {
         console.log('Cadastro realizado com sucesso', response);
-        localStorage.clear();
-        this.router.navigate(['/login']);
+        
+        const formValue = {
+          email: registerData.email,
+          senha: registerData.senha
+        };
+  
+        this.authService.login(formValue).subscribe(
+          (post) => {
+            console.log(post);
+            var token = JSON.parse(JSON.stringify(post)).token;
+            localStorage.setItem('token', token);
+            this.router.navigate(['/professores']);
+          },
+          (error) => {
+            console.error('Login falhou', error);
+            // Mostrar mensagem de erro no login, se necessário
+          }
+        );
+  
+        // localStorage.clear();
+        // this.router.navigate(['/login']);
         // Redirecionar ou mostrar mensagem de sucesso
       },
       error => {
         console.error('Erro ao realizar cadastro', error);
-        // Mostrar mensagem de erro
+        // Mostrar mensagem de erro no cadastro, se necessário
       }
     );
   }
