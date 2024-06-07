@@ -107,8 +107,19 @@ export class CadastroUserComponent implements OnInit {
       ...this.formStep1.value,
       ...this.formStep2.value,
       ...this.formStep3.value,
-      // ...this.formStep4.value,
     };
+
+
+  // submitFormProf() {
+  //   const registerDataProf: registerDataAluno = {
+  //     ...this.formStep1.value,
+  //     ...this.formStep2.value,
+  //     ...this.formStep3.value,
+  //     ...this.formStep5.value,
+  //     ...this.formStep6.value,
+  //   };
+
+
 
     console.log(registerData);
 

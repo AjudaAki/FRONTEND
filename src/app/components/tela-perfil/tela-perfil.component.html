@@ -8,12 +8,12 @@
             <h1 class=" text_principal">Perfil</h1>
             <img class="img-icone-perfil" src="../../../assets/images/svg-images/icone-perfil.svg">
         </div>
-        
         <div class="box-info-perfil ">
             <div class="box-infos-principais">
                 <div class="box-foto-perfil">
-                    <img class="foto-perfil" src="../../../assets/images/svg-images/padrao-perfil.svg">
-                </div>
+                    <img *ngIf="imgBase64 != urlBase64" class="foto-perfil" [src]="imgBase64" alt=".">
+                    <img *ngIf="imgBase64 === urlBase64" class="foto-perfil" src="../../../assets/images/svg-images/padrao-perfil.svg" alt="Imagem de perfil">
+                  </div>
                 <div class="box-nome-email-tel">
                     <div class="nome-nascimento">
                         <p class="nome text_principal">{{userData?.nome}}</p>
@@ -25,25 +25,26 @@
                         <div class="cpf text_peq"><p>{{userData?.cpf}}</p></div>
                     </div>
                     <div class="localizacao">
-                        <p>SP</p>
-                        <p>Marilia</p>
-                        <p>Santa Antonieta</p>
-                        <p>1125</p>
+                        <p>{{userData?.estado}}</p>
+                        <p>{{userData?.cidade}}</p>
+                        <p>{{userData?.rua}}</p>
+                        <p>{{userData?.numero_casa}}</p>
                     </div>
                 </div>
                 <div class="box-cargo">
-                    <h2 class="texto-cargo text_sub">Aluno</h2>
+                    <h2 class="texto-cargo text_sub" *ngIf="role === 0">Aluno</h2>
+                    <h2 class="texto-cargo text_sub" *ngIf="role === 1">Professor</h2>
                 </div>
             </div>
            
             <div class="box-info-fav-prof" >
-                 <button class="box-fav">
+                <button class="box-fav" (click)="botaoFav()">
                     <div class="box-img-fav">
                         <img class="img-fav" src="../../../assets//images/svg-images/icone-profFav.svg">
                     </div>
                     <div class="box-prof-fav">
                         <p class="texto-fav text_medio">Você favoritou</p>
-                        <p class="numero-fav text_sub">12</p>
+                        <p class="numero-fav text_sub">{{userData?.favoritos}}</p>
                         <p class="texto-fav text_medio">Professores</p>
                     </div>
                 </button>

@@ -1,30 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
-import { HttpHeaders } from '@angular/common/http';
-// import jwt_decode from 'jwt-decode'; // Importação da biblioteca jwt-decode
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-tela-perfil',
   templateUrl: './tela-perfil.component.html',
   styleUrls: ['./tela-perfil.component.css']
 })
-export class TelaPerfilComponent implements OnInit{
- 
-  role: any 
-  userData: any;
+export class TelaPerfilComponent implements OnInit {
 
-  constructor(private api: ApiService) {}
+  role: any; 
+  userData: any;
+  imgBase64: string = '';
+  urlBase64: string = 'data:image/png;base64,'
+
+  constructor(private api: ApiService, private route: Router) {}
 
   ngOnInit(): void {
-    this.getUserData();
+    this.obterDadosUsuario();
   }
 
-  getUserData(): void {
+
+  botaoFav(){
+    this.route.navigate(['/favoritos'])
+  }
+
+
+  obterDadosUsuario(): void {
     this.api.perfil().subscribe(
       (response: any) => {
-        this.userData = response[0];
+        this.userData = response;
+        this.role = this.userData.modo_professor; 
+        this.imgBase64 = this.userData.img_perfil_base64;
         console.log(this.userData);
-        this.role = this.userData.modo_professor; // Atribui o valor de "modo_professor" a role
       },
       (error: any) => {
         console.error('Erro ao buscar dados do usuário:', error);
