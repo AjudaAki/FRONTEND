@@ -1,179 +1,143 @@
 <div class="tela">
-  <div class="navbar">
-    <app-navbar></app-navbar>
-  </div>
-  <div class="box-perfil">
-    <div class="box-titulo-perfil">
-      <h1 class="text_principal">Perfil</h1>
-      <img
-        class="img-icone-perfil"
-        src="../../../assets/images/svg-images/icone-perfil.svg"
-      />
+   
+    <div class="navbar">
+        <app-navbar></app-navbar>
     </div>
-
-    <div class="box-info-perfil">
-      <div class="box-infos-principais">
-        <div class="box-foto-perfil">
-          <img
-            class="foto-perfil"
-            src="../../../assets/images/svg-images/padrao-perfil.svg"
-          />
+    <div class="box-perfil">
+        <div class="box-titulo-perfil">
+            <h1 class=" text_principal">Perfil</h1>
+            <img class="img-icone-perfil" src="../../../assets/images/svg-images/icone-perfil.svg">
         </div>
-        <div class="box-nome-email-tel">
-          <div class="nome-nascimento">
-            <p class="nome text_principal">{{ userData?.nome }}</p>
-            <p class="nascimento text_peq">
-              {{ userData?.data_nascimento_formatada }}
-            </p>
-          </div>
-          <div class="email-tel-cpf">
-            <div class="email text_peq">
-              <p>{{ userData?.email }}</p>
+        <div class="box-info-perfil ">
+            <div class="box-infos-principais">
+                <div class="box-foto-perfil">
+                    <img *ngIf="imgBase64 != urlBase64" class="foto-perfil" [src]="imgBase64" alt=".">
+                    <img *ngIf="imgBase64 === urlBase64" class="foto-perfil" src="../../../assets/images/svg-images/padrao-perfil.svg" alt="Imagem de perfil">
+                  </div>
+                <div class="box-nome-email-tel">
+                    <div class="nome-nascimento">
+                        <p class="nome text_principal">{{userData?.nome}}</p>
+                        <p class="nascimento text_peq">{{userData?.data_nascimento_formatada}}</p>
+                    </div>
+                    <div class="email-tel-cpf">
+                        <div class="email text_peq"><p>{{userData?.email}}</p></div>
+                        <div class="telefone text_peq"><p>{{userData?.telefone}}</p></div>
+                        <div class="cpf text_peq"><p>{{userData?.cpf}}</p></div>
+                    </div>
+                    <div class="localizacao">
+                        <p>{{userData?.estado}}</p>
+                        <p>{{userData?.cidade}}</p>
+                        <p>{{userData?.rua}}</p>
+                        <p>{{userData?.numero_casa}}</p>
+                    </div>
+                </div>
+                <div class="box-cargo">
+                    <h2 class="texto-cargo text_sub" *ngIf="role === 0">Aluno</h2>
+                    <h2 class="texto-cargo text_sub" *ngIf="role === 1">Professor</h2>
+                </div>
             </div>
-            <div class="telefone text_peq">
-              <p>{{ userData?.telefone }}</p>
+           
+            <div class="box-info-fav-prof" >
+                <button class="box-fav" (click)="botaoFav()">
+                    <div class="box-img-fav">
+                        <img class="img-fav" src="../../../assets//images/svg-images/icone-profFav.svg">
+                    </div>
+                    <div class="box-prof-fav">
+                        <p class="texto-fav text_medio">Você favoritou</p>
+                        <p class="numero-fav text_sub">{{userData?.favoritos}}</p>
+                        <p class="texto-fav text_medio">Professores</p>
+                    </div>
+                </button>
+                <div class="box-prof-serProf">
+                    <div class="box-ser-prof" *ngIf="role === 0">
+                        <div class="box-texto-serProf">
+                            <div class="titulo-serProf text_sub">
+                                <p>Que tal ser professor?</p>
+                            </div>
+                            <div class="texto-serProf text_peq">
+                                <p>É prático e rápido, você monta seu <br> perfil e ensina outras pessoas!</p>
+                            </div>
+                        </div>
+                        <div class="box-img-serProf">
+                            <img class="img-teste" src="../../../assets/images/svg-images/(Logo)site 2.svg">
+                        </div>
+                    </div> 
+                    <div class="box-prof-precos" *ngIf="role === 1">
+                        <div class="box-precos">
+                            <div class="preco">
+                                <p class="numero-preco text_medio">R$ 50,00</p>
+                                <p class="numero-preco text_medio">R$ 150,00</p>
+                                <p class="texto-faixa-preco text_peq">Faixa de preços por hora aula</p>
+                            </div>
+                        </div>
+                        <div class="box-logo">
+                        </div>
+                        <img class="img-icon-ajudaakiAlter" src="../../../assets//images/svg-images/icone-ajudaakiAlter.svg">
+                    </div>
+                </div>
             </div>
-            <div class="cpf text_peq">
-              <p>{{ userData?.cpf }}</p>
+            <div class="box-infos-prof" *ngIf="role === 1">
+                <div class="box-contatos-descricoes">
+                    <div class="box-contatos">
+                        <div class="box-whats">
+                            <div class="box-icone">
+                                <img class="img-contato" src="../../../assets//images/svg-images/whats-icon.svg">
+                            </div>
+                            <p class="nome-contato text_medio">Whatsapp</p>
+                        </div>
+                        <div class="box-discord">
+                            <div class="box-icone">
+                                <img class="img-contato" src="../../../assets//images/svg-images/discord-icon.svg">
+                            </div>
+                            <p class="nome-contato text_medio">Discord</p>
+                        </div>
+                        <div class="box-teams">
+                            <div class="box-icone">
+                                <img class="img-contato" src="../../../assets//images/svg-images/teams-icon.svg">
+                            </div>
+                            <p class="nome-contato text_medio">Teams</p>
+                        </div>
+                    </div>
+                    <div class="box-descricoes">
+                        <div class="box-descri-rapida text_peq">
+                            <p class="texto-descricao">descrição legal do perfil</p>
+                        </div>
+                        <div class="box-descri-longa text_peq">
+                            <p class="texto-descricao">descrição legal muito longa do perfil, bão dimais</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-semana">
+                    <div class="box-dia-semana text_medio">
+                        <p>Segunda</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                    <div class="box-dia-semana text_medio">
+                        <p>Terça</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                    <div class="box-dia-semana text_medio">
+                        <p>Quarta</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                    <div class="box-dia-semana text_medio">
+                        <p>Quinta</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                    <div class="box-dia-semana text_medio">
+                        <p>Sexta</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                    <div class="box-dia-semana text_medio">
+                        <p>Sabado</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                    <div class="box-dia-semana text_medio">
+                        <p>Domingo</p>
+                        <p>10:00-20:00</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="localizacao">
-            <p>SP</p>
-            <p>Marilia</p>
-            <p>Santa Antonieta</p>
-            <p>1125</p>
-          </div>
         </div>
-        <div class="box-cargo">
-          <h2 class="texto-cargo text_sub">Aluno</h2>
-        </div>
-      </div>
-
-      <div class="box-info-fav-prof">
-        <button class="box-fav">
-          <div class="box-img-fav">
-            <img
-              class="img-fav"
-              src="../../../assets//images/svg-images/icone-profFav.svg"
-            />
-          </div>
-          <div class="box-prof-fav">
-            <p class="texto-fav text_medio">Você favoritou</p>
-            <p class="numero-fav text_sub">12</p>
-            <p class="texto-fav text_medio">Professores</p>
-          </div>
-        </button>
-        <div class="box-prof-serProf">
-          <div class="box-ser-prof" *ngIf="role === 0">
-            <div class="box-texto-serProf">
-              <div class="titulo-serProf text_sub">
-                <p>Que tal ser professor?</p>
-              </div>
-              <div class="texto-serProf text_peq">
-                <p>
-                  É prático e rápido, você monta seu <br />
-                  perfil e ensina outras pessoas!
-                </p>
-              </div>
-            </div>
-            <div class="box-img-serProf">
-              <img
-                class="img-teste"
-                src="../../../assets/images/svg-images/(Logo)site 2.svg"
-              />
-            </div>
-          </div>
-          <div class="box-prof-precos" *ngIf="role === 1">
-            <div class="box-precos">
-              <div class="preco">
-                <p class="numero-preco text_medio">R$ 50,00</p>
-                <p class="numero-preco text_medio">R$ 150,00</p>
-                <p class="texto-faixa-preco text_peq">
-                  Faixa de preços por hora aula
-                </p>
-              </div>
-            </div>
-            <div class="box-logo"></div>
-            <img
-              class="img-icon-ajudaakiAlter"
-              src="../../../assets//images/svg-images/icone-ajudaakiAlter.svg"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="box-infos-prof" *ngIf="role === 1">
-        <div class="box-contatos-descricoes">
-          <div class="box-contatos">
-            <div class="box-whats">
-              <div class="box-icone">
-                <img
-                  class="img-contato"
-                  src="../../../assets//images/svg-images/whats-icon.svg"
-                />
-              </div>
-              <p class="nome-contato text_medio">Whatsapp</p>
-            </div>
-            <div class="box-discord">
-              <div class="box-icone">
-                <img
-                  class="img-contato"
-                  src="../../../assets//images/svg-images/discord-icon.svg"
-                />
-              </div>
-              <p class="nome-contato text_medio">Discord</p>
-            </div>
-            <div class="box-teams">
-              <div class="box-icone">
-                <img
-                  class="img-contato"
-                  src="../../../assets//images/svg-images/teams-icon.svg"
-                />
-              </div>
-              <p class="nome-contato text_medio">Teams</p>
-            </div>
-          </div>
-          <div class="box-descricoes">
-            <div class="box-descri-rapida text_peq">
-              <p class="texto-descricao">descrição legal do perfil</p>
-            </div>
-            <div class="box-descri-longa text_peq">
-              <p class="texto-descricao">
-                descrição legal muito longa do perfil, bão dimais
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="box-semana">
-          <div class="box-dia-semana text_medio">
-            <p>Segunda</p>
-            <p>10:00-20:00</p>
-          </div>
-          <div class="box-dia-semana text_medio">
-            <p>Terça</p>
-            <p>10:00-20:00</p>
-          </div>
-          <div class="box-dia-semana text_medio">
-            <p>Quarta</p>
-            <p>10:00-20:00</p>
-          </div>
-          <div class="box-dia-semana text_medio">
-            <p>Quinta</p>
-            <p>10:00-20:00</p>
-          </div>
-          <div class="box-dia-semana text_medio">
-            <p>Sexta</p>
-            <p>10:00-20:00</p>
-          </div>
-          <div class="box-dia-semana text_medio">
-            <p>Sabado</p>
-            <p>10:00-20:00</p>
-          </div>
-          <div class="box-dia-semana text_medio">
-            <p>Domingo</p>
-            <p>10:00-20:00</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </div>

@@ -55,6 +55,7 @@ export class NavbarComponent implements OnInit {
   }
 
   botaoSair() {
+    localStorage.clear();
     this.setActiveButton('');
     this.router.navigate(['']);
   }
