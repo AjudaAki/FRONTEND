@@ -118,6 +118,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
     background-color: var(--main-color);
     border-radius: 4vh; /* Substituí 40px por 4vh */
     width: 3.4vh; /* Substituí 34px por 3.4vh */
@@ -617,6 +618,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    gap: 1vh;
+    width: 70vh;
     justify-content: space-between;
 }
 .back-ground{
@@ -627,6 +630,7 @@
     padding: 1.6vh;
     justify-content: space-between;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
+    gap: 1vh;
 }
 .preço{
     display: flex;
@@ -647,6 +651,9 @@
 .semana{
     display: flex;
     gap: 4vh;
+    max-width: 60vh;
+
+    flex-wrap: wrap;
 }
 .btn-semanais{ 
     display: flex;
@@ -655,14 +662,16 @@
     border: none;
     justify-content: center;
     align-items: center;
+    width: 7vh;
 }
 .btn-semana{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--main-color);
-    border-radius: 20vh;
+    border-radius: 1vh;
     border: none;
+    color: white;
     padding: 0.5vh;
     transition: transform 0.2s ease;
 
@@ -677,6 +686,9 @@
     height: 2vh;
 }
 .card-b{
+    position: absolute;
+    left: 50%;
+    top: 20%;
     display: flex;
     width: max-content;
     padding: 0.2vh 2vh;
