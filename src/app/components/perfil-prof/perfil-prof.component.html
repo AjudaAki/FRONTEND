@@ -118,9 +118,10 @@
                     />
                   </div>
                 </div>
-                <button class="btn-envio">
-                    <img [src]="img_aviao" class="img-aviao" (click)="sendComment()">
+                <button class="btn-envio" (click)="sendComment()">
+                  <img [src]="img_aviao" class="img-aviao" [class.move-right]="isMovedRight" [class.fade-in]="isFadingIn">
                 </button>
+                
               </div>
             </div>
           </div>
@@ -158,20 +159,20 @@
           <div class="box-especialidade-preco">
             <p class="infos text_medio gray">Infos</p>
             <div class="box-titulo-especialidade">
-              <p class="titulo-especialidade text_medio">Especialidade</p>
+              <p class="titulo-especialidade text_peq gray bold">Especialidade</p>
             </div>
             <div class="box-especialidade">
               <p class="especialidade text_medio">full-stack</p>
             </div>
             <div class="box-faixa-preco">
-              <p class="titulo-faixa-preco text_medio">Faixa de preço</p>
-              <p class="menor-preco text_medio">R$80,00</p>
-              <p class="maior-preco text_medio">RS$200,00</p>
+              <p class="titulo-faixa-preco text_peq bold gray">Faixa de preço</p>
+              <p class="menor-preco text_sub bold italico">R$80,00</p>
+              <p class="maior-preco gray text_peq italico">RS$200,00</p>
             </div>
           </div>
           <div class="box-dias">
             <div class="box-titulo">
-              <p class="titulo-dias text_medio">Horarios</p>
+              <p class="titulo-dias gray bold text_peq">Horários</p>
             </div>
             <div class="box-dias-horarios">
               <div class="box-dias">

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { delay } from 'rxjs';
 
 
 @Component({
@@ -15,6 +16,8 @@ export class PerfilProfComponent {
   img_estrela: string = '/assets/images/estrela_sem_like.png'; // Caminho inicial da imagem
   img_aviao: string = '/assets/images/svg-images/Aviao-unpress.svg';
   constructor(private router: Router) {}
+  isMovedRight: boolean = false;
+  isFadingIn: boolean = false;
 
 
 botaoVoltar(){
@@ -30,13 +33,28 @@ trocarImagem() {
   }
 }
 
-sendComment(){
-  if(this.img_aviao === '/assets/images/svg-images/Aviao-unpress.svg'){
+sendComment() {
+  if (this.img_aviao === '/assets/images/svg-images/Aviao-unpress.svg') {
+    // Mudar a imagem e iniciar a animação de mover para a direita
     this.img_aviao = '/assets/images/svg-images/Aviao-pressed.svg';
-  } else{
+    this.isMovedRight = true;
+    this.isFadingIn = true;
+    setTimeout(() => {
+      // Voltar à posição original e iniciar o efeito de fade-in
+      this.isMovedRight = false;
+      
+
+      setTimeout(() => {
+        // Remover o efeito de fade-in e voltar à imagem original
+        this.isFadingIn = false;
+        this.img_aviao = '/assets/images/svg-images/Aviao-unpress.svg';
+      }, 800); // Tempo para a transição de fade-in (deve coincidir com a duração da transição CSS)
+    }, 1000);
+  } else {
     this.img_aviao = '/assets/images/svg-images/Aviao-unpress.svg';
   }
 }
+
 
 }
 
