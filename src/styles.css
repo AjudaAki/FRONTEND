@@ -345,6 +345,8 @@
 }
 
 .input-d {
+    display: flex;
+
     padding-left: 8px;
     font-size: 1.8vh;
     height: 20vh; /* 80px */

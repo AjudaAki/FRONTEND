@@ -143,8 +143,10 @@
 
 
 .descricao{
-    margin-left: 2vh;
-    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 1vh;
 }
 
 
@@ -294,7 +296,7 @@
 }
 .comentario-user:focus{
     outline: none;
-    border-bottom: var(--main-color);
+    border-bottom: var(--main-color) 1px solid;
 }
 
 
