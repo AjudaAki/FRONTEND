@@ -153,7 +153,7 @@
               <p class="text_peq">Número</p>
               <input
                 type="text"
-                formControlName="numero"
+                formControlName="numero_casa"
                 class="input-g"
                 placeholder="Número"
               />
@@ -332,7 +332,7 @@
       </div>
     </div>
 
-    <div class="dados" *ngIf="currentStep === 5">
+    <div class="dados" *ngIf="currentStep === 5" [formGroup]="formStep5">
       <div class="inputs">
         <div class="le">
           <div class="box-h1">
@@ -343,26 +343,24 @@
             <input
               type="text"
               class="input-gg"
+              formControlName="descricao_rapida"
               placeholder="descrição rápida"
             />
           </div>
 
           <div class="back-ground">
             <p class="text_medio bold">Descrição longa</p>
-            <input type="text" class="input-d" placeholder="descrição rápida" />
+            <input type="text" class="input-d" formControlName="descricao" placeholder="descrição" />
           </div>
 
           <div class="baixo">
             <div class="back-ground">
               <p class="text_medio bold">Escolha uma área de ensino</p>
-              <select id="opcoes" name="opcoes" class="input-p">
+              <select id="opcoes" name="opcoes" formControlName="id_tag" class="input-p">
                 <option value="opcao1">Escolha uma área</option>
-                <option value="opcao2">Back-end</option>
-                <option value="opcao3">Front-end</option>
-                <option value="opcao3">Full-stack</option>
-                <option value="opcao3">Ui - Ux</option>
+                <option *ngFor="let tag of tags"  [value]="tag.id">{{ tag.id }}</option>              
               </select>
-              <p class="text_peq gray">
+              <p class="text_peq gray"> 
                 Defina qual a área que você <br />
                 deseja ensinar
               </p>
@@ -375,11 +373,9 @@
                     <p class="text_peq gray">Preço Mínimo</p>
                     <input
                       class="input-p2"
-                      type="number"
-                      id="preco"
-                      name="preco"
-                      min="0.00"
-                      step="0.50"
+                      type="text"
+                      
+                      formControlName="preco_minimo"
                       placeholder="0.00"
                       required
                     />
@@ -389,11 +385,8 @@
                     <p class="text_peq gray">Preço Máximo</p>
                     <input
                       class="input-p2"
-                      type="number"
-                      id="preco"
-                      name="preco"
-                      min="0.00"
-                      step="0.50"
+                      type="text"
+                      formControlName="preco_maximo"
                       placeholder="0.00"
                       required
                     />
@@ -431,7 +424,7 @@
                                 <img src="https://i.postimg.cc/gcXBhhPQ/Vector.png"> -->
     </div>
   </div>
-  <div class="dados" *ngIf="currentStep === 6">
+  <div class="dados" *ngIf="currentStep === 6" [formGroup]="formStep6">
     <div class="inputs">
       <div class="le">
         <div class="box-h1">
@@ -595,21 +588,21 @@
                   class="icon-contato"
                   src="../../../assets\images\svg-images\discord-icon.svg "
                 />
-                <input type="text" class="input-g" placeholder="Discord" />
+                <input type="text" class="input-g" formControlName="discord" placeholder="Discord" />
               </div>
               <div class="contatin">
                 <img
                   class="icon-contato"
                   src="../../../assets\images\svg-images\teams-icon.svg "
                 />
-                <input type="text" class="input-g" placeholder="Teams" />
+                <input type="text" class="input-g" formControlName="teams" placeholder="Teams" />
               </div>
               <div class="contatin">
                 <img
                   class="icon-contato"
                   src="../../../assets\images\svg-images\whats-icon.svg "
                 />
-                <input type="text" class="input-g" placeholder="WahtsApp" />
+                <input type="text" class="input-g" formControlName="whatsapp" placeholder="WhatsApp" />
               </div>
               <p class="text_peq italico gray">preencha no mínimo um contato</p>
             </div>
@@ -631,7 +624,7 @@
         <p class="step-c text_peq">1</p>
         <p class="step-c text_peq">2</p>
       </div>
-      <button (click)="nextStep()" class="btn_rosa text_medio">
+      <button (click)="submitFormProf()" class="btn_rosa text_medio">
         Finalizar
       </button>
     </div>

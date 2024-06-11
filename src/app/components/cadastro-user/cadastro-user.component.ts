@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { AuthService } from 'src/app/services/auth.service';
-import { registerDataAluno } from 'src/app/interfaces/request.interface';
+import { registerDataAluno, registerDataProf } from 'src/app/interfaces/request.interface';
 
 @Component({
   selector: 'app-cadastro-user',
@@ -12,6 +12,7 @@ import { registerDataAluno } from 'src/app/interfaces/request.interface';
 })
 export class CadastroUserComponent implements OnInit {
   currentStep = 1;
+  tags: any[] = [];
   formStep1!: FormGroup;
   formStep2!: FormGroup;
   formStep3!: FormGroup;
@@ -45,15 +46,37 @@ export class CadastroUserComponent implements OnInit {
       cidade: ['', Validators.required],
       bairro: ['', Validators.required],
       rua: ['', Validators.required],
-      numero: ['', Validators.required],
+      numero_casa: ['', Validators.required],
     });
 
     this.formStep3 = this.fb.group({
       img_perfil: ['', Validators.required],
     })
 
-    // Carregar dados do localStorage se disponíveis
+    this.formStep5 = this.fb.group({
+      descricao_rapida: ['', Validators.required],
+      descricao: ['', Validators.required],
+      id_tag: ['', Validators.required],
+      preco_minimo: ['', Validators.required],
+      preco_maximo: ['', Validators.required]
+    })
+
+    this.formStep6 = this.fb.group({
+      domingo: ['', Validators.required],
+      segunda: ['', Validators.required],
+      terca: ['', Validators.required],
+      quarta: ['', Validators.required],
+      quinta: ['', Validators.required],
+      sexta: ['', Validators.required],
+      sabado: ['', Validators.required],
+      discord: ['', Validators.required],
+      whatsapp: ['', Validators.required],
+      teams: ['', Validators.required]
+    })
+
     this.loadFormData();
+    this.obterTags();
+    this.saveFormData(this.currentStep)
   }
 
   loadFormData() {
@@ -69,6 +92,20 @@ export class CadastroUserComponent implements OnInit {
     if (step3Data) {
       this.formStep3.setValue(JSON.parse(step3Data));
     }
+    const step5Data = localStorage.getItem('formStep5');
+    if (step5Data) {
+      this.formStep5.setValue(JSON.parse(step5Data));
+    }
+    const step6Data = localStorage.getItem('formStep6');
+    if (step6Data) {
+      this.formStep6.setValue(JSON.parse(step6Data));
+    }
+
+    console.log('Step 1 Data:', this.formStep1.value);
+    console.log('Step 2 Data:', this.formStep2.value);
+    console.log('Step 3 Data:', this.formStep3.value);
+    console.log('Step 5 Data:', this.formStep5.value);
+    console.log('Step 6 Data:', this.formStep6.value);
   }
 
   saveFormData(step: number) {
@@ -78,6 +115,10 @@ export class CadastroUserComponent implements OnInit {
       localStorage.setItem('formStep2', JSON.stringify(this.formStep2.value));
     } else if (step === 3) {
       localStorage.setItem('formStep3', JSON.stringify(this.formStep3.value));
+    } else if (step === 5) {
+      localStorage.setItem('formStep5', JSON.stringify(this.formStep5.value)); 
+    } else if (step === 6) {
+      localStorage.setItem('formStep6', JSON.stringify(this.formStep6.value));
     }
   }
 
@@ -90,16 +131,26 @@ export class CadastroUserComponent implements OnInit {
       this.saveFormData(1);
     } else if (this.currentStep === 2) {
       this.saveFormData(2);
+    } else if (this.currentStep === 3) {
+      this.saveFormData(3);
+    }else if (this.currentStep === 5) {
+      this.saveFormData(5);
+    }else if (this.currentStep === 6) {
+      this.saveFormData(6);
     }
 
     if (this.currentStep < 6) {
       this.currentStep++;
+      
+
     }
   }
 
   previousStep() {
     if (this.currentStep > 1) {
       this.currentStep--;
+      this.loadFormData();
+      console.log(this.loadFormData())
     }
   }
 
@@ -133,6 +184,49 @@ export class CadastroUserComponent implements OnInit {
             // Mostrar mensagem de erro no login, se necessário
           }
         );
+      },
+      error => {
+        console.error('Erro ao realizar cadastro', error);
+        // Mostrar mensagem de erro no cadastro, se necessário
+      }
+    );
+  }
+
+  submitFormProf() {
+
+    const idTagNumber = parseInt(this.formStep5.value.id_tag);
+    const registerData: registerDataProf = {
+      ...this.formStep1.value,
+      ...this.formStep2.value,
+      ...this.formStep3.value,
+      ...this.formStep5.value,
+      id_tag: idTagNumber, // Substituindo id_tag pela versão numérica
+      ...this.formStep6.value,
+    };
+  
+    console.log(registerData);
+  
+    this.apiService.cadastroProf(registerData).subscribe(
+      response => {
+        console.log('Cadastro realizado com sucesso', response);
+        
+        const formValue = {
+          email: registerData.email,
+          senha: registerData.senha
+        };
+  
+        this.authService.login(formValue).subscribe(
+          (post) => {
+            console.log(post);
+            var token = JSON.parse(JSON.stringify(post)).token;
+            localStorage.setItem('token', token);
+            this.router.navigate(['/professores']);
+          },
+          (error) => {
+            console.error('Login falhou', error);
+            // Mostrar mensagem de erro no login, se necessário
+          }
+        );
   
         // localStorage.clear();
         // this.router.navigate(['/login']);
@@ -144,6 +238,21 @@ export class CadastroUserComponent implements OnInit {
       }
     );
   }
+
+  obterTags(): void {
+    this.apiService.tags().subscribe(
+      (response: any) => {
+        this.tags = response;
+        console.log(this.tags);
+      },
+      (error: any) => {
+        console.error('Erro ao buscar dados do usuário:', error);
+      }
+    );
+  }
+
+
+
 
   openCard(card: string) {
     this.currentCard = card;
