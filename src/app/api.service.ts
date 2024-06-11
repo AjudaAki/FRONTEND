@@ -46,6 +46,15 @@ export class ApiService {
       return this.http.get<any>('http://localhost:3333/users/aluno/log', { headers });
     }
 
+    perfilProf(): Observable<any> {
+      const headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${this.token.getToken()}`
+      });
+      return this.http.get<any>('http://localhost:3333/users/professor/log', { headers });
+
+    }  
+
     tags(): Observable<any> {
       const headers = new HttpHeaders({
         'Content-Type': 'application/json',

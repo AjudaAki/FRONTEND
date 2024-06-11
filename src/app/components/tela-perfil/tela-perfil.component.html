@@ -65,8 +65,8 @@
                     <div class="box-prof-precos" *ngIf="role === 1">
                         <div class="box-precos">
                             <div class="preco">
-                                <p class="numero-preco text_medio">R$ 50,00</p>
-                                <p class="numero-preco text_medio">R$ 150,00</p>
+                                <p class="numero-preco text_medio">R$ {{userData?.preco_minimo}}</p>
+                                <p class="numero-preco text_medio">R$ {{userData?.preco_maximo}}</p>
                                 <p class="texto-faixa-preco text_peq">Faixa de preços por hora aula</p>
                             </div>
                         </div>
@@ -100,10 +100,10 @@
                     </div>
                     <div class="box-descricoes">
                         <div class="box-descri-rapida text_peq">
-                            <p class="texto-descricao">descrição legal do perfil</p>
+                            <p class="texto-descricao">{{userData?.descricao_rapida}}</p>
                         </div>
                         <div class="box-descri-longa text_peq">
-                            <p class="texto-descricao">descrição legal muito longa do perfil, bão dimais</p>
+                            <p class="texto-descricao">{{userData?.descricao}}</p>
                         </div>
                     </div>
                 </div>
