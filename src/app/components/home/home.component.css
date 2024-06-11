@@ -32,7 +32,10 @@
     height: 100%;
     
 }
-
+.img-logo{
+    height: 8vh;
+    width: 8vh;
+}
 .textos {
     display: flex;
     width: 343px;
