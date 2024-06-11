@@ -437,7 +437,7 @@
         <div class="box-h1">
           <h1 class="text_principal">Seu perfil</h1>
         </div>
-        <div class="add">
+        
           <div class="semana">
             <button class="btn-semanais text_peq" (click)="openCard('monday')">
               Segunda
@@ -560,7 +560,7 @@
             <h3 class="text_medio">{{ getCardTitle(currentCard) }}</h3>
             <div style="display: flex; gap: 2vh">
               <div>
-                <p class="text_peq" style="color: gray">Início</p>
+                <p class="text_peq gray italico">Início</p>
                 <input
                   type="time"
                   #startTime
@@ -569,7 +569,7 @@
                 />
               </div>
               <div>
-                <p class="text_peq" style="color: gray">Término</p>
+                <p class="text_peq gray italico" >Término</p>
                 <input
                   type="time"
                   #endTime
@@ -589,6 +589,7 @@
 
           <div>
             <div class="contatos">
+              <p class="text_medio bold">Seus contatos</p>
               <div class="contatin">
                 <img
                   class="icon-contato"
@@ -610,12 +611,10 @@
                 />
                 <input type="text" class="input-g" placeholder="WahtsApp" />
               </div>
-            </div>
-            <div>
-              <p class="text_peq">preencha no mínimo um contato</p>
+              <p class="text_peq italico gray">preencha no mínimo um contato</p>
             </div>
           </div>
-        </div>
+        
       </div>
       <div class="ld">
         <h2 class="text_sub">
