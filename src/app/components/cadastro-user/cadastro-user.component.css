@@ -98,8 +98,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 15%;
+    gap:8vh;
+    width: 20%;
     height: 100%;
+
 
 }
 
