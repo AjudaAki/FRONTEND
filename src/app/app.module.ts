@@ -14,6 +14,7 @@ import { TelaPerfilComponent } from './components/tela-perfil/tela-perfil.compon
 import { ReactiveFormsModule } from '@angular/forms';
 import { TelaProfessoresComponent } from './components/tela-professores/tela-professores.component';
 import { TelaFavoritosComponent } from './components/tela-favoritos/tela-favoritos.component';
+import { CardProfComponent } from './components/card-prof/card-prof.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TelaFavoritosComponent } from './components/tela-favoritos/tela-favorit
     NavbarComponent,
     TelaPerfilComponent,
     TelaProfessoresComponent,
-    TelaFavoritosComponent
+    TelaFavoritosComponent,
+    CardProfComponent
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
