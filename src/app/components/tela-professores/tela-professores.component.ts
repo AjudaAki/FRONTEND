@@ -10,17 +10,6 @@ export class TelaProfessoresComponent implements AfterViewInit {
   public $cards?:Observable<any[]>
 
   constructor(){}
-  img_estrela: string = '/assets/images/estrela_sem_like.png'; 
-
-
-  trocarImagem() {
-    if (this.img_estrela === '/assets/images/estrela_sem_like.png') {
-      this.img_estrela = '/assets/images/estrela _com_like.png'; 
-    } else {
-      this.img_estrela = '/assets/images/estrela_sem_like.png';
-    }
-  }
-  
 
   ngAfterViewInit(): void {
     this.$cards = this.getCards()
@@ -29,10 +18,30 @@ export class TelaProfessoresComponent implements AfterViewInit {
   getCards(): Observable<any> {
     return of([
       {
-        name: 'Felipe Rosse Cavalcante',
+        name: 'Felipe Rosse Cavalcante1',
         description:
           'siasiubauibsuyaibsyuavusvauvsuyayuvsuyavsvauvsavusvaugvsgvaugsvauvsug',
       },
+      {
+        name: 'Felipe Rosse Cavalcante2',
+        description:
+          'siasiubauibsuyaibsyuavusvauvsuyayuvsuyavsvauvsavusvaugvsgvaugsvauvsug',
+      },
+      {
+        name: 'Felipe Rosse Cavalcante3',
+        description:
+          'siasiubauibsuyaibsyuavusvauvsuyayuvsuyavsvauvsavusvaugvsgvaugsvauvsug',
+      },
+      {
+        name: 'Felipe Rosse Cavalcante4',
+        description:
+          'siasiubauibsuyaibsyuavusvauvsuyayuvsuyavsvauvsavusvaugvsgvaugsvauvsug',
+      },
+      {
+        name: 'Felipe Rosse Cavalcante5',
+        description:
+          'siasiubauibsuyaibsyuavusvauvsuyayuvsuyavsvauvsavusvaugvsgvaugsvauvsug',
+      }
     ]);
   }
 }

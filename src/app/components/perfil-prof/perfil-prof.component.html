@@ -12,8 +12,9 @@
         <div class="box-nome-fav">
           <div class="nome-prof text_principal bold ">Felipe Rosse Cavalcante</div>
           <div>
-            <button class="botao-fav" (click)="trocarImagem()">
-              <img class="estrela" [src]="img_estrela" />
+            <button class="botao-fav" (click)="updateFavorite()">
+              <img class="estrela" *ngIf= "!professor.myFavorite" src="../../../assets/images/estrela_sem_like.png" />
+              <img class="estrela" *ngIf= "professor.myFavorite" src="../../../assets/images/estrela_com_like.png" />
             </button>
           </div>
         </div>
