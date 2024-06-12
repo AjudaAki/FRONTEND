@@ -44,7 +44,7 @@ export class TelaPerfilComponent implements OnInit {
   obterDadosAluno(): void {
     this.api.perfil().subscribe(
       (response: any) => {
-        this.userData = response;
+        this.userData = response[0];
         this.role = this.userData.modo_professor; 
         this.imgBase64 = this.userData.img_perfil_base64;
         console.log(this.userData);
@@ -60,11 +60,12 @@ export class TelaPerfilComponent implements OnInit {
   obterDadosProf(): void {
     this.api.perfilProf().subscribe(
       (response: any) => {
-        this.userData = response;
+        this.userData = response[0];
         this.role = this.userData.modo_professor; 
         this.imgBase64 = this.userData.img_perfil_base64;
         console.log(this.userData);
         console.log(this.role);
+        console.log("aqui "+this.userData.preco_minimo);
       },
       (error: any) => {
         console.error('Erro ao buscar dados do usuário:', error);

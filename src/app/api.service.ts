@@ -55,7 +55,7 @@ export class ApiService {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${this.token.getToken()}`,
     });
-    return this.http.get<any>('http://localhost:3333/users/aluno/log', {
+    return this.http.get<any>('http://localhost:3333/users/professor/log', {
       headers,
     });
   }
