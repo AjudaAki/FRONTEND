@@ -1,27 +1,25 @@
-
 <div class="box-card">
-    <div class="box-foto-perfil">
-      <img
-        class="foto-perfil"
-        src="../../../assets//images/imagem teste icone.jpeg"
-      />
+  <div class="box-foto-perfil">
+    <img
+      class="foto-perfil"
+      [src]="professor?.img_perfil || '../../../assets/images/imagem teste icone.jpeg'"
+    />
+  </div>
+  <div class="box-conteudo">
+    <div class="box-nome">
+      <p class="text_peq gray">Nome</p>
+      <h2 class="text_modal">{{professor?.nome}}</h2>
     </div>
-    <div class="box-conteudo">
-      <div class="box-nome">
-        <p class=" text_peq gray">Nome</p>
-        <h2 class=" text_modal">Felipe Rosse Cavalcante</h2>
-      </div>
-      <div class="box-descricao">
-        <p class=" text_peq gray ">Descrição</p>
-        <p class="descricao-perfil text_medio">
-          siasiubauibsuyaibsyuavusvauvsuyayuvsuyavsvauvsavusvaugvsgvaugsvauvsug
-        </p>
-      </div>
+    <div class="box-descricao">
+      <p class="text_peq gray">Descrição</p>
+      <p class="descricao-perfil text_medio">
+        {{professor?.descricao_rapida}}
+      </p>
     </div>
-    <div class="box-area">
-      <div class="area-prof">
-        <p class="text_medio">Full-stack</p>
-      </div>
-     
+  </div>
+  <div class="box-area">
+    <div class="area-prof">
+      <p class="text_medio">{{professor?.nome_tag}}</p>
     </div>
-  </div> 
+  </div>
+</div>

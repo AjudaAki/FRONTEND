@@ -358,7 +358,7 @@
               <p class="text_medio bold">Escolha uma área de ensino</p>
               <select id="opcoes" name="opcoes" formControlName="id_tag" class="input-p">
                 <option value="opcao1">Escolha uma área</option>
-                <option *ngFor="let tag of tags"  [value]="tag.id">{{ tag.id }}</option>              
+                <option *ngFor="let tag of tags"  [value]="tag.id">{{ tag.nome_tag }}</option>              
               </select>
               <p class="text_peq gray"> 
                 Defina qual a área que você <br />

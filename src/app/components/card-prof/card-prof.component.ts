@@ -1,6 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-card-prof',
@@ -8,10 +6,7 @@ import { ApiService } from 'src/app/api.service';
   styleUrls: ['./card-prof.component.css']
 })
 export class CardProfComponent {
-  
-  @Input() public professor:any
-  public loading = false;
+  @Input() public professor: any;
 
-  constructor(private apiService:ApiService){}
-
+  // Remover a lógica de getInfo()
 }

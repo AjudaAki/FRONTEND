@@ -11,9 +11,9 @@
         <div class="box-info-perfil ">
             <div class="box-infos-principais">
                 <div class="box-foto-perfil">
-                    <img *ngIf="imgBase64 != urlBase64" class="foto-perfil" [src]="imgBase64" alt=".">
-                    <img *ngIf="imgBase64 === urlBase64" class="foto-perfil" src="../../../assets/images/svg-images/padrao-perfil.svg" alt="Imagem de perfil">
-                  </div>
+                    <img *ngIf="imgPerfilArmazenada && imgPerfilArmazenada !== defaultImg" class="foto-perfil" [src]="imgPerfilArmazenada" alt="Imagem de perfil">
+                    <img *ngIf="!imgPerfilArmazenada || imgPerfilArmazenada === defaultImg" class="foto-perfil" [src]="defaultImg" alt="Imagem de perfil padrão">
+                </div>              
                 <div class="box-nome-email-tel">
                     <div class="nome-nascimento">
                         <p class="nome text_principal">{{userData?.nome}}</p>
