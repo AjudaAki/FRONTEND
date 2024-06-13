@@ -104,3 +104,9 @@ export interface perfilProfAcessado {
     data_nascimento_formatada: string
   }
   
+
+  export interface comentario {
+    id_usuario: number | null;
+    comentario_usuario: string;
+  }
+  
