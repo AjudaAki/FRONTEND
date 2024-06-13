@@ -11,8 +11,7 @@
         <div class="box-info-perfil ">
             <div class="box-infos-principais">
                 <div class="box-foto-perfil">
-                    <img *ngIf="imgPerfilArmazenada && imgPerfilArmazenada !== defaultImg" class="foto-perfil" [src]="imgPerfilArmazenada" alt="Imagem de perfil">
-                    <img *ngIf="!imgPerfilArmazenada || imgPerfilArmazenada === defaultImg" class="foto-perfil" [src]="defaultImg" alt="Imagem de perfil padrão">
+                    <img class="foto-perfil" *ngIf="imgPerfil" [src]="imgPerfil" alt="Imagem de Perfil" (error)="imgPerfil=defaultImg">
                 </div>              
                 <div class="box-nome-email-tel">
                     <div class="nome-nascimento">

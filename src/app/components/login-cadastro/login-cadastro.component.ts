@@ -43,6 +43,8 @@ export class LoginCadastroComponent implements OnInit {
           localStorage.setItem('token', token);
           this.form.reset();
           this.router.navigate(['/professores'])
+          console.log(localStorage.getItem('userId'));
+
         },
         (error) => {
           console.error('Login failed', error);

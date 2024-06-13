@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 import { Router } from '@angular/router';
-import {jwtDecode} from 'jwt-decode'; 
+import { jwtDecode } from 'jwt-decode'; 
 
 @Component({
   selector: 'app-tela-perfil',
@@ -14,12 +14,13 @@ export class TelaPerfilComponent implements OnInit {
   userData: any;
   imgBase64: string = '';
   urlBase64: string = 'data:image/png;base64,';
-
+  idLogado: any;
   urlBaseApi: string = 'http://localhost:3333/';
-  imgPerfilArmazenada: string = '';
+  imgPath: any;
+  imgPerfil: any;
   defaultImg: string = '../../../assets/images/svg-images/padrao-perfil.svg';
 
-  token: any  = '';
+  token: any = '';
 
   constructor(private api: ApiService, private route: Router) {}
 
@@ -29,6 +30,7 @@ export class TelaPerfilComponent implements OnInit {
     if (this.token) {
       const decodedToken: any = jwtDecode(this.token);
       this.role = decodedToken.role; 
+      this.idLogado = decodedToken.id;
 
       if (this.role === 1) {
         this.obterDadosProf();
@@ -37,7 +39,7 @@ export class TelaPerfilComponent implements OnInit {
       }
     }
   }
-
+  
   botaoFav() {
     this.route.navigate(['/favoritos']);
   }
@@ -47,12 +49,19 @@ export class TelaPerfilComponent implements OnInit {
       (response: any) => {
         this.userData = response;
         this.role = this.userData.modo_professor; 
-        this.imgBase64 = this.userData.img_perfil_base64;
-        this.imgPerfilArmazenada = this.userData.img_perfil ? `${this.urlBaseApi}${this.userData.img_perfil}` : this.defaultImg;
+        this.idLogado = this.userData.id;
+        this.imgPath = this.userData.img_perfil;
 
+        if (this.imgPath) {
+          this.imgPerfil = `${this.urlBaseApi}${this.imgPath}`;
+        } else {
+          this.imgPerfil = this.defaultImg;
+        }
+
+        console.log(`${this.urlBaseApi}${this.imgPath}`)
         console.log(this.userData);
         console.log(this.role);
-        console.log(this.imgPerfilArmazenada);
+        console.log(this.idLogado);
       },
       (error: any) => {
         console.error('Erro ao buscar dados do usuário:', error);
@@ -65,12 +74,9 @@ export class TelaPerfilComponent implements OnInit {
       (response: any) => {
         this.userData = response;
         this.role = this.userData.modo_professor; 
-        this.imgBase64 = this.userData.img_perfil_base64;
-        this.imgPerfilArmazenada = this.userData.img_perfil ? `${this.urlBaseApi}${this.userData.img_perfil}` : this.defaultImg;
-
+        this.idLogado = this.userData.id;
         console.log(this.userData);
         console.log(this.role);
-        console.log(this.imgPerfilArmazenada);
       },
       (error: any) => {
         console.error('Erro ao buscar dados do usuário:', error);

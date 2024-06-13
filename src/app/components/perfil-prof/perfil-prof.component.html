@@ -45,7 +45,7 @@
             </div>
             <div class="parte-inferior-coment">
               <div class="cards-coment">
-                <div class="box-card">
+                <div class="box-card"  *ngFor="let coment of $coments | async">
                   <div class="box-foto-coment">
                     <img
                       class="foto-coment"
@@ -57,55 +57,7 @@
                       Felipe Rosse Cavalcante
                     </p>
                     <p class="coment text_medio">
-                      comentario sobre o professor
-                    </p>
-                  </div>
-                </div>
-                <div class="box-card">
-                  <div class="box-foto-coment">
-                    <img
-                      class="foto-coment"
-                      src="../../../assets//images/imagem teste icone.jpeg"
-                    />
-                  </div>
-                  <div class="box-nome-coment">
-                    <p class="nome-coment text_peq italico">
-                      Felipe Rosse Cavalcante
-                    </p>
-                    <p class="coment text_medio">
-                      comentario sobre o professor
-                    </p>
-                  </div>
-                </div>
-                <div class="box-card">
-                  <div class="box-foto-coment">
-                    <img
-                      class="foto-coment"
-                      src="../../../assets//images/imagem teste icone.jpeg"
-                    />
-                  </div>
-                  <div class="box-nome-coment">
-                    <p class="nome-coment text_peq italico">
-                      Felipe Rosse Cavalcante
-                    </p>
-                    <p class="coment text_medio">
-                      comentario sobre o professor
-                    </p>
-                  </div>
-                </div>
-                <div class="box-card">
-                  <div class="box-foto-coment">
-                    <img
-                      class="foto-coment"
-                      src="../../../assets//images/imagem teste icone.jpeg"
-                    />
-                  </div>
-                  <div class="box-nome-coment">
-                    <p class="nome-coment text_peq italico">
-                      Felipe Rosse Cavalcante
-                    </p>
-                    <p class="coment text_medio">
-                      comentario sobre o professor
+                      {{coment.comentario_usuario}}
                     </p>
                   </div>
                 </div>
@@ -118,16 +70,17 @@
                       src="../../../assets//images/imagem teste icone.jpeg"
                     />
                   </div>
-                  <div class="box-nome-coment">
+                  <div class="box-nome-coment" [formGroup]="formComent">
                     <p class="gray italico text_peq">Você</p>
                     <input
                       type="text"
                       class="comentario-user text_medio"
+                      formControlName="comentario"
                       placeholder="Fazer comentario"
                     />
                   </div>
                 </div>
-                <button class="btn-envio" (click)="sendComment()">
+                <button class="btn-envio" (click)="sendComment(id)">
                   <img
                     [src]="img_aviao"
                     class="img-aviao"
