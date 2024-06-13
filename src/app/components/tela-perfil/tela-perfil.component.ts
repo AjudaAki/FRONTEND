@@ -45,7 +45,7 @@ export class TelaPerfilComponent implements OnInit {
   obterDadosAluno(): void {
     this.api.perfil().subscribe(
       (response: any) => {
-        this.userData = response[0];
+        this.userData = response;
         this.role = this.userData.modo_professor; 
         this.imgBase64 = this.userData.img_perfil_base64;
         this.imgPerfilArmazenada = this.userData.img_perfil ? `${this.urlBaseApi}${this.userData.img_perfil}` : this.defaultImg;
