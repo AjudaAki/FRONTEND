@@ -7,6 +7,4 @@ import { Component, Input } from '@angular/core';
 })
 export class CardProfComponent {
   @Input() public professor: any;
-
-  // Remover a lógica de getInfo()
 }

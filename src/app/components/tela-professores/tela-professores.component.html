@@ -23,8 +23,8 @@
     </div>
 
     <div class="parte-inferior">
-      <div class="cards">       
-        <app-card-prof *ngFor="let card of $cards | async" [professor]="card"></app-card-prof>
+      <div class="cards">    
+          <app-card-prof *ngFor="let card of $cards | async" [professor]="card" (click)="acessarCard(card.id)"></app-card-prof>
       </div>
     </div>
   </div>

@@ -10,13 +10,21 @@
     <div class="box-perfil">
       <div class="box-infos-principal">
         <div class="box-nome-fav">
-          <div class="nome-prof text_principal bold ">Felipe Rosse Cavalcante</div>
-          <div>
+          <div class="nome-prof text_principal bold">{{ infoProf?.nome }}</div>
+          <!-- <div>
             <button class="botao-fav" (click)="updateFavorite()">
-              <img class="estrela" *ngIf= "!professor.myFavorite" src="../../../assets/images/estrela_sem_like.png" />
-              <img class="estrela" *ngIf= "professor.myFavorite" src="../../../assets/images/estrela_com_like.png" />
+              <img
+                class="estrela"
+                *ngIf="!professor.myFavorite"
+                src="../../../assets/images/estrela_sem_like.png"
+              />
+              <img
+                class="estrela"
+                *ngIf="professor.myFavorite"
+                src="../../../assets/images/estrela_com_like.png"
+              />
             </button>
-          </div>
+          </div> -->
         </div>
         <div class="box-foto">
           <img
@@ -28,7 +36,7 @@
       <div class="box-infos">
         <div class="box-descr">
           <p class="titulo-descricao text_medio">Descrição</p>
-          <p class="descricao text_medio">descrição legal ebaaaa</p>
+          <p class="descricao text_medio"> {{ infoProf?.descricao }} </p>
         </div>
         <div class="box-coment-contatos">
           <div class="box-coment">
@@ -48,7 +56,7 @@
                     <p class="nome-coment text_peq italico">
                       Felipe Rosse Cavalcante
                     </p>
-                    <p class="coment text_medio ">
+                    <p class="coment text_medio">
                       comentario sobre o professor
                     </p>
                   </div>
@@ -64,7 +72,7 @@
                     <p class="nome-coment text_peq italico">
                       Felipe Rosse Cavalcante
                     </p>
-                    <p class="coment text_medio ">
+                    <p class="coment text_medio">
                       comentario sobre o professor
                     </p>
                   </div>
@@ -80,7 +88,7 @@
                     <p class="nome-coment text_peq italico">
                       Felipe Rosse Cavalcante
                     </p>
-                    <p class="coment text_medio ">
+                    <p class="coment text_medio">
                       comentario sobre o professor
                     </p>
                   </div>
@@ -96,7 +104,7 @@
                     <p class="nome-coment text_peq italico">
                       Felipe Rosse Cavalcante
                     </p>
-                    <p class="coment text_medio ">
+                    <p class="coment text_medio">
                       comentario sobre o professor
                     </p>
                   </div>
@@ -120,9 +128,13 @@
                   </div>
                 </div>
                 <button class="btn-envio" (click)="sendComment()">
-                  <img [src]="img_aviao" class="img-aviao" [class.move-right]="isMovedRight" [class.fade-in]="isFadingIn">
+                  <img
+                    [src]="img_aviao"
+                    class="img-aviao"
+                    [class.move-right]="isMovedRight"
+                    [class.fade-in]="isFadingIn"
+                  />
                 </button>
-                
               </div>
             </div>
           </div>
@@ -160,15 +172,23 @@
           <div class="box-especialidade-preco">
             <p class="infos text_medio gray">Infos</p>
             <div class="box-titulo-especialidade">
-              <p class="titulo-especialidade text_peq gray bold">Especialidade</p>
+              <p class="titulo-especialidade text_peq gray bold">
+                Especialidade
+              </p>
             </div>
             <div class="box-especialidade">
               <p class="especialidade text_medio">full-stack</p>
             </div>
             <div class="box-faixa-preco">
-              <p class="titulo-faixa-preco text_peq bold gray">Faixa de preço</p>
-              <p class="menor-preco text_sub bold italico">R$80,00</p>
-              <p class="maior-preco gray text_peq italico">RS$200,00</p>
+              <p class="titulo-faixa-preco text_peq bold gray">
+                Faixa de preço
+              </p>
+              <p class="menor-preco text_sub bold italico">
+                R${{ infoProf.preco_minimo }}
+              </p>
+              <p class="maior-preco gray text_peq italico">
+                R${{ infoProf.preco_maximo}}
+              </p>
             </div>
           </div>
           <div class="box-dias">
@@ -186,13 +206,13 @@
                 <p class="dia text_medio">Domingo</p>
               </div>
               <div class="box-horarios">
-                <p class="horario text_medio">11:00 - 15:00</p>
-                <p class="horario text_medio">11:00 - 15:00</p>
-                <p class="horario text_medio">11:00 - 15:00</p>
-                <p class="horario text_medio">11:00 - 15:00</p>
-                <p class="horario text_medio">11:00 - 15:00</p>
-                <p class="horario text_medio">11:00 - 15:00</p>
-                <p class="horario text_medio">11:00 - 15:00</p>
+                <p class="horario text_medio">{{infoProf.segunda}}</p>
+                <p class="horario text_medio">{{infoProf.terca}}</p>
+                <p class="horario text_medio">{{infoProf.quarta}}</p>
+                <p class="horario text_medio">{{infoProf.quinta}}</p>
+                <p class="horario text_medio">{{infoProf.sexta}}</p>
+                <p class="horario text_medio">{{infoProf.sabado}}</p>
+                <p class="horario text_medio">{{infoProf.domingo}}</p>
               </div>
             </div>
           </div>

@@ -100,4 +100,22 @@ export class ApiService {
     });
     return this.http.get<any>('http://localhost:3333/users/professores/card', { headers });
   }
+  profsFav(): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${this.token.getToken()}`
+    });
+    return this.http.get<any>('http://localhost:3333/users/professores/card', { headers });
+  }
+
+
+  cardProfAcessado(id: number): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${this.token.getToken()}`,
+    });
+    return this.http.get<any>(`http://localhost:3333/users/professor/${id}`, { headers });
+  }
 }
+
+

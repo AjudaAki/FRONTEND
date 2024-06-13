@@ -113,3 +113,8 @@
     border-radius: 1vh;
     background-color: var(--main-color);
 }
+
+
+.botao-card{
+    border: none;
+}
