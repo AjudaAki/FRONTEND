@@ -106,7 +106,7 @@ export class ApiService {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${this.token.getToken()}`
     });
-    return this.http.get<any>('http://localhost:3333/users/professores/card', { headers });
+    return this.http.get<any>('http://localhost:3333/favorito', { headers });
   }
   cardProfAcessado(id: number): Observable<any> {
     const headers = new HttpHeaders({

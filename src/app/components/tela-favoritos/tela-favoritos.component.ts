@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-tela-favoritos',
@@ -9,40 +11,25 @@ import { Observable, of } from 'rxjs';
 export class TelaFavoritosComponent {
   public $cards?:Observable<any[]>
 
-  constructor(){}
+  constructor(private api: ApiService, private router: Router){}
 
   ngAfterViewInit(): void {
     this.$cards = this.getCards()
+    console.log(this.$cards)
   }
 
   getCards(): Observable<any> {
-    return of([
-      {
-        name: 'Felipe Rosse Cavalcante1',
-        description:
-          'siasiubauibsuyaibsyuavusvauvsuyayuvsuyavsvauvsavusvaugvsgvaugsvauvsug',
-      },
-      {
-        name: 'Felipe Rosse Cavalcante2',
-        description:
-          'siasiubauibsuyaibsyuavusvauvsuyayuvsuyavsvauvsavusvaugvsgvaugsvauvsug',
-      },
-      {
-        name: 'Felipe Rosse Cavalcante3',
-        description:
-          'siasiubauibsuyaibsyuavusvauvsuyayuvsuyavsvauvsavusvaugvsgvaugsvauvsug',
-      },
-      {
-        name: 'Felipe Rosse Cavalcante4',
-        description:
-          'siasiubauibsuyaibsyuavusvauvsuyayuvsuyavsvauvsavusvaugvsgvaugsvauvsug',
-      },
-      {
-        name: 'Felipe Rosse Cavalcante5',
-        description:
-          'siasiubauibsuyaibsyuavusvauvsuyayuvsuyavsvauvsavusvaugvsgvaugsvauvsug',
-      }
-    ]);
+    return this.api.profsFav()
+  }
+
+  acessarCard(id: number){
+    this.api.cardProfAcessado(id).subscribe(data => {
+      console.log(data);
+      this.router.navigate(['perfil-prof'])
+      localStorage.setItem('idCard', JSON.parse(JSON.stringify(id)))
+      console.log(localStorage.getItem('idCard'))
+    })
+    
   }
 }
 
