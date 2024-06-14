@@ -120,7 +120,7 @@ export class ApiService {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${this.token.getToken()}`,
     });
-    return this.http.get<any>(`http://localhost:3333/comentario/${id}`, { headers });
+    return this.http.get<any>(`http://localhost:3333/comentario/perfil/${id}`, { headers });
   }
   fazerComentarioProf(id: number, comentarioData: comentario): Observable<any> {
     const headers = new HttpHeaders({

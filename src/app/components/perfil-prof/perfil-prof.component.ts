@@ -38,6 +38,7 @@ export class PerfilProfComponent implements OnInit {
     this.acessarCard(Number(this.id));
     this.infoProf;
     this.$coments = this.getComents(Number(this.id));
+    console.log("aqui "+this.$coments);
   }
 
   botaoVoltar() {
