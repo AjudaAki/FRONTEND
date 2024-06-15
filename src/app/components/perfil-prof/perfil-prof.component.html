@@ -29,7 +29,7 @@
         <div class="box-foto">
           <img
             class="foto-perfil"
-            src="../../../assets//images/imagem teste icone.jpeg"
+            *ngIf="imgPerfil" [src]="imgPerfil" alt="Imagem de Perfil" 
           />
         </div>
       </div>
@@ -49,7 +49,7 @@
                   <div class="box-foto-coment">
                     <img
                       class="foto-coment"
-                      src="../../../assets//images/imagem teste icone.jpeg"
+                      *ngIf="imgPerfil" [src]="coment.img_perfil" alt="Imagem de Perfil" 
                     />
                   </div>
                   <div class="box-nome-coment">
@@ -67,7 +67,7 @@
                   <div class="box-foto-coment">
                     <img
                       class="foto-coment"
-                      src="../../../assets//images/imagem teste icone.jpeg"
+                      *ngIf="imgPerfil" [src]="imgPerfil" alt="Imagem de Perfil" 
                     />
                   </div>
                   <div class="box-nome-coment" [formGroup]="formComent">

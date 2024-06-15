@@ -13,6 +13,9 @@ import { comentario, perfilProfAcessado } from 'src/app/interfaces/request.inter
 export class PerfilProfComponent implements OnInit {
   img_estrela: string = '/assets/images/estrela_sem_like.png';
   img_aviao: string = '/assets/images/svg-images/Aviao-unpress.svg';
+  imgPerfil: any;
+  imgPerfilComentario: any;
+  // defaultImg: string = '../../../assets/images/svg-images/padrao-perfil.svg';
   loading = false;
   professor: any;
   isMovedRight: boolean = false;
@@ -49,6 +52,8 @@ export class PerfilProfComponent implements OnInit {
   getComents(id: number): Observable<any[]> {
     return this.apiService.comentariosProf(id);
   }
+
+  
 
   updateFavorite() {
     this.loading = true;
@@ -107,7 +112,9 @@ export class PerfilProfComponent implements OnInit {
     this.apiService.cardProfAcessado(id).subscribe(
       (response: any) => {
         this.infoProf = response;
+        this.imgPerfil = response.img_perfil;
         console.log(this.infoProf);
+        console.log(this.imgPerfil);
       },
       (error: any) => {
         console.error('Erro ao buscar dados do usuário:', error);

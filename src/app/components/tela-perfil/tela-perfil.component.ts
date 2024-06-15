@@ -50,15 +50,9 @@ export class TelaPerfilComponent implements OnInit {
         this.userData = response;
         this.role = this.userData.modo_professor; 
         this.idLogado = this.userData.id;
-        this.imgPath = this.userData.img_perfil;
+        this.imgPerfil = this.userData.img_perfil || this.defaultImg;
 
-        if (this.imgPath) {
-          this.imgPerfil = `${this.urlBaseApi}${this.imgPath}`;
-        } else {
-          this.imgPerfil = this.defaultImg;
-        }
-
-        console.log(`${this.urlBaseApi}${this.imgPath}`)
+        console.log(this.imgPerfil);
         console.log(this.userData);
         console.log(this.role);
         console.log(this.idLogado);
@@ -67,7 +61,8 @@ export class TelaPerfilComponent implements OnInit {
         console.error('Erro ao buscar dados do usuário:', error);
       }
     );
-  }
+}
+
 
   obterDadosProf(): void {
     this.api.perfilProf().subscribe(
@@ -75,6 +70,7 @@ export class TelaPerfilComponent implements OnInit {
         this.userData = response;
         this.role = this.userData.modo_professor; 
         this.idLogado = this.userData.id;
+        this.imgPerfil = this.userData.img_perfil || this.defaultImg;
         console.log(this.userData);
         console.log(this.role);
       },
