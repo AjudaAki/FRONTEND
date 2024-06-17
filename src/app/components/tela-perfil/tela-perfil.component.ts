@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 import { Router } from '@angular/router';
-import { jwtDecode } from 'jwt-decode'; 
+import { jwtDecode } from 'jwt-decode';
 
 @Component({
   selector: 'app-tela-perfil',
   templateUrl: './tela-perfil.component.html',
-  styleUrls: ['./tela-perfil.component.css']
+  styleUrls: ['./tela-perfil.component.css'],
 })
 export class TelaPerfilComponent implements OnInit {
-
-  role: any; 
+  role: any;
   userData: any;
   imgBase64: string = '';
   urlBase64: string = 'data:image/png;base64,';
@@ -29,7 +28,7 @@ export class TelaPerfilComponent implements OnInit {
 
     if (this.token) {
       const decodedToken: any = jwtDecode(this.token);
-      this.role = decodedToken.role; 
+      this.role = decodedToken.role;
       this.idLogado = decodedToken.id;
 
       if (this.role === 1) {
@@ -39,7 +38,7 @@ export class TelaPerfilComponent implements OnInit {
       }
     }
   }
-  
+
   botaoFav() {
     this.route.navigate(['/favoritos']);
   }
@@ -48,7 +47,7 @@ export class TelaPerfilComponent implements OnInit {
     this.api.perfil().subscribe(
       (response: any) => {
         this.userData = response;
-        this.role = this.userData.modo_professor; 
+        this.role = this.userData.modo_professor;
         this.idLogado = this.userData.id;
         this.imgPerfil = this.userData.img_perfil || this.defaultImg;
 
@@ -61,14 +60,13 @@ export class TelaPerfilComponent implements OnInit {
         console.error('Erro ao buscar dados do usuário:', error);
       }
     );
-}
-
+  }
 
   obterDadosProf(): void {
     this.api.perfilProf().subscribe(
       (response: any) => {
         this.userData = response;
-        this.role = this.userData.modo_professor; 
+        this.role = this.userData.modo_professor;
         this.idLogado = this.userData.id;
         this.imgPerfil = this.userData.img_perfil || this.defaultImg;
         console.log(this.userData);
